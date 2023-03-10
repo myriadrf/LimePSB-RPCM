@@ -1,0 +1,15 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 11:21:09 On 2023-03-10
+
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of PCB Document [LimeKEY-RPCM_1v1.PcbDoc]
+   Generated File[Pick Place for LimeKEY-RPCM_1v1.txt]
+   Generated File[Pick Place for LimeKEY-RPCM_1v1.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 11:21:25 On 2023-03-10
