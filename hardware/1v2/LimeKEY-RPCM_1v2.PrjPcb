@@ -446,6 +446,23 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document25]
+DocumentPath=Schematics\13_Temp.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=OYRLSHOY
+
+[Document26]
 DocumentPath=PCB\LimeKEY-RPCM_1v2.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -462,7 +479,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RDYIQCBY
 
-[Document26]
+[Document27]
 DocumentPath=LimeKEY-RPCM_1v2.PCBDwf
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -479,7 +496,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document27]
+[Document28]
 DocumentPath=LimeMicroAltiumLib\LimeMicroAltiumLib.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -496,7 +513,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document28]
+[Document29]
 DocumentPath=LimeMicroAltiumLib\LimeMicroAltiumLib.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
