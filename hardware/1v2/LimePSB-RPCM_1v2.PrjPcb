@@ -429,7 +429,7 @@ GenerateClassCluster=0
 DocumentUniqueId=HWVTRDHT
 
 [Document24]
-DocumentPath=LimeKEY-RPCM_1v2.Annotation
+DocumentPath=LimePSB-RPCM_1v2.Annotation
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -463,7 +463,7 @@ GenerateClassCluster=0
 DocumentUniqueId=OYRLSHOY
 
 [Document26]
-DocumentPath=PCB\LimeKEY-RPCM_1v2.PcbDoc
+DocumentPath=PCB\LimePSB-RPCM_1v2.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -480,7 +480,7 @@ GenerateClassCluster=0
 DocumentUniqueId=RDYIQCBY
 
 [Document27]
-DocumentPath=LimeKEY-RPCM_1v2.PCBDwf
+DocumentPath=LimePSB-RPCM_1v2.PCBDwf
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
