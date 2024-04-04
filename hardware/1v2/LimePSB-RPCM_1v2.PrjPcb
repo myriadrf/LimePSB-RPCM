@@ -395,13 +395,13 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document22]
-DocumentPath=Schematics\08_USB.SchDoc
+DocumentPath=Schematics\08_USB_hub.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=7
+AnnotateOrder=-1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -412,7 +412,7 @@ GenerateClassCluster=0
 DocumentUniqueId=SLONOVYD
 
 [Document23]
-DocumentPath=Schematics\09_USB_HDMI_sockets.SchDoc
+DocumentPath=Schematics\09_USB_HDMI.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -443,7 +443,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=NQLXSWTW
 
 [Document25]
 DocumentPath=Schematics\11_RFFE.SchDoc
@@ -460,7 +460,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=TJWVOLTT
 
 [Document26]
 DocumentPath=Schematics\12_PoE_USB_PD.SchDoc
@@ -477,7 +477,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=RKIYTSOJ
 
 [Document27]
 DocumentPath=Schematics\13_Power.SchDoc
@@ -494,7 +494,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=HWVTRDHT
 
 [Document28]
 DocumentPath=PCB\LimePSB-RPCM_1v2.PcbDoc
