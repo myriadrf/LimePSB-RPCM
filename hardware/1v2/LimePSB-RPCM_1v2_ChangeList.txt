@@ -1,0 +1,30 @@
+Changes:
+
+LimePSB-RPCM_1v2(_DB)_DFMr0:
+ - Project name changed from LimeKEY-RPCM to LimePSB-RPCM. Version and revision follow the previous name;
+ - Added support for Raspberry Pi CM5 module along with the old CM4. Most changes are related to provide support for both CM4 and CM5;
+ - TX PA SBB-5089 changed to TQP3M9018 due to EOL;
+ - Dual USB2 connector changed to dual USB3 with;
+ - ADC/DAC voltage reference configuration changed (topology is the same);
+ - 4-bit switch added for reconfiguring board setup;
+ - PCB updated;
+ - New DFM files generated.
+ 
+LimeKEY-RPCM_1v1(_DB)_DFMr2:
+ - PCB silkscreen updated;
+ - BOM comparison to version LimeKEY-RPCM_1v0 added;
+ - 0R added at J48 (ISNK_COARSE);
+ - C193, C195, C216, C220, C228 changed to GRM21BR61E106KA73K;
+ - JMP1, JMP7 made FIT;
+ - New DFM files generated;
+ 
+LimeKEY-RPCM_1v1(_DB)_DFMr1:
+ - J1 connector P and N signals in diff. pairs swapped pins 9<->11 and 10<->12;
+ - IC16A RTC with TSSOP8 package added as an alternative (NF default);
+ - R255 for XO VC DAC voltage divider added (NF default);
+ - 11 page POE_VDDL net C200 capacitor package changed from 0402 to 0603;
+ - PCB updated;
+ - New DFM files generated;
+ 
+LimeKEY-RPCM_1v1(_DB)_DFMr0:
+ - Initial version

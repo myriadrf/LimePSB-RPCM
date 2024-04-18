@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v2\PCB\LimePSB-RPCM_1v2.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=limepsb-rpcm_1v2-roundholes.txt|DrillLayers=gtl,g1,g2,g3,g4,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=limepsb-rpcm_1v2-slotholes.txt|DrillLayers=gtl,g1,g2,g3,g4,gbl
