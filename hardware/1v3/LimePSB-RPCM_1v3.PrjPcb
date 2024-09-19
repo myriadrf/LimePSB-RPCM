@@ -511,9 +511,26 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=HWVTRDHT
+DocumentUniqueId=ACVQHSVJ
 
 [Document29]
+DocumentPath=Schematics\15_Temp.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=LMDOOGAO
+
+[Document30]
 DocumentPath=PCB\LimePSB-RPCM_1v3.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -530,7 +547,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RDYIQCBY
 
-[Document30]
+[Document31]
 DocumentPath=LimePSB-RPCM_1v3.PCBDwf
 AnnotationEnabled=1
 AnnotateStartValue=1
