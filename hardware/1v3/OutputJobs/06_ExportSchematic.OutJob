@@ -160,7 +160,7 @@ PageOptions9=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration9_Name1=OutputConfigurationParameter1
 Configuration9_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType10=Schematic Print
-OutputName10=09_USB_hub.SchDoc
+OutputName10=09_USB_hub
 OutputCategory10=Documentation
 OutputDocumentPath10=09_USB_hub.SchDoc
 OutputVariantName10=
@@ -174,7 +174,7 @@ PageOptions10=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 Configuration10_Name1=OutputConfigurationParameter1
 Configuration10_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType11=Schematic Print
-OutputName11=10_USB_HDMI.SchDoc
+OutputName11=10_USB_HDMI
 OutputCategory11=Documentation
 OutputDocumentPath11=10_USB_HDMI.SchDoc
 OutputVariantName11=
@@ -188,7 +188,7 @@ PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 Configuration11_Name1=OutputConfigurationParameter1
 Configuration11_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType12=Schematic Print
-OutputName12=11_Clock_1.SchDoc
+OutputName12=11_Clock_1
 OutputCategory12=Documentation
 OutputDocumentPath12=11_Clock_1.SchDoc
 OutputVariantName12=
@@ -202,7 +202,7 @@ PageOptions12=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 Configuration12_Name1=OutputConfigurationParameter1
 Configuration12_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType13=Schematic Print
-OutputName13=12_Clock_2.SchDoc
+OutputName13=12_Clock_2
 OutputCategory13=Documentation
 OutputDocumentPath13=12_Clock_2.SchDoc
 OutputVariantName13=
@@ -216,7 +216,7 @@ PageOptions13=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 Configuration13_Name1=OutputConfigurationParameter1
 Configuration13_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType14=Schematic Print
-OutputName14=13_RFFE.SchDoc
+OutputName14=13_RFFE
 OutputCategory14=Documentation
 OutputDocumentPath14=13_RFFE.SchDoc
 OutputVariantName14=
@@ -230,7 +230,7 @@ PageOptions14=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 Configuration14_Name1=OutputConfigurationParameter1
 Configuration14_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType15=Schematic Print
-OutputName15=14_PoE_USB_PD.SchDoc
+OutputName15=14_PoE_USB_PD
 OutputCategory15=Documentation
 OutputDocumentPath15=14_PoE_USB_PD.SchDoc
 OutputVariantName15=
@@ -244,7 +244,7 @@ PageOptions15=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 Configuration15_Name1=OutputConfigurationParameter1
 Configuration15_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 OutputType16=Schematic Print
-OutputName16=15_Power.SchDoc
+OutputName16=15_Power
 OutputCategory16=Documentation
 OutputDocumentPath16=15_Power.SchDoc
 OutputVariantName16=
