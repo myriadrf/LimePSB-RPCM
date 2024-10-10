@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: LimePSB-RPCM_1v3.PcbDoc   2024-10-10  10:24:01
+NCDrill File Report For: LimePSB-RPCM_1v3.PcbDoc   2024-10-10  12:15:03
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top to Bottom
@@ -29,10 +29,10 @@ T18     3mm (118mil)                                              Round         
 T19     3.2mm (126mil)                                            Round             3         PTH        0.00mm (0.00inch)
 T20     0.75mm (30mil)                                            Round             2         NPTH       0.00mm (0.00inch)
 T21     0.8mm (31mil)                                             Round             28        NPTH       0.00mm (0.00inch)
-T22     0.9mm (35mil)                                             Round             8         NPTH       0.00mm (0.00inch)
-T23     1mm (39mil)                                               Round             1         NPTH       0.00mm (0.00inch)
-T24     1.1mm (43mil)                                             Round             1         NPTH       0.00mm (0.00inch)
-T25     1.3mm (51mil)                                             Round             14        NPTH       0.00mm (0.00inch)
+T22     1mm (39mil)                                               Round             1         NPTH       0.00mm (0.00inch)
+T23     1.1mm (43mil)                                             Round             1         NPTH       0.00mm (0.00inch)
+T24     1.3mm (51mil)                                             Round             14        NPTH       0.00mm (0.00inch)
+T25     1.5mm (59mil)                                             Round             8         NPTH       0.00mm (0.00inch)
 T26     1.6mm (63mil)                                             Round             1         NPTH       0.00mm (0.00inch)
 T27     1.8mm (71mil)                                             Round             4         NPTH       0.00mm (0.00inch)
 T28     3mm (118mil)                                              Round             6         NPTH       0.00mm (0.00inch)

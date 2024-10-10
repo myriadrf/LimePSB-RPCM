@@ -1,5 +1,10 @@
 Changes:
 
+LimePSB-RPCM_1v3(_DB)_DFMr1:
+ - Created from LimePSB-RPCM_1v3(_DB)_DFMr1;
+ - Rakon TCXO thermal case hole size increased from 0.9mm to 1.5mm
+ - New DFM files generated;
+
 LimePSB-RPCM_1v3(_DB)_DFMr0:
  - Created from LimePSB-RPCM_1v2(_DB)_DFMr0;
  - FPGA added;

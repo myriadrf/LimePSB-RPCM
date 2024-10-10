@@ -1,34 +1,15 @@
 Project Outputs Generation Report
 ---------------------------------
-Start Output Generation At 10:47:59 On 2024-10-10
+Start Output Generation At 12:15:10 On 2024-10-10
 
-Output: Gerber Files
-Type  : Gerber
+Output: Generates pick and place files
+Type  : Pick Place
 From  : Variant [[No Variations]] of PCB Document [LimePSB-RPCM_1v3.PcbDoc]
-   Generated File[LimePSB-RPCM_1v3.GTO]
-   Generated File[LimePSB-RPCM_1v3.GTP]
-   Generated File[LimePSB-RPCM_1v3.GTS]
-   Generated File[LimePSB-RPCM_1v3.GTL]
-   Generated File[LimePSB-RPCM_1v3.G1]
-   Generated File[LimePSB-RPCM_1v3.G2]
-   Generated File[LimePSB-RPCM_1v3.G3]
-   Generated File[LimePSB-RPCM_1v3.G4]
-   Generated File[LimePSB-RPCM_1v3.GBL]
-   Generated File[LimePSB-RPCM_1v3.GBS]
-   Generated File[LimePSB-RPCM_1v3.GBP]
-   Generated File[LimePSB-RPCM_1v3.GBO]
-   Generated File[LimePSB-RPCM_1v3.GM1]
-   Generated File[LimePSB-RPCM_1v3.GM6]
-   Generated File[LimePSB-RPCM_1v3.GM14]
-   Generated File[LimePSB-RPCM_1v3.GM15]
-   Generated File[LimePSB-RPCM_1v3.GPT]
-   Generated File[LimePSB-RPCM_1v3.GPB]
-   Generated File[LimePSB-RPCM_1v3.RUL]
-   Generated File[LimePSB-RPCM_1v3.EXTREP]
-   Generated File[LimePSB-RPCM_1v3.REP]
+   Generated File[Pick Place for LimePSB-RPCM_1v3.txt]
+   Generated File[Pick Place for LimePSB-RPCM_1v3.csv]
 
 
-Files Generated   : 21
+Files Generated   : 2
 Documents Printed : 0
 
-Finished Output Generation At 10:48:02 On 2024-10-10
+Finished Output Generation At 12:15:19 On 2024-10-10
