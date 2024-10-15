@@ -2,9 +2,6 @@
    :maxdepth: 3
    :hidden:
 
-   Introduction <self>
-   documentation/board-description
-
 Introduction
 ============
 
