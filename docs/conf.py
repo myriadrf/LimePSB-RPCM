@@ -18,7 +18,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'LimePSB RPCM Board'
+project = 'LimePSB RPCM Boards'
 copyright = '2024, MyriadRF Contributors'
 author = 'Lime Microsystems'
 
