@@ -17,12 +17,12 @@ The LimePSB RPCM is carrier board for Raspberry Pi Compute Module 4 (CM4) and mP
 .. figure:: documentation/images/LimePSB-RPCM_v1.1_3D_top.png
   :width: 600
   
-  Figure 1: LimePSB RPCM v1.0 board top view
+  Figure 1: LimePSB RPCM v1.1 board top view
 
 .. figure:: documentation/images/LimePSB-RPCM_v1.1_3D_bot.png
   :width: 600
   
-  Figure 2: LimePSB RPCM v1.0 board bottom view
+  Figure 2: LimePSB RPCM v1.1 board bottom view
 
 LimePSB RPCM board features:
 
