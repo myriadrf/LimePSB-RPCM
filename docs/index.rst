@@ -8,6 +8,7 @@
 Introduction
 ============
 
+* `LimePSB RPCM v1.1 </v1.1>`_
 
 LimePSB RPCM Board Key Features
 -------------------------------
