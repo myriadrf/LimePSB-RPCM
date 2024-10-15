@@ -6,12 +6,12 @@ LimePSB RPCM v1.1 Board Key Features
 
 The LimePSB RPCM is carrier board for Raspberry Pi Compute Module 4 (CM4) and mPCIe card (by default LimeSDR XTRX board). LimePSB RPCM carrier board provides a hardware platform for developing and prototyping high-performance designs based on Raspberry Pi CM4, RF front end, clock network and mPCIe card. It allows user to use the board in SDR, LoRa and other applications.
 
-.. figure:: documentation/LimePSB-RPCM_v1.1_3D_top.png
+.. figure:: images/LimePSB-RPCM_v1.1_3D_top.png
   :width: 600
   
   Figure 1: LimePSB RPCM v1.1 board top view
 
-.. figure:: documentation/LimePSB-RPCM_v1.1_3D_bot.png
+.. figure:: images/LimePSB-RPCM_v1.1_3D_bot.png
   :width: 600
   
   Figure 2: LimePSB RPCM v1.1 board bottom view
@@ -83,7 +83,7 @@ Board Overview
 
 The heart of the LimePSB RPCM carrier board is Raspberry PI Compute Module 4 which may be used to transfer digital data between the CM4 and mPCIe board while performing data processing. The block diagram for LimePSB RPCM board is as shown in Figure 3.
 
-.. figure:: documentation/LimePSB-RPCM_v1.1_diagrams_r1_block.png
+.. figure:: images/LimePSB-RPCM_v1.1_diagrams_r1_block.png
   :width: 600
   
   Figure 3: LimePSB RPCM v1.1 board block diagram
@@ -91,14 +91,14 @@ The heart of the LimePSB RPCM carrier board is Raspberry PI Compute Module 4 whi
 LimePSB RPCM board picture with highlighted connectors and main components are presented in Figure 4 and Figure 5. 
 
 
-.. figure:: documentation/LimePSB-RPCM_v1.1_top_components.png
+.. figure:: images/LimePSB-RPCM_v1.1_top_components.png
   :width: 600
   
   Figure 4: LimePSB RPCM v1.1 board top connectors and main components
 
 .. _target1:
 
-.. figure:: documentation/LimePSB-RPCM_v1.1_bot_components.png
+.. figure:: images/LimePSB-RPCM_v1.1_bot_components.png
   :width: 600
   
   Figure 5: LimePSB RPCM v1.1 board bottom connectors and main components
