@@ -83,7 +83,7 @@ Board Overview
 
 The heart of the LimePSB RPCM carrier board is Raspberry PI Compute Module 4 which may be used to transfer digital data between the CM4 and mPCIe board while performing data processing. The block diagram for LimePSB RPCM board is as shown in Figure 3.
 
-.. figure:: images/LimePSB-RPCM_v1.3_diagrams_r1_block.png
+.. figure:: images/LimePSB-RPCM_v1.3_diagrams_block.png
   :width: 600
   
   Figure 3: LimePSB RPCM v1.3 board block diagram
@@ -822,7 +822,7 @@ RF Front End
 
 LimePSB RPCM RF path features power amplifiers, low noise amplifiers and SPDT switches as shown in Figure 1.
 
-.. figure:: images/LimePSB-RPCM_v1.3_diagrams_r1_RFFE.png
+.. figure:: images/LimePSB-RPCM_v1.3_diagrams_RFFE.png
   :width: 600
   
   Figure 1: LimePSB RPCM 1v1 RF path block diagram
@@ -888,7 +888,7 @@ USB Subsystem
 
 LimePSB RPCM features USB2.0 hub, type-C, double type-A sockets and headers. The USB subsystem diagram is as shown in Figure 9.
 
-.. figure:: images/LimePSB-RPCM_v1.3_diagrams_r1_USB.png
+.. figure:: images/LimePSB-RPCM_v1.3_diagrams_USB.png
   :width: 600
   
   Figure 9. LimePSB RPCM 1v1 USB subsystem diagram
@@ -1218,7 +1218,7 @@ Clock Distribution
 
 LimePSB RPCM board clock network comprises of on-board voltage controlled crystal oscillators, phase detector, clock buffer, reference clock input and output connectors and clock source selection pin headers. Board clock distribution block diagram is as shown in Figure 3.
 
-.. figure:: images/LimePSB-RPCM_v1.3_diagrams_r1_clock.png
+.. figure:: images/LimePSB-RPCM_v1.3_diagrams_clock.png
   :width: 600
   
   Figure 3. LimePSB RPCM 1v1 board clock distribution block diagram
@@ -1296,7 +1296,7 @@ Power Distribution
 
 LimePSB RPCM board power delivery network consists of different power rails with different regulators, voltages and filters. LimePSB RPCM board power distribution block diagram is presented in Figure 4.
 
-.. figure:: images/LimePSB-RPCM_v1.3_diagrams_r1_power.png
+.. figure:: images/LimePSB-RPCM_v1.3_diagrams_power.png
   :width: 600
   
   Figure 4. LimePSB RPCM 1v1 board power distribution block diagram
