@@ -1,3 +1,7 @@
+*****
+LimePSB RPCM v1.1 Board
+*****
+
 Introduction
 ============
 
