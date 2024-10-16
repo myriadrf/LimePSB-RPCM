@@ -826,7 +826,7 @@ LimePSB RPCM RF path features power amplifiers, low noise amplifiers and SPDT sw
 .. figure:: images/LimePSB-RPCM_v1.1_diagrams_r1_RFFE.png
   :width: 600
   
-  Figure 6: LimePSB RPCM 1v1 RF path block diagram
+  Figure 6: LimePSB RPCM v1.1 RF path block diagram
 
 A single control signal (RF_SW_TDD) is used to control all RF switches simultaneously for both A and B channels to change between TDD and FDD modes as shown in Table 7.
 
@@ -892,7 +892,7 @@ LimePSB RPCM features USB2.0 hub, type-C, double type-A sockets and headers. The
 .. figure:: images/LimePSB-RPCM_v1.1_diagrams_r1_USB.png
   :width: 600
   
-  Figure 7. LimePSB RPCM 1v1 USB subsystem diagram
+  Figure 7. LimePSB RPCM v1.1 USB subsystem diagram
 
 Main LimeSPB RPCM board USB subsystem components:
 
@@ -946,7 +946,7 @@ LimePSB RPCM board features five dual colour (red and green (RG)) LEDs, one gree
 .. figure:: images/LimePSB-RPCM_v1.1_user_interface_components.png
   :width: 600
   
-  Figure 8: LimePSB RPCM 1v1 user interface components
+  Figure 8: LimePSB RPCM v1.1 user interface components
 
 Dual color LEDs (LED1-LED4) are connected to shift register (IC14). Their function may be programmed according to the user requirements. Dual color LED5 indicates Raspberry Pi status. Green LED6 indicates board power. These LEDs are mounted on the front side of the board.
 
@@ -1220,7 +1220,7 @@ LimePSB RPCM board clock network comprises of on-board voltage controlled crysta
 .. figure:: images/LimePSB-RPCM_v1.1_diagrams_r1_clock.png
   :width: 600
   
-  Figure 9. LimePSB RPCM 1v1 board clock distribution block diagram
+  Figure 9. LimePSB RPCM v1.1 board clock distribution block diagram
 
 LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4, mini PCIe connector and external sources. It is possible to connect external reference clock and PPS signals to and from another boards or systems via J32 (EXT_SYNC_IN) and J35 (EXT_SYNC_OUT) connectors. Clock path may be configured using jumpers and resistors as described in Table 18.
 
@@ -1298,7 +1298,7 @@ LimePSB RPCM board power delivery network consists of different power rails with
 .. figure:: images/LimePSB-RPCM_v1.1_diagrams_r1_power.png
   :width: 600
   
-  Figure 10. LimePSB RPCM 1v1 board power distribution block diagram
+  Figure 10. LimePSB RPCM v1.1 board power distribution block diagram
 
 LimePSB RPCM board may be supplied from USB Type-C port (USB Power delivery), Ethernet RJ45 port (PoE) or barrel DC connector (9-14V):
 
