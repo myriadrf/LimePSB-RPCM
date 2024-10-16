@@ -61,7 +61,6 @@ LimePSB RPCM board features:
   * 20 pin CM4 GPIO header (3.3V)
   * Front button
 
-
 * Clock system:
 
   * 30.72MHz (default) on board VCOCXO and 30.72/38.4/40.00MHz (optional) VCTCXOs
@@ -220,7 +219,6 @@ Description of board components is given in the Table 1.
   +-----------------------------------------------------+-----------------------+------------------------------------------------------------------------+
   | IC48                                                | IC                    | Voltage reference AS431ANTR-G1 (2.5V rail) (unpopulated)               |
   +-----------------------------------------------------+-----------------------+------------------------------------------------------------------------+
-
 
 Board Description
 =================
@@ -677,7 +675,6 @@ LimePSB RPCM board has several headers dedicated for Raspberry Pi CM4 configurat
   | 14      | RPI_GLOBAL_EN             | Drive low to power off CM4. A button between pins 13-14 can be used to wake up compute module from power down.                                                                                           |
   +---------+---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-
 Description of additional control connector J5 (not fitted) for Raspberry Pi CM4 pinout is given in Table 3.
 
 .. table:: Table 3. Raspberry Pi CM4 J5 enable header
@@ -1032,7 +1029,6 @@ LimePSB RPCM features multiple low speed interfaces like SPI (SPI0, SPI1), I2C, 
   |               | RPI_UART0_TX              | 55 (GPIO14) | 3.3V             | Data (CM4 output)                                           |
   +---------------+---------------------------+-------------+------------------+-------------------------------------------------------------+
 
-
 RPI_I2C0 interface devices, addresses and other info are shown in Table 12.
 
 .. table:: Table 12. RPI_I2C0 interface devices
@@ -1150,7 +1146,6 @@ MIPI CSI interface is used for serial camera. Detail camera 1 connector J18 pino
   +---------+---------------------------+----------------------------------------+
   | 15      | VCC3P3                    | 3.3V power rail                        |
   +---------+---------------------------+----------------------------------------+
-
 
 HMDI, Ethernet Connectors and uSD Socket
 ----------------------------------------
