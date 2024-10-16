@@ -228,9 +228,9 @@ More detailed description of LimePSB RPCM board components and interconnections 
 Raspberry CM4 Connector
 -----------------------
 
-LimePSB RPCM board is designed to use Raspberry Pi CM4 as a host computer. Raspberry Pi CM4L version without eMMC Flash memory is also supported. Board to board connectors (J1 and J2) are used to connect CM4 to the LimePSB RPCM board. Connector pinout, CM4 signals and schematic signal names are listed and described in Table 1.
+LimePSB RPCM board is designed to use Raspberry Pi CM4 as a host computer. Raspberry Pi CM4L version without eMMC Flash memory is also supported. Board to board connectors (J1 and J2) are used to connect CM4 to the LimePSB RPCM board. Connector pinout, CM4 signals and schematic signal names are listed and described in Table 2.
 
-.. table:: Table 1. Raspberry Pi Compute Module connector pinout
+.. table:: Table 2. Raspberry Pi Compute Module connector pinout
 
   +-------------+-------------------+---------------------------+----------------------------------------+
   | **CM4 Pin** | **CM4 reference** | **Schematic signal name** | **Description[1]**                     |
@@ -639,9 +639,9 @@ LimePSB RPCM board is designed to use Raspberry Pi CM4 as a host computer. Raspb
 Raspberry Pi CM4 Configuration Headers
 --------------------------------------
 
-LimePSB RPCM board has several headers dedicated for Raspberry Pi CM4 configuration, debug, analog inputs or other purposes. Header J14 (SYS) pins, schematic signal names and description are given in Table 2.
+LimePSB RPCM board has several headers dedicated for Raspberry Pi CM4 configuration, debug, analog inputs or other purposes. Header J14 (SYS) pins, schematic signal names and description are given in Table 3.
 
-.. table:: Table 2. SYS header pinout
+.. table:: Table 3. SYS header pinout
 
   +---------+---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
   | **Pin** | **Schematic signal name** | **Description**                                                                                                                                                                                          |
@@ -675,9 +675,9 @@ LimePSB RPCM board has several headers dedicated for Raspberry Pi CM4 configurat
   | 14      | RPI_GLOBAL_EN             | Drive low to power off CM4. A button between pins 13-14 can be used to wake up compute module from power down.                                                                                           |
   +---------+---------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Description of additional control connector J5 (not fitted) for Raspberry Pi CM4 pinout is given in Table 3.
+Description of additional control connector J5 (not fitted) for Raspberry Pi CM4 pinout is given in Table 4.
 
-.. table:: Table 3. Raspberry Pi CM4 J5 enable header
+.. table:: Table 4. Raspberry Pi CM4 J5 enable header
 
   +---------+---------------------------+----------------------------------------------------------------------+
   | **Pin** | **Schematic signal name** | **Description**                                                      |
@@ -689,9 +689,9 @@ Description of additional control connector J5 (not fitted) for Raspberry Pi CM4
   | 3       | RPI_RUN_PG                | Drive low to reset CM4 CPU/high signal indicates CM4 CPU is running. |
   +---------+---------------------------+----------------------------------------------------------------------+
 
-Raspberry Pi Compute Module 4 on board WiFi and Bluetooth disable signals may be controlled by header J6 (not fitted) as shown in Table 4.
+Raspberry Pi Compute Module 4 on board WiFi and Bluetooth disable signals may be controlled by header J6 (not fitted) as shown in Table 5.
 
-.. table:: Table 4. Raspberry Pi CM4 J6 WiFi and Bluetooth control header pinout
+.. table:: Table 5. Raspberry Pi CM4 J6 WiFi and Bluetooth control header pinout
 
   +---------+---------------------------+---------------------------------------------------------------------+
   | **Pin** | **Schematic signal name** | **Description**                                                     |
@@ -706,9 +706,9 @@ Raspberry Pi Compute Module 4 on board WiFi and Bluetooth disable signals may be
 Mini PCIe x1 Socket
 -------------------
 
-LimePSB RPCM board features mini PCIe x1 specification compatible socket. LimePSB RPCM board mPCIe socket is also compatible with some non-standard expansion boards like LimeSDR XTRX, LoRaWAN and LoRa Core. More detailed information is listed in Table 5.
+LimePSB RPCM board features mini PCIe x1 specification compatible socket. LimePSB RPCM board mPCIe socket is also compatible with some non-standard expansion boards like LimeSDR XTRX, LoRaWAN and LoRa Core. More detailed information is listed in Table 6.
 
-.. table:: Table 5. LimePSB RPCM board Mini PCIe x1 connector pinout 
+.. table:: Table 6. LimePSB RPCM board Mini PCIe x1 connector pinout 
 
   +---------+------------------------------------------+--------------------------------------------+--------------------+-----------------------+----------------------------------------------+
   | **Pin** | **Mini PCIe x1 Specification Reference** | **LimePSB** **RPCM schematic signal name** | **XTRX reference** | **LoRaWAN reference** | **SX1302/03 Corecell schematic signal name** |
@@ -828,9 +828,9 @@ LimePSB RPCM RF path features power amplifiers, low noise amplifiers and SPDT sw
   
   Figure 1: LimePSB RPCM 1v1 RF path block diagram
 
-A single control signal (RF_SW_TDD) is used to control all RF switches simultaneously for both A and B channels to change between TDD and FDD modes as shown in Table 6.
+A single control signal (RF_SW_TDD) is used to control all RF switches simultaneously for both A and B channels to change between TDD and FDD modes as shown in Table 7.
 
-.. table:: Table 6. RF path truth table
+.. table:: Table 7. RF path truth table
 
   +--------------------------------+-------------------------+----------------------------+
   | **Control signal (RF_SW_TDD)** | **TRXA/B connected to** | **RXA/B** **connected to** |
@@ -844,9 +844,9 @@ By default RF switches may be controlled from mPCIe expansion board pin 17 (via 
 
 RF path contains two types of connectors: board edge SMA connectors (J42, J43, J46, J47) used for external connections (antennas or cables) and U.FL connectors (J40, J41, J44, J45) used for internal connections (for example to connect to XTRX mini PCIe expansion board). 
 
-Signal frequency range of TX and RX paths are listed in Table 7.
+Signal frequency range of TX and RX paths are listed in Table 8.
 
-.. table:: Table 7. RF path signal frequency range
+.. table:: Table 8. RF path signal frequency range
 
   +-------------------------------+--------------------------------------+
   | **Direction**                 | **Frequency range**                  |
@@ -856,9 +856,9 @@ Signal frequency range of TX and RX paths are listed in Table 7.
   | RX                            | 100 MHz - 4 GHz                      |
   +-------------------------------+--------------------------------------+
 
-More detailed RF path component parameters are given in Table 8.
+More detailed RF path component parameters are given in Table 9.
 
-.. table:: Table 8. RF path components parameters
+.. table:: Table 9. RF path components parameters
 
   +---------------+--------------+------------------------------------+----------------------+------------------+
   | **Component** | **Function** | **Gain, dB**                       | **Output P1dB, dBm** | **NF, dB**       |
@@ -898,9 +898,9 @@ Main LimeSPB RPCM board USB subsystem components:
 
   * USB type-C socket (J27) is primarily used as LimeSPB RPCM one of power supply sources (for more information check Power Distribution section). To enable RPi USB boot mount nRPIBOOT jumper on J14 pins 1-2 and mount a jumper on header J28 to switch Raspberry Pi USB from USB hub to USB C (more information check section 2.2 Raspberry Pi CM4 Configuration Headers).
   * USB type-A dual sockets (J29) may be used to connect USB peripherals to the Raspberry Pi CM4.
-  * USB2.0 hub USB2517 (IC19) USB 2.0 hub expands Raspberry Pi CM4 USB port to dual USB socket (J29), header (J31) and mPCIe (J3). For more information check Table 9.
+  * USB2.0 hub USB2517 (IC19) USB 2.0 hub expands Raspberry Pi CM4 USB port to dual USB socket (J29), header (J31) and mPCIe (J3). For more information check Table 10.
 
-.. table:: Table 9. USB2.0 (IC19) Hub signals
+.. table:: Table 10. USB2.0 (IC19) Hub signals
 
   +---------+----------------+-----------------+---------------------------+-------------------------------------+
   | **Pin** | **Pin name**   | **Function**    | **Schematic signal name** | **Connector ID**                    |
@@ -952,9 +952,9 @@ Dual color LEDs (LED1-LED4) are connected to shift register (IC14). Their functi
 
 Ethernet connector J9 has two LEDs: yellow and green. LEDs indicate wired network activity and speed. 
 
-Default function of LEDs and related information is listed in Table 10.
+Default function of LEDs and related information is listed in Table 11.
 
-.. table:: Table 10. Default LED behaviour
+.. table:: Table 11. Default LED behaviour
 
   +-----------------------+--------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
   | **Board Reference**   | **Schematic name** | **Shift register (IC14) pin** | **Description**                                                                                                                                                 |
@@ -993,9 +993,9 @@ A user button BTN1 is mounted on the front side of the board and can be used for
 SPI, I2C, UART Interfaces
 -------------------------
 
-LimePSB RPCM features multiple low speed interfaces like SPI (SPI0, SPI1), I2C, UART. LimePSB RPCM low speed interfaces signal names, I/O standards are listed in Table 11.
+LimePSB RPCM features multiple low speed interfaces like SPI (SPI0, SPI1), I2C, UART. LimePSB RPCM low speed interfaces signal names, I/O standards are listed in Table 12.
 
-.. table:: Table 11. Raspberry Pi CM4 interface pins
+.. table:: Table 12. Raspberry Pi CM4 interface pins
 
   +---------------+---------------------------+-------------+------------------+-------------------------------------------------------------+
   | **Interface** | **Schematic signal name** | **CM4 pin** | **I/O standard** | **Comment**                                                 |
@@ -1029,9 +1029,9 @@ LimePSB RPCM features multiple low speed interfaces like SPI (SPI0, SPI1), I2C, 
   |               | RPI_UART0_TX              | 55 (GPIO14) | 3.3V             | Data (CM4 output)                                           |
   +---------------+---------------------------+-------------+------------------+-------------------------------------------------------------+
 
-RPI_I2C0 interface devices, addresses and other info are shown in Table 12.
+RPI_I2C0 interface devices, addresses and other info are shown in Table 13.
 
-.. table:: Table 12. RPI_I2C0 interface devices
+.. table:: Table 13. RPI_I2C0 interface devices
 
   +---------------------------+--------------------+------------------+------------------+------------------------+
   | **RPI_I2C0 slave device** | **Slave device**   | **I2C address**  | **I/O standard** | **Comment**            |
@@ -1050,9 +1050,9 @@ RPI_I2C0 interface devices, addresses and other info are shown in Table 12.
 Front Display Connector
 -----------------------
 
-LimePSB RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 0022112052 [7]). It is dedicated for front display connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided inTable 13.
+LimePSB RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 0022112052 [7]). It is dedicated for front display connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided inTable 14.
 
-.. table:: Table 13. Front screen connector (J8) pinout
+.. table:: Table 14. Front screen connector (J8) pinout
 
   +------------+---------------------------+------------------------------------+
   | **J8 pin** | **Schematic signal name** | **Description**                    |
@@ -1071,9 +1071,9 @@ LimePSB RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 00
 MIPI DSI Display and CSI Camera Connectors
 ------------------------------------------
 
-LimePSB RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI camera. MIPI DSI interface is used for connecting serial display. Detailed display 1 connector J17 pinout is as shown in Table 14.
+LimePSB RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI camera. MIPI DSI interface is used for connecting serial display. Detailed display 1 connector J17 pinout is as shown in Table 15.
 
-.. table:: Table 14. MIPI DSI Display 1 connector (J17) pinout
+.. table:: Table 15. MIPI DSI Display 1 connector (J17) pinout
 
   +---------+---------------------------+------------------------------------+
   | **Pin** | **Schematic signal name** | **Description**                    |
@@ -1109,9 +1109,9 @@ LimePSB RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI cam
   | 15      | VCC3P3                    | 3.3V power rail                    |
   +---------+---------------------------+------------------------------------+
 
-MIPI CSI interface is used for serial camera. Detail camera 1 connector J18 pinout is as shown in Table 15.
+MIPI CSI interface is used for serial camera. Detail camera 1 connector J18 pinout is as shown in Table 16.
 
-.. table:: Table 15. MIPI CSI Camera 1 connector pinout
+.. table:: Table 16. MIPI CSI Camera 1 connector pinout
 
   +---------+---------------------------+----------------------------------------+
   | **Pin** | **Schematic signal name** | **Description**                        |
@@ -1159,9 +1159,9 @@ For Raspberry Pi CM4L module (Raspberry Pi CM4 without eMMC Flash memory) microS
 GPIO Connector
 --------------
 
-Some Raspberry Pi Compute Module 4 GPIOs are connected to 20 pin 0.1” J10 header. Three pins of this connector are dedicated for power (3.3 V and 5V). GPIO header pins (J10) and additional information is given in Table 16.
+Some Raspberry Pi Compute Module 4 GPIOs are connected to 20 pin 0.1” J10 header. Three pins of this connector are dedicated for power (3.3 V and 5V). GPIO header pins (J10) and additional information is given in Table 17.
 
-.. table:: Table 16. Raspberry Pi CM4 GPIO header (J10) pins
+.. table:: Table 17. Raspberry Pi CM4 GPIO header (J10) pins
 
   +-------------------+---------------------------+-----------------+------------------+-------------------------------------------+
   | **Connector pin** | **Schematic signal name** | **CM4** **pin** | **I/O standard** | **Comment**                               |
@@ -1222,9 +1222,9 @@ LimePSB RPCM board clock network comprises of on-board voltage controlled crysta
   
   Figure 3. LimePSB RPCM 1v1 board clock distribution block diagram
 
-LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4, mini PCIe connector and external sources. It is possible to connect external reference clock and PPS signals to and from another boards or systems via J32 (EXT_SYNC_IN) and J35 (EXT_SYNC_OUT) connectors. Clock path may be configured using jumpers and resistors as described in Table 17.
+LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4, mini PCIe connector and external sources. It is possible to connect external reference clock and PPS signals to and from another boards or systems via J32 (EXT_SYNC_IN) and J35 (EXT_SYNC_OUT) connectors. Clock path may be configured using jumpers and resistors as described in Table 18.
 
-.. table:: Table 17. LimePSB RPCM clock signal selection
+.. table:: Table 18. LimePSB RPCM clock signal selection
 
   +------------------+--------------------+-------------------+-------------------------------------------------------------------------------------+
   | **Schematic ID** | **Input signal**   | **Output signal** | **Description**                                                                     |
@@ -1264,9 +1264,9 @@ LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute 
 
 LimePSB RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffer LMK00101. By default voltage controlled oven compensated crystal oscillator (VCOCXO) XO1 is populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC27 default or 8-bit IC29) or phase detector (IC28).
 
-Clock network components are listed in Table 18.
+Clock network components are listed in Table 19.
 
-.. table:: Table 18. LimePSB RPCM clock distribution system components
+.. table:: Table 19. LimePSB RPCM clock distribution system components
 
   +----------------+----------------+----------------------------+-----------------+------------------+
   | **Designator** | **Type**       | **Part number**            | **Description** | **Description**  |
