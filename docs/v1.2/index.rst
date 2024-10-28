@@ -241,7 +241,7 @@ LimePSB-RPCM board is designed to use Raspberry Pi CM4/5 as a host computer. Ras
 
 .. table:: Table 2 Raspberry Pi Compute Module 4 connector pinout
 
- +--------------+-------------------+---------------------------+----------------------------------------+
++--------------+-------------------+---------------------------+----------------------------------------+
 | **CM4 Pin* * | **CM4 reference** | **Schematic signal name** | **Description[1]**                     |
 +--------------+-------------------+---------------------------+----------------------------------------+
 | 1            | GND               | GND                       | Ground (0V)                            |
