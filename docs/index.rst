@@ -9,6 +9,8 @@
 LimePSB RPCM boards
 ===================
 
+The LimePSB RPCM is carrier board for Raspberry Pi Compute Module and mPCIe card (by default LimeSDR XTRX board). LimePSB RPCM carrier board provides a hardware platform for developing and prototyping high-performance designs based on Raspberry Pi CM4 or CM5, RF front end, clock network and mPCIe card. It allows user to use the board in SDR, LoRa and other applications.
+
 * `LimePSB RPCM v1.1 </v1.1>`_
 * `LimePSB RPCM v1.2 </v1.2>`_
 * `LimePSB RPCM v1.3 </v1.3>`_
