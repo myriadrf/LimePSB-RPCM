@@ -1096,3 +1096,24 @@ RPI_I2C0 interface devices, addresses and other info are shown in Table 14.
 +---------------------------+----------------------------+-------------------+------------------+------------------------+
 | IC51                      | USB PD controller          | 0 0 0 1 0 0 0 RW  | 3.3V             | CYPD3177-24LQXQT       |
 +---------------------------+----------------------------+-------------------+------------------+------------------------+
+
+Front Display Connector
+-----------------------
+
+LimePSB-RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 0022112052 [7]). It is dedicated for front display connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided inTable 15.
+
+.. table:: Table 15 Front screen connector (J8) pinout
+
++------------+---------------------------+----------------------------+
+| **J8 pin** | **Schematic signal name** | **Description**            |
++============+===========================+============================+
+| 1          | GND                       | Ground (0V)                |
++------------+---------------------------+----------------------------+
+| 2          | VCC3P3/VCC5P0             | Power 3.3V (default) or 5V |
++------------+---------------------------+----------------------------+
+| 3          | RPI_ID_SD                 | I2C data                   |
++------------+---------------------------+----------------------------+
+| 4          | RPI_ID_SC                 | I2C clock                  |
++------------+---------------------------+----------------------------+
+| 5          | RPI_BTN2                  | User button 2 (debounced)  |
++------------+---------------------------+----------------------------+
