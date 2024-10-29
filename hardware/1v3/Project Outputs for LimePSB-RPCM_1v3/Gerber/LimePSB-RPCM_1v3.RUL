@@ -1,7 +1,0 @@
-DRC Rules Export File for PCB: d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v3\PCB\LimePSB-RPCM_1v3.PcbDoc
-RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=3.94
-RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=1.97
-RuleKind=Clearance|RuleName=Clearance_MINI_PCIe|Scope=Board|Minimum=0.00
-RuleKind=Width|RuleName=Width|Scope=Board|Minimum=3.94
-RuleKind=Width|RuleName=Width_ClumsyConnection|Scope=Board|Minimum=3.94
-RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
