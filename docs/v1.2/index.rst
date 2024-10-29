@@ -1351,7 +1351,7 @@ LimePSB-RPCM board power delivery network consists of different power rails with
 .. figure:: images/LimePSB-RPCM_v1.2_diagrams_power.png
   :width: 600
   
-  Figure 9. Figure 10 LimePSB-RPCM v1.2 board power distribution block diagram
+  Figure 10 LimePSB-RPCM v1.2 board power distribution block diagram
   
 LimePSB-RPCM board may be supplied from USB Type-C port (USB Power delivery), Ethernet RJ45 port (PoE) or barrel DC connector (9-14V):
 
