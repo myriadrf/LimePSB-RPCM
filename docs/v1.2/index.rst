@@ -752,7 +752,7 @@ LimePSB-RPCM board features mini PCIe x1 specification compatible socket. LimePS
 .. table:: Table 7 LimePSB-RPCM board Mini PCIe x1 connector pinout
 
 +---------+------------------------------+-------------------------+------------------------+---------------------------+--------------------------------+
-| **Pin** | **Mini PCIe x1 Specification | **LimePSB-RPCM          | **XTRX reference [3]** | **LoRaWAN reference [4]** | S**X1302/03 Corecell schematic |
+| **Pin** | **Mini PCIe x1 Specification | **LimePSB-RPCM          | **XTRX reference [3]** | **LoRaWAN reference [4]** | **SX1302/03 Corecell schematic |
 |         | Reference [2]**              | schematic signal name** |                        |                           | signal name [5]**              |
 +=========+==============================+=========================+========================+===========================+================================+
 | 1       | Wake#                        | NC/RPI_PCIE_DET_nWAKE   | Wake#                  | NC                        | NC                             |
