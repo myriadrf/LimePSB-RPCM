@@ -1,15 +1,14 @@
 Project Outputs Generation Report
 ---------------------------------
-Start Output Generation At 12:15:10 On 2024-10-10
+Start Output Generation At 14:09:59 On 2024-10-28
 
-Output: Generates pick and place files
-Type  : Pick Place
-From  : Variant [[No Variations]] of PCB Document [LimePSB-RPCM_1v3.PcbDoc]
-   Generated File[Pick Place for LimePSB-RPCM_1v3.txt]
-   Generated File[Pick Place for LimePSB-RPCM_1v3.csv]
+Output: Bill of Materials
+Type  : BOM
+From  : Variant [[No Variations]] of Project [LimePSB-RPCM_1v3.PrjPcb]
+   Generated File[LimePSB-RPCM_1v3_BOMr0.xls]
 
 
-Files Generated   : 2
+Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 12:15:19 On 2024-10-10
+Finished Output Generation At 14:23:29 On 2024-10-28
