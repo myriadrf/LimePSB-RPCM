@@ -920,3 +920,52 @@ More detailed RF path component parameters are given in Table 10.
 +---------------+--------------+------------------------------------+----------------------+------------------+
 
 LimePSB-RPCM RF front end uses same design as Front End Adapter, except PA part was changed. For more information about the design look into XTRX documentation [3].
+
+USB Subsystem
+-------------
+
+LimePSB-RPCM contains USB2.0 hub, over current protection, type-C, double type-A sockets and headers. USB sockets and header has independent current limit power switches. The USB subsystem diagram is as shown in Figure 7.
+
+.. figure:: images/LimePSB-RPCM_v1.2_diagrams_USB.png
+  :width: 600
+
+  Figure 7 LimePSB-RPCM v1.2 USB subsystem diagram
+  
+Main LimePSB-RPCM board USB subsystem components:
+
+* USB type-C socket (J25) is primarily used as LimePSB-RPCM one of power supply sources (for more information check section 2.15 Power Distribution). To enable RPi USB boot mount nRPIBOOT jumper on J12 pins 1-2 and mount a jumper on header J26 to switch Raspberry Pi USB from USB hub to USB C (more information check section 2.2 Raspberry Pi CM4/5 Configuration).
+* USB type-A dual sockets (J29) may be used to connect USB peripherals to the Raspberry Pi CM4/5.(USB 3.0 with CM5)
+* USB2.0 hub USB2517 (IC20) USB 2.0 hub expands Raspberry Pi CM4/5 USB port to dual USB socket (J29), header (J31) and mPCIe (J3). For more information check Table 11.
+* Current limit power switches for USB dual socket and header.
+
+.. Table 11 USB2.0 (IC20) Hub signals
+
++------------+----------------------+------------------+---------------------------+---------------------------------------+
+| **Pin**    | **Pin name**         | **Function [6]** | **Schematic signal name** | **Connector ID**                      |
++============+======================+==================+===========================+=======================================+
+| 59/58      | USBUP_DP/ USBUP_DM   | Root port        | USB_HUB_D0_P/             | Connected to CM4/5 USB via USB switch |
+|            |                      |                  | USB_HUB_D0_N              |                                       |
++------------+----------------------+------------------+---------------------------+---------------------------------------+
+| 2024-02-01 | USBDN1_DP/ USBDN1_DM | Downstream port  | USB_HUB_D1_P/             | J3 (mPCIe)                            |
+|            |                      |                  | USB_HUB_D1_N              |                                       |
++------------+----------------------+------------------+---------------------------+---------------------------------------+
+| 2024-04-03 | USBDN2_DP/           | Downstream port  | USB_HUB_D2_P/             | J29 (bottom)                          |
+|            | USBDN2_DM            |                  | USB_HUB_D2_N              |                                       |
++------------+----------------------+------------------+---------------------------+---------------------------------------+
+| 2024-07-06 | USBDN3_DP/           | Downstream port  | USB_HUB_D3_P/             | J29 (top)                             |
+|            | USBDN3_DM            |                  | USB_HUB_D3_N              |                                       |
++------------+----------------------+------------------+---------------------------+---------------------------------------+
+| 2024-09-08 | USBDN4_DP/           | Downstream port  | USB_HUB_D4_P/             | J27 (pins 5/3)                        |
+|            | USBDN4_DM            |                  | USB_HUB_D4_N              |                                       |
++------------+----------------------+------------------+---------------------------+---------------------------------------+
+| 2024-12-11 | USBDN5_DP/           | Downstream port  | USB_HUB_D5_P/             | J27 (pins 6/4)                        |
+|            | USBDN5_DM            |                  | USB_HUB_D5_N              |                                       |
++------------+----------------------+------------------+---------------------------+---------------------------------------+
+| 54/53      | USBDN6_DP/           | Downstream port  | NC                        | NC                                    |
+|            | USBDN6_DM            |                  |                           |                                       |
++------------+----------------------+------------------+---------------------------+---------------------------------------+
+| 56/55      | USBDN7_DP/           | Downstream port  | NC                        | NC                                    |
+|            | USBDN7_DM            |                  |                           |                                       |
++------------+----------------------+------------------+---------------------------+---------------------------------------+
+
+Dual USB 3.0 socket (J29) and header (J27) have over current protection. Current limit is set to 600 mA. Both sockets share same protection circuitry so if one of them tries to draw more current both sockets will be disabled. Header has it is own separate over current protection.
