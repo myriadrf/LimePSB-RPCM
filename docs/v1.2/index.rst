@@ -938,7 +938,7 @@ Main LimePSB-RPCM board USB subsystem components:
 * USB2.0 hub USB2517 (IC20) USB 2.0 hub expands Raspberry Pi CM4/5 USB port to dual USB socket (J29), header (J31) and mPCIe (J3). For more information check Table 11.
 * Current limit power switches for USB dual socket and header.
 
-.. Table 11 USB2.0 (IC20) Hub signals
+.. table:: Table 11 USB2.0 (IC20) Hub signals
 
 +------------+----------------------+------------------+---------------------------+---------------------------------------+
 | **Pin**    | **Pin name**         | **Function [6]** | **Schematic signal name** | **Connector ID**                      |
@@ -973,18 +973,48 @@ Dual USB 3.0 socket (J29) and header (J27) have over current protection. Current
 User Interface Components
 -------------------------
 
-LimePSB-RPCM contains USB2.0 hub, over current protection, type-C, double type-A sockets and headers. USB sockets and header has independent current limit power switches. The USB subsystem diagram is as shown in Figure 7.
+LimePSB-RPCM board features button, buzzer, 5 dual colour (red and green (RG)) LEDs, 1 green indication LED and 2 Ethernet activity LEDs (yellow and green). All board user interface components are highlighted in Figure 8.
 
-.. figure:: images/LimePSB-RPCM_v1.2_diagrams_USB.png
+.. figure:: images/LimePSB-RPCM_v1.2_user_interface_components.png
   :width: 600
 
-  Figure 7 LimePSB-RPCM v1.2 USB subsystem diagram
+  Figure 8. LimePSB-RPCM v1.2 user interface components
   
-Main LimePSB-RPCM board USB subsystem components:
+Dual color LEDs (LED1-LED4) are connected to shift register (IC14). Their function may be programmed according to the user requirements. Dual color LED5 indicates Raspberry Pi status. Green LED6 indicates board power. These LEDs are mounted on the front side of the board.
+Ethernet connector J9 has two LEDs: yellow and green. LEDs indicate wired network activity and speed. 
+ 
+Default function of LEDs and related information is listed in Table 12. 
 
-* USB type-C socket (J25) is primarily used as LimePSB-RPCM one of power supply sources (for more information check section 2.15 Power Distribution). To enable RPi USB boot mount nRPIBOOT jumper on J12 pins 1-2 and mount a jumper on header J26 to switch Raspberry Pi USB from USB hub to USB C (more information check section 2.2 Raspberry Pi CM4/5 Configuration).
-* USB type-A dual sockets (J29) may be used to connect USB peripherals to the Raspberry Pi CM4/5.(USB 3.0 with CM5)
-* USB2.0 hub USB2517 (IC20) USB 2.0 hub expands Raspberry Pi CM4/5 USB port to dual USB socket (J29), header (J31) and mPCIe (J3). For more information check Table 11.
-* Current limit power switches for USB dual socket and header.
+.. table:: Table 12 Default LEDs functions
 
-.. Table 11 USB2.0 (IC20) Hub signals
++-----------------------+--------------------+-------------------------------+---------------------------------------------------------------------------------------------------------+
+| **Board Reference**   | **Schematic name** | **Shift register (IC14) pin** | **Description**                                                                                         |
++=======================+====================+===============================+=========================================================================================================+
+| LED1                  | RPI_LED1_R         | Q0                            | User defined.                                                                                           |
+|                       +--------------------+-------------------------------+                                                                                                         |
+|                       | RPI_LED1_G         | Q1                            |                                                                                                         |
++-----------------------+--------------------+-------------------------------+---------------------------------------------------------------------------------------------------------+
+| LED2                  | RPI_LED2_R         | Q2                            | User defined.                                                                                           |
+|                       +--------------------+-------------------------------+                                                                                                         |
+|                       | RPI_LED2_G         | Q3                            |                                                                                                         |
++-----------------------+--------------------+-------------------------------+---------------------------------------------------------------------------------------------------------+
+| LED3                  | RPI_LED3_R         | Q4                            | User defined.                                                                                           |
+|                       +--------------------+-------------------------------+                                                                                                         |
+|                       | RPI_LED3_G         | Q5                            |                                                                                                         |
++-----------------------+--------------------+-------------------------------+---------------------------------------------------------------------------------------------------------+
+| LED4                  | RPI_LED4_R         | Q6                            | User defined.                                                                                           |
+|                       +--------------------+-------------------------------+                                                                                                         |
+|                       | RPI_LED4_G         | Q7                            |                                                                                                         |
++-----------------------+--------------------+-------------------------------+---------------------------------------------------------------------------------------------------------+
+| LED5                  | RPI_STATUS_LED_R   | -                             | Green is connected to CM4/5 PI_LED_nPWR (Power On) and red is connected to Pi_nLED_Activity (Activity). |
+|                       +--------------------+-------------------------------+                                                                                                         |
+|                       | RPI_STATUS_LED_G   | -                             |                                                                                                         |
++-----------------------+--------------------+-------------------------------+---------------------------------------------------------------------------------------------------------+
+| LED6                  | VCC3P3             | -                             | Board power. Connected to 3.3 V power rail                                                              |
++-----------------------+--------------------+-------------------------------+---------------------------------------------------------------------------------------------------------+
+| Ethernet connector J9 | ETH_LED_Y          | -                             | Green is connected to Ethernet_nLED2 (Ethernet speed indicator: 1Gbit or 100Mbit Link)                  |
+| LEDs                  +--------------------+-------------------------------+ and yellow is connected to Ethernet_nLED3 (Ethernet activity indicator).                                |
+|                       | ETH_LED_G          | -                             |                                                                                                         |
++-----------------------+--------------------+-------------------------------+---------------------------------------------------------------------------------------------------------+
+
+A user button (BTN1) and buzzer (BZ1) are mounted on the front side of the board and can be used for various purposes. The button is connected to Raspberry Pi CM4/5 GPIO24, has external pull up resistors and is hardware debounced. Buzzer control circuit is connected to GPIO5.
