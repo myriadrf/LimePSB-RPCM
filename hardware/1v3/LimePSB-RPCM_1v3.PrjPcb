@@ -564,6 +564,122 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\NC Drill\LimePSB-RPCM_1v3-RoundHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\NC Drill\LimePSB-RPCM_1v3-SlotHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\NC Drill\LimePSB-RPCM_1v3.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.G1
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.G2
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.G3
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.G4
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GM1
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GM6
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GM14
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GM15
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GPB
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GPT
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\DRC\LimePSB-RPCM_1v3.html
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\ERC\LimePSB-RPCM_1v3.html
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\NC Drill\LimePSB-RPCM_1v3.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.REP
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Gerber\LimePSB-RPCM_1v3.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument28]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Pick Place\Pick Place for LimePSB-RPCM_1v3.csv
+DItemRevisionGUID=
+
+[GeneratedDocument29]
+DocumentPath=Project Outputs for LimePSB-RPCM_1v3\Pick Place\Pick Place for LimePSB-RPCM_1v3.txt
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
