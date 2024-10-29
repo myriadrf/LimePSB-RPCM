@@ -1359,7 +1359,7 @@ LimePSB-RPCM board may be supplied from USB Type-C port (USB Power delivery), Et
 * RJ45 socket is an alternative way to supply the LimePSB-RPCM board. Make sure PoE+ (802.3at) class 4 compliant power source is used.
 * Barrel connector (9-14V 2A) also may be used to power LimePSB-RPCM board.
 
-To keep RTC running when board power is disconnected 3V CR1220 battery must be inserted into BATT1 battery holder.
+To keep RTC running when board power is disconnected lithium coin cell 3V CR1220 battery must be inserted into BATT1 battery holder.
 
 References
 ----------
