@@ -1360,3 +1360,15 @@ LimePSB-RPCM board may be supplied from USB Type-C port (USB Power delivery), Et
 * Barrel connector (9-14V 2A) also may be used to power LimePSB-RPCM board.
 
 To keep RTC running when board power is disconnected 3V CR1220 battery must be inserted into BATT1 battery holder.
+
+References
+----------
+
+1. Raspberry Pi, Compute Module 4 datasheet. URL: https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf
+2. PCI Express Mini Card Electromechanical Specification Revision 1.2. URL: https://s3.amazonaws.com/fit-iot/download/facet-cards/documents/PCI_Express_miniCard_Electromechanical_specs_rev1.2.pdf
+3. Lime Microsystems, LimeSDR-XTRX. URL: https://github.com/myriadrf 
+4. n-fuse, Concentrator Card LRWCCx-MPCIE for LoRaWAN technology. URL: https://www.n-fuse.co/devices/LoRaWAN-Concentrator-Card-mini-PCIe.html 
+5. Semtech, SX1303CTSXXXGW1, LoRa Corecell Gateway Reference Design for Fine Timestamp Based on SX1303 for LoRa Core. URL: https://www.semtech.com/products/wireless-rf/lora-core/sx1303ctsxxxgw1
+6. Texas Instruments, TUSB2036 2- or 3-Port Hub for the Universal Serial Bus With Optional Serial EEPROM Interface. URL: https://www.ti.com/lit/ds/symlink/tusb2036.pdf
+7. Molex, 0022112052, KK 254 Solid Header, Vertical, with Friction Lock, 5 Circuits, Gold (Au) Plating, Bag. URL: https://www.molex.com/molex/products/part-detail/pcb_headers/0022112052
+
