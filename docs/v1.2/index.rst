@@ -1260,5 +1260,85 @@ Some Raspberry Pi Compute Module 4/5 GPIOs are connected to 20 pin 0.1” J10 he
 Board Temperature Control
 -------------------------
 
-LimePSB-RPCM board has two dedicated 0.1” pitch headers J23 and J24 for fans. Header J23 is standard 4-pin fan header while J24 is 2-pin header. Fan control voltage is VCC_IN (12V) by default, but it may be changed to 3.3V or 5V by resistors. Fan power may be controlled from shift register (IC17) output Q7 (FAN_CTRL,), directly from temperature sensor IC9 pin 3 (LM75_OS) or by FAN controller (IC12) (default). 
+LimePSB-RPCM board has two dedicated 0.1” pitch headers J23 and J24 for fans. Header J23 is standard 4-pin fan header while J24 is 2-pin header. Fan control voltage is VCC_IN (12V) by default, but it may be changed to 3.3V or 5V by resistors. Fan power may be controlled from shift register (IC17) output Q7 (FAN_CTRL), directly from temperature sensor IC9 pin 3 (LM75_OS) or by FAN controller (IC12) (default). 
 4 pin FAN connector (J23) is compatible with 3 pin fans. PWM signal from FAN controller (IC12) can be used to control fan speed by switching MOSFET (VT2) if R88 is fitted (default). If 4 pin fan is used remove R88 and fit R73 to route PWM signal to the connectors 4th pin also fit R82.
+
+Clock Distribution Network
+--------------------------
+
+LimePSB-RPCM board clock network comprises of on-board voltage controlled crystal oscillators, phase detector, clock buffer, reference clock input and output connectors and clock source selection pin headers. Board clock distribution block diagram is as shown in Figure 9. 
+
+.. figure:: images/LimePSB-RPCM_v1.2_diagrams_clock.png
+  :width: 600
+
+  Figure 9. LimePSB-RPCM v1.2 board clock distribution block diagram
+  
+LimePSB-RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. It is possible to connect external reference clock and PPS signals to and from another boards or systems via J32 (EXT_SYNC_IN) and J35 (EXT_SYNC_OUT) connectors thus synchronizing multiple systems. Clock path may be configured using jumpers and resistors as described in Table 19.
+
+.. table:: Table 19 LimePSB-RPCM clock signals configuration
+
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| **Schematic ID** | **Input signal** | **Output signal** | **Description**                                                                     |
++==================+==================+===================+=====================================================================================+
+| J36              | EXT_SYNC_IN      | REF_CLK_IN        | Phase detector (IC34) input selection                                               |
+|                  +------------------+                   |                                                                                     |
+|                  | RPI_SYNC_OUT     |                   |                                                                                     |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| J37              | RPI_SYNC_OUT     | PCIE_PPS_IN       | PPS signal source selection for mPCIe expansion boards                              |
+|                  +------------------+                   |                                                                                     |
+|                  | EXT_SYNC_IN      |                   |                                                                                     |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| J38              | EXT_SYNC_IN      | RPI_SYNC_IN       | CM4/5 SYNC_IN synchronization input source selection                                |
+|                  +------------------+                   |                                                                                     |
+|                  | PCIE_PPS_OUT     |                   |                                                                                     |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| J39              | EXT_SYNC_IN      | PCIE_UIMC4        | Reference clock selection for mPCIE exanpsion board (XTRX)                          |
+|                  +------------------+                   |                                                                                     |
+|                  | LMK_CLK_OUT2     |                   |                                                                                     |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| J34              | RPI_SYNC_OUT     | EXT_SYNC_OUT      | Synchronization output signal selection                                             |
+|                  +------------------+                   |                                                                                     |
+|                  | PCIE_PPS_OUT     |                   |                                                                                     |
+|                  +------------------+                   |                                                                                     |
+|                  | LMK_CLK_OUT3     |                   |                                                                                     |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| R153             | PCIE_PPS_IN      | PCIE_COEX1        | PPS signal output for mPCIE expansion board (XTRX)                                  |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| R4               | PCIE_PPS_IN      | PCIE_PETn0        | PPS signal output for mPCIE expansion board (LoRa Semtech)                          |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| R2               | PCIE_PPS_IN      | PCIE_COEX2        | PPS signal output for mPCIE expansion board (LoRa n-Fuse) and PPS output for (XTRX) |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| R3               | PCIE_COEX2       | PCIE_PPS_OUT      | PPS signal input from mPCIE expansion board (XTRX)                                  |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+| R8               | PCIE_SMB_CLK     | PCIE_PPS_OUT      | Clock signal input from mPCIE expansion board (XTRX)                                |
++------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
+
+LimePSB-RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffer LMK00101. By default voltage controlled oven compensated crystal oscillator (VCOCXO) XO1 is populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC33 default or 8-bit IC36) or phase detector (IC34).
+
+Clock network components are listed in Table 20.
+
+.. table:: Table 20 LimePSB-RPCM clock distribution network components
+
++----------------+----------------+----------------------------+----------------+-----------------+
+| **Designator** | **Function**   | **Part number**            | **Parameters** | **Description** |
++================+================+============================+================+=================+
+| XO1            | VCOCXO         | U7475LF 30.72MHz           | 30.72 MHz      |                 |
++----------------+----------------+----------------------------+----------------+-----------------+
+| XO2            | VCTCXO         | E6245LF 30.72 MHz          | 30.72 MHz      | Not mounted     |
++----------------+----------------+----------------------------+----------------+-----------------+
+| XO3            |                | E5280LF 30.72MHz           | 30.72 MHz      | Not mounted     |
++----------------+----------------+----------------------------+----------------+-----------------+
+| XO4            |                | RTX5032A, 40.00MHz         | 40 MHz         | Not mounted     |
++----------------+----------------+----------------------------+----------------+-----------------+
+| XO5            |                | ASVTX-12-A-38.400MHZ-H10-T | 38.4 MHz       | Not mounted     |
++----------------+----------------+----------------------------+----------------+-----------------+
+| IC33           | DAC            | AD5662                     | 16 Bit         |                 |
++----------------+----------------+----------------------------+----------------+-----------------+
+| IC36           |                | AD5601BKSZ-REEL7           | 8 Bit          | Not mounted     |
++----------------+----------------+----------------------------+----------------+-----------------+
+| IC31           | Clock buffer   | LMK00105SQ/NOPB            |                |                 |
++----------------+----------------+----------------------------+----------------+-----------------+
+| IC34           | Phase detector | ADF4002BCPZ-RL7            |                |                 |
++----------------+----------------+----------------------------+----------------+-----------------+
+
+RPI_SYNC mux (IC35) is needed for CM4 and CM5 compatibility purposes.
