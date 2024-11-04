@@ -15,5 +15,10 @@ The LimePSB RPCM is carrier board for Raspberry Pi Compute Module and mPCIe card
 * `LimePSB RPCM v1.2 </v1.2>`_
 * `LimePSB RPCM v1.3 </v1.3>`_
 
-.. figure:: v1.3/images/LimePSB-RPCM_v1.3_3D_iso.png
-  :width: 600
+.. tabs::
+  :caption: LimePSB RPCM v1.3
+  
+  .. figure:: v1.3/images/LimePSB-RPCM_v1.3_3D_iso.png
+    :width: 600
+    
+  LimePSB RPCM v1.3 board
