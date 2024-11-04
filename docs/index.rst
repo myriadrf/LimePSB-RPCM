@@ -16,42 +16,7 @@ The LimePSB RPCM is carrier board for Raspberry Pi Compute Module and mPCIe card
 * `LimePSB RPCM v1.3 </v1.3>`_
 
 
-Tabs test6
+  .. figure:: v1.3/images/LimePSB-RPCM_v1.3_3D_iso.png
+    :width: 600
 
-.. tabs::
-
-   .. tab:: Apples
-
-      Apples are green, or sometimes red.
-
-   .. tab:: Pears
-
-      Pears are green.
-
-   .. tab:: Oranges
-
-      Oranges are orange.
-
-xxvc
-
-To install git and venv on Ubuntu:
-
-.. tabs:: 
-
-   .. code-tab:: bash
-       :caption: Ubuntu 20.04
-
-       sudo apt update
-
-       sudo apt install git python3-venv
-
-   .. code-tab:: bash
-       :caption: Ubuntu 22.04+
-
-       sudo add-apt-repository ppa:deadsnakes/ppa
-
-       sudo apt update
-
-       sudo apt install git python3.8 python3.8-venv
-
-This only needs to be done once on each system where documentation is edited.
+Figure 3: LimePSB RPCM v1.3 board
