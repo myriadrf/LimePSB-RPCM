@@ -18,7 +18,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'LimePSB RPCM Boards'
+project = 'LimePSB RPCM v1.1 Board'
 copyright = '2024, MyriadRF Contributors'
 author = 'Lime Microsystems'
 
@@ -38,8 +38,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.mathjax',
     'sphinx-mathjax-offline',
-    'sphinx_code_tabs',
-    'sphinx_tabs.tabs',
     'sphinx_rtd_theme'
 ]
 
