@@ -16,25 +16,7 @@ The LimePSB RPCM is carrier board for Raspberry Pi Compute Module and mPCIe card
 * `LimePSB RPCM v1.3 </v1.3>`_
 
 
-Tabs test3
-
-.. tabs:: 
-
-   .. code-tab:: bash
-       :caption: Ubuntu 20.04
-
-       sudo apt update
-
-       sudo apt install git python3-venv
-
-   .. code-tab:: bash
-       :caption: Ubuntu 22.04+
-
-       sudo add-apt-repository ppa:deadsnakes/ppa
-
-       sudo apt update
-
-       sudo apt install git python3.8 python3.8-venv
+Tabs test4
 
 .. tabs::
 
@@ -46,12 +28,6 @@ Tabs test3
 
       Pears are green.
 
-.. tabs::
+   .. tab:: Oranges
 
-   .. tab:: LimePSB RPCM v1.3
-
-      Apples are green, or sometimes red.
-
-   .. tab:: Pears
-
-      Pears are green.
+      Oranges are orange.
