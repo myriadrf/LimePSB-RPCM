@@ -15,6 +15,19 @@ The LimePSB RPCM is carrier board for Raspberry Pi Compute Module and mPCIe card
 * `LimePSB RPCM v1.2 </v1.2>`_
 * `LimePSB RPCM v1.3 </v1.3>`_
 
+
+Tabs test
+
+.. tabs::
+
+   .. tab:: Apples
+
+      Apples are green, or sometimes red.
+
+   .. tab:: Pears
+
+      Pears are green.
+
 .. tabs::
 
    .. tab:: LimePSB RPCM v1.3
