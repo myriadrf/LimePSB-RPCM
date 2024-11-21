@@ -13,12 +13,12 @@ The LimePSB RPCM is carrier board for Raspberry Pi Compute Module 4 or 5 (CM4 or
 .. figure:: images/LimePSB-RPCM_v1.2_3D_top.png
   :width: 600
   
-  Figure 1. LimePSB-RPCM v1.2 board top view
+  Figure 1. LimePSB RPCM v1.2 board top view
 
 .. figure:: images/LimePSB-RPCM_v1.2_3D_bot.png
   :width: 600
   
-  Figure 2. LimePSB-RPCM v1.2 board bottom view
+  Figure 2. LimePSB RPCM v1.2 board bottom view
 
 LimePSB RPCM board features:
 
@@ -88,26 +88,26 @@ For more information on the following topics, refer to the folowing documents:
 Board Overview
 -------------- 
 
-The heart of the LimePSB-RPCM carrier board is Raspberry PI Compute Module 4 or Compute Module 5 which may be used to transfer digital data between the CM4/5 and mPCIe board while performing data processing. The block diagram for LimePSB-RPCM board is as shown in Figure 3.
+The heart of the LimePSB RPCM carrier board is Raspberry PI Compute Module 4 or Compute Module 5 which may be used to transfer digital data between the CM4/5 and mPCIe board while performing data processing. The block diagram for LimePSB RPCM board is as shown in Figure 3.
 
 .. figure:: images/LimePSB-RPCM_v1.2_diagrams_block.png
   :width: 600
   
-  Figure 3. LimePSB-RPCM v1.2 carrier Board Block Diagram
+  Figure 3. LimePSB RPCM v1.2 carrier Board Block Diagram
 
-LimePSB-RPCM board picture with highlighted connectors and main components are presented in Figure 4 and Figure 5. 
+LimePSB RPCM board picture with highlighted connectors and main components are presented in Figure 4 and Figure 5. 
 
 .. figure:: images/LimePSB-RPCM_v1.2_top_components.png
   :width: 600
   
-  Figure 4. LimePSB-RPCM v1.2 board top connectors and main components
+  Figure 4. LimePSB RPCM v1.2 board top connectors and main components
 
 .. _target1:
 
 .. figure:: images/LimePSB-RPCM_v1.2_bot_components.png
   :width: 600
   
-  Figure 5. LimePSB-RPCM v1.2 board bottom connectors and main components
+  Figure 5. LimePSB RPCM v1.2 board bottom connectors and main components
 
 Board components are described in the Table 1.
 
@@ -229,15 +229,15 @@ Board components are described in the Table 1.
   | IC55                            | IC                         | Voltage   reference AS431ANTR-G1 (2.5V rail)                                |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
 
-LimePSB-RPCM Board Architecture
+LimePSB RPCM Board Architecture
 ===============================
 
-This chapter is dedicated for detailed description of LimePSB-RPCM board components and interconnections.
+This chapter is dedicated for detailed description of LimePSB RPCM board components and interconnections.
 
 Raspberry CM4/5 Connector
 -------------------------
 
-LimePSB-RPCM board is designed to use Raspberry Pi CM4/5 as a host computer. Raspberry Pi CM4/5L version without eMMC Flash memory is also supported. Board to board connectors (J1 and J2) are used to connect CM4/5 to the LimePSB-RPCM board. Connector pinout, CM4 signals and schematic signal names are listed and described in Table 2.
+LimePSB RPCM board is designed to use Raspberry Pi CM4/5 as a host computer. Raspberry Pi CM4/5L version without eMMC Flash memory is also supported. Board to board connectors (J1 and J2) are used to connect CM4/5 to the LimePSB RPCM board. Connector pinout, CM4 signals and schematic signal names are listed and described in Table 2.
 
 .. table:: Table 2. Raspberry Pi Compute Module 4 connector pinout
 
@@ -648,7 +648,7 @@ LimePSB-RPCM board is designed to use Raspberry Pi CM4/5 as a host computer. Ras
 Raspberry Pi CM4/5 Configuration
 --------------------------------------
 
-LimePSB-RPCM board has several headers and a DIP switch dedicated for Raspberry Pi CM4/5 configuration, debug, analog inputs or other purposes. SYS Header (J12) pins, schematic signal names and description are given in Table 3.
+LimePSB RPCM board has several headers and a DIP switch dedicated for Raspberry Pi CM4/5 configuration, debug, analog inputs or other purposes. SYS Header (J12) pins, schematic signal names and description are given in Table 3.
 
 .. table:: Table 3. SYS header (J12) pinout
 
@@ -748,12 +748,12 @@ Some configuration can be done by switching SW1 DIP switch bits. Detailed switch
 Mini PCIe x1 Socket
 -------------------
 
-LimePSB-RPCM board features mini PCIe x1 specification compatible socket. LimePSB-RPCM board mPCIe socket is also compatible with some non-standard expansion boards like LimeSDR-XTRX, LoRaWAN and LoRa Core. More detailed information is listed in Table 7.
+LimePSB RPCM board features mini PCIe x1 specification compatible socket. LimePSB RPCM board mPCIe socket is also compatible with some non-standard expansion boards like LimeSDR-XTRX, LoRaWAN and LoRa Core. More detailed information is listed in Table 7.
 
-.. table:: Table 7 LimePSB-RPCM board Mini PCIe x1 connector pinout
+.. table:: Table 7 LimePSB RPCM board Mini PCIe x1 connector pinout
 
   +---------+------------------------------+-------------------------+------------------------+---------------------------+--------------------------------+
-  | **Pin** | **Mini PCIe x1 Specification | **LimePSB-RPCM          | **XTRX reference [3]** | **LoRaWAN reference [4]** | **SX1302/03 Corecell schematic |
+  | **Pin** | **Mini PCIe x1 Specification | **LimePSB RPCM          | **XTRX reference [3]** | **LoRaWAN reference [4]** | **SX1302/03 Corecell schematic |
   |         | Reference [2]**              | schematic signal name** |                        |                           | signal name [5]**              |
   +=========+==============================+=========================+========================+===========================+================================+
   | 1       | Wake#                        | NC/RPI_PCIE_DET_nWAKE   | Wake#                  | NC                        | NC                             |
@@ -864,12 +864,12 @@ LimePSB-RPCM board features mini PCIe x1 specification compatible socket. LimePS
 RF Front End
 ------------
 
-LimePSB-RPCM RF path features power amplifiers, low noise amplifiers and SPDT switches as shown in Figure 6.
+LimePSB RPCM RF path features power amplifiers, low noise amplifiers and SPDT switches as shown in Figure 6.
 
 .. figure:: images/LimePSB-RPCM_v1.2_diagrams_RFFE.png
   :width: 600
 
-  Figure 6 LimePSB-RPCM v1.2 RFFE diagram
+  Figure 6 LimePSB RPCM v1.2 RFFE diagram
   
 A single control signal (RF_SW_TDD) is used to control all RF switches simultaneously for both A and B channels to change between TDD and FDD modes as shown in Table 8.
 
@@ -920,21 +920,21 @@ More detailed RF path component parameters are given in Table 10.
   |               |              | -1.6dB (6000 MHz)                  |                      |                  |
   +---------------+--------------+------------------------------------+----------------------+------------------+
 
-LimePSB-RPCM RF front end uses same design as Front End Adapter, except PA part was changed. For more information about the design look into XTRX documentation [3].
+LimePSB RPCM RF front end uses same design as Front End Adapter, except PA part was changed. For more information about the design look into XTRX documentation [3].
 
 USB Subsystem
 -------------
 
-LimePSB-RPCM contains USB2.0 hub, over current protection, type-C, double type-A sockets and headers. USB sockets and header has independent current limit power switches. The USB subsystem diagram is as shown in Figure 7.
+LimePSB RPCM contains USB2.0 hub, over current protection, type-C, double type-A sockets and headers. USB sockets and header has independent current limit power switches. The USB subsystem diagram is as shown in Figure 7.
 
 .. figure:: images/LimePSB-RPCM_v1.2_diagrams_USB.png
   :width: 600
 
-  Figure 7 LimePSB-RPCM v1.2 USB subsystem diagram
+  Figure 7 LimePSB RPCM v1.2 USB subsystem diagram
   
-Main LimePSB-RPCM board USB subsystem components:
+Main LimePSB RPCM board USB subsystem components:
 
-* USB type-C socket (J25) is primarily used as LimePSB-RPCM one of power supply sources (for more information check section 2.15 Power Distribution). To enable RPi USB boot mount nRPIBOOT jumper on J12 pins 1-2 and mount a jumper on header J26 to switch Raspberry Pi USB from USB hub to USB C (more information check section 2.2 Raspberry Pi CM4/5 Configuration).
+* USB type-C socket (J25) is primarily used as LimePSB RPCM one of power supply sources (for more information check section 2.15 Power Distribution). To enable RPi USB boot mount nRPIBOOT jumper on J12 pins 1-2 and mount a jumper on header J26 to switch Raspberry Pi USB from USB hub to USB C (more information check section 2.2 Raspberry Pi CM4/5 Configuration).
 * USB type-A dual sockets (J29) may be used to connect USB peripherals to the Raspberry Pi CM4/5.(USB 3.0 with CM5)
 * USB2.0 hub USB2517 (IC20) USB 2.0 hub expands Raspberry Pi CM4/5 USB port to dual USB socket (J29), header (J31) and mPCIe (J3). For more information check Table 11.
 * Current limit power switches for USB dual socket and header.
@@ -974,12 +974,12 @@ Dual USB 3.0 socket (J29) and header (J27) have over current protection. Current
 User Interface Components
 -------------------------
 
-LimePSB-RPCM board features button, buzzer, 5 dual colour (red and green (RG)) LEDs, 1 green indication LED and 2 Ethernet activity LEDs (yellow and green). All board user interface components are highlighted in Figure 8.
+LimePSB RPCM board features button, buzzer, 5 dual colour (red and green (RG)) LEDs, 1 green indication LED and 2 Ethernet activity LEDs (yellow and green). All board user interface components are highlighted in Figure 8.
 
 .. figure:: images/LimePSB-RPCM_v1.2_user_interface_components.png
   :width: 600
 
-  Figure 8. LimePSB-RPCM v1.2 user interface components
+  Figure 8. LimePSB RPCM v1.2 user interface components
   
 Dual color LEDs (LED1-LED4) are connected to shift register (IC14). Their function may be programmed according to the user requirements. Dual color LED5 indicates Raspberry Pi status. Green LED6 indicates board power. These LEDs are mounted on the front side of the board.
 Ethernet connector J9 has two LEDs: yellow and green. LEDs indicate wired network activity and speed. 
@@ -1023,7 +1023,7 @@ A user button (BTN1) and buzzer (BZ1) are mounted on the front side of the board
 SPI, I2C, UART Interfaces
 -------------------------
 
-LimePSB-RPCM features multiple low speed interfaces like SPI (SPI0, SPI1), I2C, UART. LimePSB-RPCM low speed interfaces signal names, I/O standards are listed in Table 13.
+LimePSB RPCM features multiple low speed interfaces like SPI (SPI0, SPI1), I2C, UART. LimePSB RPCM low speed interfaces signal names, I/O standards are listed in Table 13.
 
 .. table:: Table 13. CM4/5 low speed interfaces pins
 
@@ -1100,7 +1100,7 @@ RPI_I2C0 interface devices, addresses and other info are shown in Table 14.
 Front Display Connector
 -----------------------
 
-LimePSB-RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 0022112052 [7]). It is dedicated for front display connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided inTable 15.
+LimePSB RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 0022112052 [7]). It is dedicated for front display connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided inTable 15.
 
 .. table:: Table 15 Front screen connector (J8) pinout
 
@@ -1121,7 +1121,7 @@ LimePSB-RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 00
 MIPI DSI Display and CSI Camera Connectors
 ------------------------------------------
 
-LimePSB-RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI camera. MIPI DSI interface is used for connecting serial display. Detailed display 1 connector J15 pinout is as shown in Table 16.
+LimePSB RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI camera. MIPI DSI interface is used for connecting serial display. Detailed display 1 connector J15 pinout is as shown in Table 16.
 
 .. table:: Table 16 MIPI DSI Display 1 connector (J17) pinout
 
@@ -1200,9 +1200,9 @@ MIPI CSI interface is used for serial camera. Detail camera 1 connector J16 pino
 HMDI, Ethernet Connectors and uSD Socket
 ----------------------------------------
 
-LimePSB-RPCM board features 2 vertically mounted full-size HDMI 2.0 connectors (J30 and J31). Data signals are directly connected between Raspberry Pi CM4/5 TMDS interfaces and HDMI connectors. 5V power for HDMI connectors is supplied via a current-limited switch (IC28). 
+LimePSB RPCM board features 2 vertically mounted full-size HDMI 2.0 connectors (J30 and J31). Data signals are directly connected between Raspberry Pi CM4/5 TMDS interfaces and HDMI connectors. 5V power for HDMI connectors is supplied via a current-limited switch (IC28). 
 
-LimePSB-RPCM board also features Gigabit Ethernet and power over Ethernet (PoE) capable RJ45 connector (J9). 
+LimePSB RPCM board also features Gigabit Ethernet and power over Ethernet (PoE) capable RJ45 connector (J9). 
 
 For Raspberry Pi CM4/5L module (Raspberry Pi CM4 without eMMC Flash memory) microSD card push-push socket (J7) must be used along with the appropriate uSD card.
 
@@ -1260,22 +1260,22 @@ Some Raspberry Pi Compute Module 4/5 GPIOs are connected to 20 pin 0.1” J10 he
 Board Temperature Control
 -------------------------
 
-LimePSB-RPCM board has two dedicated 0.1” pitch headers J23 and J24 for fans. Header J23 is standard 4-pin fan header while J24 is 2-pin header. Fan control voltage is VCC_IN (12V) by default, but it may be changed to 3.3V or 5V by resistors. Fan power may be controlled from shift register (IC17) output Q7 (FAN_CTRL), directly from temperature sensor IC9 pin 3 (LM75_OS) or by FAN controller (IC12) (default). 
+LimePSB RPCM board has two dedicated 0.1” pitch headers J23 and J24 for fans. Header J23 is standard 4-pin fan header while J24 is 2-pin header. Fan control voltage is VCC_IN (12V) by default, but it may be changed to 3.3V or 5V by resistors. Fan power may be controlled from shift register (IC17) output Q7 (FAN_CTRL), directly from temperature sensor IC9 pin 3 (LM75_OS) or by FAN controller (IC12) (default). 
 4 pin FAN connector (J23) is compatible with 3 pin fans. PWM signal from FAN controller (IC12) can be used to control fan speed by switching MOSFET (VT2) if R88 is fitted (default). If 4 pin fan is used remove R88 and fit R73 to route PWM signal to the connectors 4th pin also fit R82.
 
 Clock Distribution Network
 --------------------------
 
-LimePSB-RPCM board clock network comprises of on-board voltage controlled crystal oscillators, phase detector, clock buffer, reference clock input and output connectors and clock source selection pin headers. Board clock distribution block diagram is as shown in Figure 9. 
+LimePSB RPCM board clock network comprises of on-board voltage controlled crystal oscillators, phase detector, clock buffer, reference clock input and output connectors and clock source selection pin headers. Board clock distribution block diagram is as shown in Figure 9. 
 
 .. figure:: images/LimePSB-RPCM_v1.2_diagrams_clock.png
   :width: 600
 
-  Figure 9. LimePSB-RPCM v1.2 board clock distribution block diagram
+  Figure 9. LimePSB RPCM v1.2 board clock distribution block diagram
   
-LimePSB-RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. It is possible to connect external reference clock and PPS signals to and from another boards or systems via J32 (EXT_SYNC_IN) and J35 (EXT_SYNC_OUT) connectors thus synchronizing multiple systems. Clock path may be configured using jumpers and resistors as described in Table 19.
+LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. It is possible to connect external reference clock and PPS signals to and from another boards or systems via J32 (EXT_SYNC_IN) and J35 (EXT_SYNC_OUT) connectors thus synchronizing multiple systems. Clock path may be configured using jumpers and resistors as described in Table 19.
 
-.. table:: Table 19 LimePSB-RPCM clock signals configuration
+.. table:: Table 19 LimePSB RPCM clock signals configuration
 
   +------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
   | **Schematic ID** | **Input signal** | **Output signal** | **Description**                                                                     |
@@ -1313,11 +1313,11 @@ LimePSB-RPCM board distributes reference clock to and from Raspberry Pi Compute 
   | R8               | PCIE_SMB_CLK     | PCIE_PPS_OUT      | Clock signal input from mPCIE expansion board (XTRX)                                |
   +------------------+------------------+-------------------+-------------------------------------------------------------------------------------+
 
-LimePSB-RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffer LMK00101. By default voltage controlled oven compensated crystal oscillator (VCOCXO) XO1 is populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC33 default or 8-bit IC36) or phase detector (IC34).
+LimePSB RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffer LMK00101. By default voltage controlled oven compensated crystal oscillator (VCOCXO) XO1 is populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC33 default or 8-bit IC36) or phase detector (IC34).
 
 Clock network components are listed in Table 20.
 
-.. table:: Table 20 LimePSB-RPCM clock distribution network components
+.. table:: Table 20 LimePSB RPCM clock distribution network components
 
   +----------------+----------------+----------------------------+----------------+-----------------+
   | **Designator** | **Function**   | **Part number**            | **Parameters** | **Description** |
@@ -1346,18 +1346,18 @@ RPI_SYNC mux (IC35) is needed for CM4 and CM5 compatibility purposes.
 Power Distribution
 ------------------
 
-LimePSB-RPCM board power delivery network consists of different power rails with different regulators, voltages and filters. LimePSB-RPCM board power distribution block diagram is presented in Figure 10.
+LimePSB RPCM board power delivery network consists of different power rails with different regulators, voltages and filters. LimePSB RPCM board power distribution block diagram is presented in Figure 10.
 
 .. figure:: images/LimePSB-RPCM_v1.2_diagrams_power.png
   :width: 600
   
-  Figure 10 LimePSB-RPCM v1.2 board power distribution block diagram
+  Figure 10 LimePSB RPCM v1.2 board power distribution block diagram
   
-LimePSB-RPCM board may be supplied from USB Type-C port (USB Power delivery), Ethernet RJ45 port (PoE) or barrel DC connector (9-14V):
+LimePSB RPCM board may be supplied from USB Type-C port (USB Power delivery), Ethernet RJ45 port (PoE) or barrel DC connector (9-14V):
 
-* USB Type-C socket (9-12V 2.5 A or 1.5 A) may be used to supply LimePSB-RPCM board. In this case make sure that USB Power Delivery 18W or more power adapter is used. Depending on application board requested current from source may be lowered from 2.5A to 1.5A by changing SW1 bit 3 to ON position.
-* RJ45 socket is an alternative way to supply the LimePSB-RPCM board. Make sure PoE+ (802.3at) class 4 compliant power source is used.
-* Barrel connector (9-14V 2A) also may be used to power LimePSB-RPCM board.
+* USB Type-C socket (9-12V 2.5 A or 1.5 A) may be used to supply LimePSB RPCM board. In this case make sure that USB Power Delivery 18W or more power adapter is used. Depending on application board requested current from source may be lowered from 2.5A to 1.5A by changing SW1 bit 3 to ON position.
+* RJ45 socket is an alternative way to supply the LimePSB RPCM board. Make sure PoE+ (802.3at) class 4 compliant power source is used.
+* Barrel connector (9-14V 2A) also may be used to power LimePSB RPCM board.
 
 To keep RTC running when board power is disconnected lithium coin cell 3V CR1220 battery must be inserted into BATT1 battery holder.
 
