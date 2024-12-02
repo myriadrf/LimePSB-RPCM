@@ -873,7 +873,7 @@ More detailed RF path component parameters are given in Table 9.
   |               |              |                                    |                      |                  |
   |               |              | 7.0dB (3800 MHz)                   | 22.8dBm (3800 MHz)   | 1.5dB (3800 MHz) |
   +---------------+--------------+------------------------------------+----------------------+------------------+
-  | SKY13286      | RF switch    | -0.7dB (1000 MHz)                  | 30.dBm (2000 MHz)    | -                |
+  | SKY13286      | RF switch    | -0.7dB (1000 MHz)                  | 30.dBm (2000 MHz)    |                  |
   |               |              |                                    |                      |                  |
   |               |              | -0.8dB (2000 MHz)                  |                      |                  |
   |               |              |                                    |                      |                  |
