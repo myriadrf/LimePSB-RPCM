@@ -73,7 +73,7 @@ The LimePSB RPCM is carrier board for Raspberry Pi Compute Module 4 or 5 (CM4 or
   * Reference clock/PPS input and output SMA connectors (EXT_SYNC_IN and EXT_SYNC_OUT)
   * Possibility to synchronize multiple boards using coaxial SMA connectors  (EXT_SYNC_IN and EXT_SYNC_OUT)
 
- Board power sources:
+* Board power sources:
 
   * Barrel (9-14V, 2-3A)
   * USB Power Delivery (12V 1.5A or 2.5A)
