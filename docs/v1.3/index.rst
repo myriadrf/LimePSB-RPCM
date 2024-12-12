@@ -1379,7 +1379,7 @@ More detailed RF path component parameters are given in Table 10.
 
 LimePSB RPCM RF front end uses same design as Front End Adapter, except PA part was changed. For more information about the design look into XTRX documentation [4].
 
-SB Subsystem
+USB Subsystem
 -------------
 
 LimePSB RPCM contains USB2.0 hub, over current protection, type-C, double type-A sockets and headers. USB sockets and header has independent current limit power switches. The USB subsystem diagram is as shown in Figure 7.
