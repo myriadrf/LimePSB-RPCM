@@ -254,8 +254,8 @@ LimePSB RPCM Board Architecture
 
 This chapter is dedicated for detailed description of LimePSB RPCM board components and interconnections.
 
-Raspberry CM4/5 Connector
--------------------------
+Raspberry Pi CM4/5 Connector
+----------------------------
 
 LimePSB RPCM board is designed to use Raspberry Pi CM4/5 as a host computer. Raspberry Pi CM4/5L version without eMMC Flash memory is also supported. Board to board connectors (J1 and J2) are used to connect CM4/5 to the LimePSB RPCM board. Connector pinout, CM4 and CM5 signals and schematic signal names are listed and described in Table 2.
 
@@ -1074,6 +1074,9 @@ LimePSB RPCM board is designed to use Raspberry Pi CM4/5 as a host computer. Ras
     +----------+---------------------+-----------------------+----------------------------------------+
     | 200      | HDMI0_SCL           | HDMI0_SCL             | Bidirectional HDMI0 SCL                |
     +----------+---------------------+-----------------------+----------------------------------------+
+
+Raspberry Pi CM4/5 Configuration
+--------------------------------
 
 LimePSB RPCM board has several headers and a DIP switch dedicated for Raspberry Pi CM4/5 configuration, debug, analog inputs or other purposes. SYS Header (J12) pins, schematic signal names and description are given in Table 3.
 
