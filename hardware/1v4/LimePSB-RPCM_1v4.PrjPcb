@@ -777,6 +777,14 @@ Variation204=Designator=R295|UniqueId=\TJFYUPHC|Kind=1|AlternatePart=
 Variation205=Designator=C95|UniqueId=\WOSYLFCB|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
+[Parameter1]
+Name=SHEET_TOTAL
+Value=15
+
+[Parameter2]
+Name=PROJECT_VERSION
+Value=v1.4
+
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
