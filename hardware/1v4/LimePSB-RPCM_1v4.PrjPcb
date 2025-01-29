@@ -787,7 +787,7 @@ Value=15
 
 [Parameter2]
 Name=PROJECT_VERSION
-Value=v1.4
+Value=1.4
 
 [Configuration1]
 Name=Default Configuration
