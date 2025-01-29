@@ -569,7 +569,7 @@ UniqueID=C4CDED0A-96C9-4016-916F-3F9F121FB863
 Description=Default
 AllowFabrication=0
 ParameterCount=0
-VariationCount=211
+VariationCount=214
 Variation1=Designator=J5|UniqueId=\MTCYZGQY|Kind=1|AlternatePart= 
 Variation2=Designator=J6|UniqueId=\BVIDYGIC|Kind=1|AlternatePart= 
 Variation3=Designator=R9|UniqueId=\JRMJUZOY|Kind=1|AlternatePart= 
@@ -781,6 +781,9 @@ Variation208=Designator=R113|UniqueId=\DKCXOOZF|Kind=1|AlternatePart=
 Variation209=Designator=R110|UniqueId=\GYXSEEEN|Kind=0|AlternatePart= 
 Variation210=Designator=J?|UniqueId=\LUXOUFLX|Kind=1|AlternatePart= 
 Variation211=Designator=R?|UniqueId=\EDGCFNHJ|Kind=1|AlternatePart= 
+Variation212=Designator=R85|UniqueId=\HSZLTRJA|Kind=0|AlternatePart= 
+Variation213=Designator=R?|UniqueId=\XRQJSKTW|Kind=1|AlternatePart= 
+Variation214=Designator=R?|UniqueId=\NMABTKIP|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [Parameter1]
