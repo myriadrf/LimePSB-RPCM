@@ -564,6 +564,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XNCKCINT
 
+[Document32]
+DocumentPath=Schematics\16_Temp.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=HNMGOOEX
+
 [ProjectVariant1]
 UniqueID=C4CDED0A-96C9-4016-916F-3F9F121FB863
 Description=Default
