@@ -1,0 +1,15 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 14:49:02 On 2025-02-28
+
+Output: Bill of Materials
+Type  : BOM
+From  : Variant [[No Variations]] of Project [LimePSB-RPCM_1v4.PrjPcb]
+   Generated File[LimePSB-RPCM_1v4_BOMr0.xls]
+   Generated File[LimePSB-RPCM_1v4_BOMr0.xls]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 14:49:13 On 2025-02-28
