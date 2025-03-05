@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=Project Outputs for LimePSB-RPCM_1v4
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=2ECE73BD-F6F1-4025-997E-9D7B03CDF58F
 IncludeDesignInRelease=0
@@ -564,23 +564,6 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XNCKCINT
 
-[Document32]
-DocumentPath=Schematics\16_RF_PD.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=NTJUCUYL
-
 [ProjectVariant1]
 UniqueID=C4CDED0A-96C9-4016-916F-3F9F121FB863
 Description=Default
@@ -888,7 +871,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=0
 
 [Generic_EDE]
-OutputDir=Project Outputs for LimePSB-RPCM_1v4
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
