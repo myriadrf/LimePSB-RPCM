@@ -463,13 +463,13 @@ GenerateClassCluster=0
 DocumentUniqueId=TJWVOLTT
 
 [Document26]
-DocumentPath=Schematics\14_PoE_USB_PD.SchDoc
+DocumentPath=Schematics\14_RFPD_PoE_USB_PD.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=13
+AnnotateOrder=-1
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
