@@ -469,7 +469,7 @@ AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=15
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -569,7 +569,7 @@ UniqueID=C4CDED0A-96C9-4016-916F-3F9F121FB863
 Description=Default
 AllowFabrication=0
 ParameterCount=0
-VariationCount=247
+VariationCount=252
 Variation1=Designator=J5|UniqueId=\MTCYZGQY|Kind=1|AlternatePart= 
 Variation2=Designator=J6|UniqueId=\BVIDYGIC|Kind=1|AlternatePart= 
 Variation3=Designator=R9|UniqueId=\JRMJUZOY|Kind=1|AlternatePart= 
@@ -817,6 +817,11 @@ Variation244=Designator=R271|UniqueId=\LBSDEBXN|Kind=1|AlternatePart=
 Variation245=Designator=R340|UniqueId=\TESXAHPM|Kind=1|AlternatePart= 
 Variation246=Designator=R342|UniqueId=\MHKIEPSC|Kind=1|AlternatePart= 
 Variation247=Designator=R343|UniqueId=\OAIXXNMJ|Kind=1|AlternatePart= 
+Variation248=Designator=R344|UniqueId=\GCFHNBLZ|Kind=1|AlternatePart= 
+Variation249=Designator=C217|UniqueId=\OQYYNZBQ|Kind=0|AlternatePart= 
+Variation250=Designator=R348|UniqueId=\DRFOQLKS|Kind=1|AlternatePart= 
+Variation251=Designator=R345|UniqueId=\IOFMZOPL|Kind=1|AlternatePart= 
+Variation252=Designator=R349|UniqueId=\IUUDDRGE|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [Parameter1]
