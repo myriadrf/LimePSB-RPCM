@@ -4,13 +4,19 @@ d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v4\Project Outputs for LimePSB-RPCM_1v4\P
 ========================================================================================================================
 File Design Information:
 
-Date:       13-03-25
-Time:       16:32
-Revision:   d457aba73e50152f3160cebc74ed3b705fed24c9
+Date:       02-06-25
+Time:       12:26
+Revision:   c97cd7b2ccf211ab3020a622e79f5bb4b0e01452
 Variant:    Default
 Units used: mm
 
 "Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"MECH4","SMD spacer (M2, 1.5mm)","TopLayer","9774015243R_SMT_M2_STANDOFF_SPACER","98.7250","73.0500","90",""
+"MECH12","SMD spacer (M2, 1.5mm)","TopLayer","9774015243R_SMT_M2_STANDOFF_SPACER","56.1250","24.4750","90",""
+"MECH10","SMD spacer (M2, 1.5mm)","TopLayer","9774015243R_SMT_M2_STANDOFF_SPACER","89.1250","24.4750","90",""
+"MECH8","SMD spacer (M2, 1.5mm)","TopLayer","9774015243R_SMT_M2_STANDOFF_SPACER","89.1250","72.4750","90",""
+"MECH6","SMD spacer (M2, 1.5mm)","TopLayer","9774015243R_SMT_M2_STANDOFF_SPACER","56.1250","72.4750","90",""
+"MECH2","SMD spacer (M2, 1.5mm)","TopLayer","9774015243R_SMT_M2_STANDOFF_SPACER","122.9250","73.0500","90",""
 "R41","1k, 1%","BottomLayer","RES0402","132.8058","95.2183","90",""
 "IC57","F2972NEGK","TopLayer","F2972NEGK_SPDT_RF_switch_12-TQFN","142.1400","94.2433","90",""
 "J46","SMA panel mount","TopLayer","SMA_connector_side","116.0500","105.2750","270","CONN SMA JACK STR 50OHM EDGE MNT"
@@ -741,7 +747,7 @@ Units used: mm
 "LED2","LED_RG_SMD","TopLayer","LED-2x0603","81.3101","2.5525","90",""
 "LED1","LED_RG_SMD","TopLayer","LED-2x0603","73.8101","2.5525","90",""
 "J4","nano SIM (push-push)","TopLayer","NANO_SIM_SIM8066-6-1-14-01-A","162.1450","19.4500","90",""
-"J3","1775862-2","TopLayer","MINIPCIE_CONNECTOR_XTRX","110.8250","46.9750","360","CONN PCI EXP MINI FEMALE 52POS"
+"J3","1775862-2","TopLayer","MINIPCIE_CONNECTOR_XTRX_V2","110.8250","25.0000","360","CONN PCI EXP MINI FEMALE 52POS"
 "J48","U.FL/MMCX","TopLayer","MMCX_UFL_conn_u","107.7400","79.5250","360","CONN UMC RCPT STR 50 OHM SMD"
 "J49","U.FL/MMCX","TopLayer","MMCX_UFL_conn_u","145.7400","79.5250","0","CONN UMC RCPT STR 50 OHM SMD"
 "J37","U.FL/MMCX","TopLayer","MMCX_UFL_conn_u","152.4000","35.4250","90","CONN UMC RCPT STR 50 OHM SMD"

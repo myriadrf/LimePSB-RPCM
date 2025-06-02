@@ -3,7 +3,7 @@ Changes:
 LimePSB-RPCM_1v4(_DB)_DFMr1:
  - schematic page 5 - mechanical spacers changed to parts with footprints
  - M.2 connector (J3) footprint changed to MiniPCIe_connector_XTRX_v2, which doesn't include mounting holes
- 
+ - DFM files refreshed: Top paste gerber layer, Assembly drawings PDF, Pick and Place files, schematic PDF
 
 LimePSB-RPCM_1v4(_DB)_DFMr0:
  - Initial version as an update for LimePSB-RPCM_1v3
