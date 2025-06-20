@@ -15,7 +15,7 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=Job Group
+Name=01_ExportBOM.OutJob
 Description=
 TargetOutputMedium=Folder Structure
 VariantName=Default
@@ -47,16 +47,16 @@ OutputDefault1=0
 PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 Configuration1_Name1=ColumnNameFormat
 Configuration1_Item1=CaptionAsName
-Configuration1_Name2=Filter
-Configuration1_Item2=545046300E5446696C74657257726170706572000D46696C7465722E416374697665090F46696C7465722E43726974657269610A04000000000000000000
-Configuration1_Name3=General
-Configuration1_Item3=OpenExported=False|AddToProject=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePCBData=False|IncludeVaultData=False|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=OutputJobs\BOM_Lime.xlt|BatchMode=5|FormWidth=950|FormHeight=661|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=<none>
-Configuration1_Name4=GroupOrder
-Configuration1_Item4=Comment=True|Footprint=True
-Configuration1_Name5=SortOrder
-Configuration1_Item5=Designator=Up|Comment=Up|Footprint=Up
-Configuration1_Name6=VisibleOrder
-Configuration1_Item6=Assembly Info=100|Comment=100|Description=100|Designator=100|Footprint=100|Quantity=100|Manufacturer Part Number=100|PartType=100|Manufacturer Part Number 1=100|Supplier 1=100|Supplier Part Number 1=100|Manufacturer=100|Part Description=100
+Configuration1_Name2=General
+Configuration1_Item2=OpenExported=False|AddToProject=False|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=False|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=OutputJobs\BOM_Lime.xlt|TemplateVaultGuid=|TemplateRevisionGuid=|BatchMode=5|FormWidth=950|FormHeight=661|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=<none>|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=0|UseDirectApi=False|BomSetName=
+Configuration1_Name3=GroupOrder
+Configuration1_Item3=Comment=True|Footprint=True
+Configuration1_Name4=SortOrder
+Configuration1_Item4=Designator=Up|Comment=Up|Footprint=Up
+Configuration1_Name5=VisibleOrder
+Configuration1_Item5=Comment=100|Description=100|Designator=100|Footprint=100|Quantity=100|Manufacturer Part Number=100|PartType=100|Manufacturer Part Number 1=100|Supplier 1=100|Supplier Part Number 1=100|Manufacturer=100|Part Description=100|Additional Info=100
+Configuration1_Name6=VisibleOrder_Flat
+Configuration1_Item6=Comment=100|Description=100|Designator=100|Footprint=100|Quantity=100|Manufacturer Part Number=100|PartType=100|Manufacturer Part Number 1=100|Supplier 1=100|Supplier Part Number 1=100|Manufacturer=100|Part Description=100|Additional Info=100
 
 [PublishSettings]
 OutputFilePath2=

@@ -4,9 +4,9 @@ d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v4\Project Outputs for LimePSB-RPCM_1v4\P
 ========================================================================================================================
 File Design Information:
 
-Date:       02-06-25
-Time:       12:26
-Revision:   c97cd7b2ccf211ab3020a622e79f5bb4b0e01452
+Date:       20-06-25
+Time:       12:57
+Revision:   c3c3daceb34e2eb0064f6173af109606c330b875
 Variant:    Default
 Units used: mm
 
@@ -267,10 +267,8 @@ R149       "2k2, 1%"                   TopLayer    RES0402                      
 C86        "100nF, 16V"                TopLayer    CAP0402                                74.7750      16.5250      270      ""                                                                                                                                          
 R130       0R                          BottomLayer RES0402                                62.4750      23.1500      360      ""                                                                                                                                          
 R127       0R                          BottomLayer RES0402                                62.4750      24.2500      360      ""                                                                                                                                          
-R154       0R                          BottomLayer RES0402                                77.8500      26.6250      360      ""                                                                                                                                          
 R134       "10k, 1%"                   BottomLayer RES0402                                76.3750      23.0750      360      ""                                                                                                                                          
 R135       "1M, 1%"                    BottomLayer RES0402                                66.4250      20.1500      270      ""                                                                                                                                          
-R153       0R                          BottomLayer RES0402                                76.3000      28.3250      90       ""                                                                                                                                          
 C77        "100nF, 16V"                BottomLayer CAP0402                                70.7500      33.5500      90       ""                                                                                                                                          
 C76        "1uF, 10V"                  BottomLayer CAP0402                                71.7485      33.5475      270      "CAP CER 1UF 10V X5R 0402"                                                                                                                  
 IC20       USB2517                     BottomLayer USB2517-JZX-TR_USB_HUB_QFN64           69.8750      27.2000      360      ""                                                                                                                                          
