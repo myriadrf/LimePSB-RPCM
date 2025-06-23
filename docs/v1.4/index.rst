@@ -1142,7 +1142,7 @@ Description of power control header J5 (not fitted) for Raspberry Pi CM4/5 pinou
 
 Raspberry Pi Compute Module 4/5 on board WiFi and Bluetooth disable signals may be controlled from header J6 (not fitted) as shown in Table 5.
 
-.. table:: Table 5 Raspberry Pi CM4/5 J6 WiFi and Bluetooth control header pinout
+.. table:: Table 5. Raspberry Pi CM4/5 J6 WiFi and Bluetooth control header pinout
 
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
   | **Pin** | **Schematic signal**      | **Description [1], [2]**                                                                                                                                                                                                                                                                                                            |
@@ -1177,7 +1177,7 @@ DIP Switch configuration
 
 Some configuration can be done by switching SW1 DIP switch bits. Detailed switch bit descriptions is given in Table 6.
 
-.. table:: Table 6 DIP switch configuration bits
+.. table:: Table 6. DIP switch configuration bits
 
   +---------+---------------------------+-----------------------------------------------------------------------------------------------------+
   | **Bit** | **Schematic signal name** | **Description**                                                                                     |
@@ -1212,7 +1212,7 @@ FPGA configuration
 
 LimePSB RPCM board houses Lattice Semiconductor ICE40 Ultra family FPGA ICE5LP4K. It can be copnfigured by RPI CM4/5 (RPI_SPI0) or by external source (JTAG). By default FPGA is set to SPI slave mode and PRi module is in master mode to configure it during boot up. Also FPGA can be set to SPI master mode (FPGA_CFG) while CM4/5 (RPI_SPI0) is disconnected. In this case FPGA configuration information is stored in flash IC19 (NF). Hardware configuration for both modes are shown table 7.
 
-.. table:: Table 7 FPGA configuration mode selection 
+.. table:: Table 7. FPGA configuration mode selection 
 
   +------------------+---------------+----------------+
   | **Component id** | **Slave SPI** | **Master SPI** |
@@ -1240,13 +1240,12 @@ LimePSB RPCM board houses Lattice Semiconductor ICE40 Ultra family FPGA ICE5LP4K
   | C63              | remove        | populate       |
   +------------------+---------------+----------------+
 
-
 Mini PCIe x1 Socket
 -------------------
 
 LimePSB RPCM board features mini PCIe x1 specification compatible socket. LimePSB RPCM board mPCIe socket is also compatible with some non-standard expansion boards like LimeSDR-XTRX, LoRaWAN and LoRa Core. More detailed information is listed in Table 8.
 
-.. table:: Table 8 LimePSB RPCM board Mini PCIe x1 connector pinout
+.. table:: Table 8. LimePSB RPCM board Mini PCIe x1 connector pinout
 
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | **Pin** | **Mini PCIe x1 specification** | **LimePSB-RPCM**          | **XTRX Reference [4]** | **LoRaWAN reference [5]** | **SX1302/03 Corecell schematic** |
@@ -1370,7 +1369,7 @@ LimePSB RPCM RF path features power amplifiers, low noise amplifiers, SPDT switc
 
 A single control signal (RF_SW_TDD) is used to control all RF switches simultaneously for both A and B channels to change between TDD and FDD modes as shown in Table 9.
 
-.. table:: Table 9 RF path truth table
+.. table:: Table 9. RF path truth table
 
   +--------------------------------+----------------+----------------+
   | **Control signal (RF_SW_TDD)** | **TRXA/B       | **RXA/B        |
@@ -1387,7 +1386,7 @@ RF path contains two types of connectors: board edge SMA connectors (J42, J43, J
 
 Signal frequency range of TX and RX paths are listed in Table 10.
 
-.. table:: Table 10 RF path signal frequency range
+.. table:: Table 10. RF path signal frequency range
 
   +---------------+---------------------+
   | **Direction** | **Frequency range** |
@@ -1399,7 +1398,7 @@ Signal frequency range of TX and RX paths are listed in Table 10.
 
 More detailed RF path component parameters are given in Table 11.
 
-.. table:: Table 11 RF path components parameters
+.. table:: Table 11. RF path components parameters
 
   +---------------+--------------+--------------------------------------+----------------------+------------------+
   | **Component** | **Function** | **Gain, dB**                         | **Output P1dB, dBm** | **NF, dB**       |
@@ -1442,7 +1441,7 @@ Main LimePSB RPCM board USB subsystem components:
 * USB type-A dual socket (J33) and header (J31) have over current protection. Current limit is set to 600 mA. Both sockets share same protection circuitry so if one of them tries to draw more current both sockets will be disabled. Header has it is own separate over current protection.
 *	USB2.0 hub USB2517 (IC20) USB 2.0 hub expands Raspberry Pi CM4/5 USB port to dual USB socket (J33), header (J31) and mPCIe (J3). For more information check Table 12.
 
-.. table:: Table 12 USB2.0 (IC20) Hub signals
+.. table:: Table 12. USB2.0 (IC20) Hub signals
 
   +------------+----------------------+------------------+---------------------------+-------------------------------------------+
   | **Pin**    | **Pin name**         | **Function [7]** | **Schematic signal name** | **Comment**                               |
@@ -1488,7 +1487,7 @@ Ethernet connector J9 has two LEDs: yellow and green. LEDs indicate wired networ
 
 Default LEDs function and related information is listed in Table 13. 
 
-.. table:: Table 13 Default LEDs functions
+.. table:: Table 13. Default LEDs functions
 
   +-------------------------+------------------+-------------------------+------------------------------------------------------------------------------------------+
   | **Board Reference**     | **Schematic      | **I/O expander**        | **Description**                                                                          |                                          
@@ -1632,7 +1631,7 @@ Front Display Connector
 
 LimePSB RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 0022112052 [8]) dedicated for front screen connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided in table 17.
 
-.. table:: Table 17 Front screen connector (J8) pinout
+.. table:: Table 17. Front screen connector (J8) pinout
 
   +------------+---------------------------+----------------------------+
   | **J8 pin** | **Schematic signal name** | **Description**            |
@@ -1653,7 +1652,7 @@ MIPI DSI Display and CSI Camera Connectors
 
 LimePSB-RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI camera. MIPI DSI interface is used for connecting serial display. Detailed display 1 connector J15 pinout is as shown in table 18.
 
-.. table:: Table 18 MIPI DSI display 1 connector (J15) pinout
+.. table:: Table 18. MIPI DSI display 1 connector (J15) pinout
 
   +---------+---------------------------+--------------------------------+
   | **Pin** | **Schematic signal name** | **Description [1], [2]**       |
@@ -1691,7 +1690,7 @@ LimePSB-RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI cam
 
 MIPI CSI interface is used for serial camera. Detail camera 1 connector J16 pinout is as shown in table 19.
 
-.. table:: Table 19 MIPI CSI camera 1 connector (J16) pinout
+.. table:: Table 19. MIPI CSI camera 1 connector (J16) pinout
 
   +---------+---------------------------+----------------------------------------+
   | **Pin** | **Schematic signal name** | **Description [1], [2]**               |
@@ -1741,7 +1740,7 @@ GPIO Connector
 
 Some Raspberry Pi Compute Module 4/5 and FPGA GPIOs are connected to 20 pin 0.1” J10 header. Several pins of this connector are dedicated for power (1 pin for 3.3 V and 2 pins for 5V). GPIO header pins (J10) and additional information is given in table 20.
 
-.. table:: Table 20 Raspberry Pi CM4/5 GPIO header (J10) pins
+.. table:: Table 20. Raspberry Pi CM4/5 GPIO header (J10) pins
 
   +---------------+-----------------------+-----------+--------------+---------------------------------------------+
   | Connector pin | Schematic signal name | CM4/5 pin | I/O standard | Comment                                     |
@@ -1808,7 +1807,7 @@ Board clock distribution block diagram is as shown in figure 9.
 LimePSB-RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. Clock and PPS signals can be sourced from onboard XOs and GNSS transceiver or another external source via J36 (EXT_SYNC_IN) connector. Also J38 (EXT_SYNC_OUT) connector can be used as clock signal output thus synchronizing multiple systems.
 Clock path may be configured using analog muxes that are controlled by CM4/5 module as described in table 21.
 
-.. table:: Table 21 LimePSB-RPCM clock signals configuration
+.. table:: Table 21. LimePSB-RPCM clock signals configuration
 
   +--------------+---------------+---------------+-------------+--------------------------------------------------------------------------------------+
   | Schematic ID | Input signal  | Output signal | CM4/5 pin   | Description                                                                          |
@@ -1855,7 +1854,7 @@ Clock path may be configured using analog muxes that are controlled by CM4/5 mod
 LimePSB-RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffers (LMK00101). By default voltage controlled oven compensated crystal oscillators (VCOCXO) XO1 and XO6 are populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 and XO7 – XO10 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC36 default or 8-bit IC38) or phase detector (IC37).
 Clock network components are listed in table 22.
 
-.. table:: Table 22 LimePSB-RPCM clock distribution network components
+.. table:: Table 22. LimePSB-RPCM clock distribution network components
 
   +------------+----------------+----------------------------+------------+-------------+
   | Designator | Function       | Part number                | Parameters | Description |
