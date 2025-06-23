@@ -73,7 +73,7 @@ The LimePSB RPCM is carrier board for Raspberry Pi Compute Module 4 or 5 (CM4 or
   * Reference clock/PPS input and output SMA connectors (EXT_SYNC_IN and EXT_SYNC_OUT)
   * Possibility to synchronize multiple boards using coaxial SMA connectors  (EXT_SYNC_IN and EXT_SYNC_OUT)
 
-* Board power sources:
+ Board power sources:
 
   * Barrel (9-14V, 2-3A)
   * USB Power Delivery (12V 1.5A or 2.5A)
@@ -254,8 +254,8 @@ LimePSB RPCM Board Architecture
 
 This chapter is dedicated for detailed description of LimePSB RPCM board components and interconnections.
 
-Raspberry Pi CM4/5 Connector
-----------------------------
+Raspberry CM4/5 Connector
+-------------------------
 
 LimePSB RPCM board is designed to use Raspberry Pi CM4/5 as a host computer. Raspberry Pi CM4/5L version without eMMC Flash memory is also supported. Board to board connectors (J1 and J2) are used to connect CM4/5 to the LimePSB RPCM board. Connector pinout, CM4 and CM5 signals and schematic signal names are listed and described in Table 2.
 
@@ -1075,9 +1075,6 @@ LimePSB RPCM board is designed to use Raspberry Pi CM4/5 as a host computer. Ras
     | 200      | HDMI0_SCL           | HDMI0_SCL             | Bidirectional HDMI0 SCL                |
     +----------+---------------------+-----------------------+----------------------------------------+
 
-Raspberry Pi CM4/5 Configuration
---------------------------------
-
 LimePSB RPCM board has several headers and a DIP switch dedicated for Raspberry Pi CM4/5 configuration, debug, analog inputs or other purposes. SYS Header (J12) pins, schematic signal names and description are given in Table 3.
 
 .. table:: Table 3. SYS header (J12) pinout
@@ -1119,7 +1116,7 @@ LimePSB RPCM board has several headers and a DIP switch dedicated for Raspberry 
 
 Description of power control header J5 (not fitted) for Raspberry Pi CM4/5 pinout is given in Table 4.
 
-.. table:: Table 4 Raspberry Pi CM4/5 power control (J5) header
+.. table:: Table 4. Raspberry Pi CM4/5 power control (J5) header
 
   +---------+---------------------------+--------------------------------------------------------------------------+
   | **Pin** | **Schematic signal name** | **Description [1], [2]**                                                 |
@@ -1133,7 +1130,7 @@ Description of power control header J5 (not fitted) for Raspberry Pi CM4/5 pinou
 
 Raspberry Pi Compute Module 4/5 on board WiFi and Bluetooth disable signals may be controlled from header J6 (not fitted) as shown in Table 5.
 
-.. table:: Table 5 Raspberry Pi CM4/5 J6 WiFi and Bluetooth control header pinout
+.. table:: Table 5. Raspberry Pi CM4/5 J6 WiFi and Bluetooth control header pinout
 
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
   | **Pin** | **Schematic signal**      | **Description [1], [2]**                                                                                                                                                                                                                                                                                                            |
@@ -1168,7 +1165,7 @@ DIP Switch configuration
 
 Some configuration can be done by switching SW1 DIP switch bits. Detailed switch bit descriptions is given in Table 6.
 
-.. table:: Table 6 DIP switch configuration bits
+.. table:: Table 6. DIP switch configuration bits
 
   +---------+---------------------------+-----------------------------------------------------------------------------------------------------+
   | **Bit** | **Schematic signal name** | **Description**                                                                                     |
@@ -1198,21 +1195,48 @@ Some configuration can be done by switching SW1 DIP switch bits. Detailed switch
   |         |                           | ON: connected to CM5 USB3.0 lines (for CM5).                                                        |
   +---------+---------------------------+-----------------------------------------------------------------------------------------------------+
 
+FPGA configuration
+------------------
+
+LimePSB RPCM board houses Lattice Semiconductor ICE40 Ultra family FPGA ICE5LP4K. It can be copnfigured by RPI CM4/5 (RPI_SPI0) or by external source (JTAG). By default FPGA is set to SPI slave mode and PRi module is in master mode to configure it during boot up. Also FPGA can be set to SPI master mode (FPGA_CFG) while CM4/5 (RPI_SPI0) is disconnected. In this case FPGA configuration information is stored in flash IC19 (NF). Hardware configuration for both modes are shown table 7.
+
+.. table:: Table 7. FPGA configuration mode selection 
+
+  +------------------+---------------+----------------+
+  | **Component id** | **Slave SPI** | **Master SPI** |
+  +------------------+---------------+----------------+
+  | R103             | populate      | populate       |
+  +------------------+---------------+----------------+
+  | R104             | remove        | populate       |
+  +------------------+---------------+----------------+
+  | R105             | populate      | remove         |
+  +------------------+---------------+----------------+
+  | R106             | remove        | populate       |
+  +------------------+---------------+----------------+
+  | R107             | populate      | remove         |
+  +------------------+---------------+----------------+
+  | R108             | populate      | populate       |
+  +------------------+---------------+----------------+
+  | R109             | populate      | remove         |
+  +------------------+---------------+----------------+
+  | R111             | remove        | populate       |
+  +------------------+---------------+----------------+
+
 Mini PCIe x1 Socket
 -------------------
 
-LimePSB RPCM board features mini PCIe x1 specification compatible socket. LimePSB RPCM board mPCIe socket is also compatible with some non-standard expansion boards like LimeSDR-XTRX, LoRaWAN and LoRa Core. More detailed information is listed in Table 7.
+LimePSB RPCM board features mini PCIe x1 specification compatible socket. LimePSB RPCM board mPCIe socket is also compatible with some non-standard expansion boards like LimeSDR-XTRX, LoRaWAN and LoRa Core. More detailed information is listed in Table 8.
 
-.. table:: Table 7 LimePSB RPCM board Mini PCIe x1 connector pinout
+.. table:: Table 8. LimePSB RPCM board Mini PCIe x1 connector pinout
 
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | **Pin** | **Mini PCIe x1 specification** | **LimePSB-RPCM**          | **XTRX Reference [4]** | **LoRaWAN reference [5]** | **SX1302/03 Corecell schematic** |
   |         |                                |                           |                        |                           |                                  |
   |         | **reference [3]**              | **schematic signal name** |                        |                           | **signal name [6]**              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 1       | Wake#                          | NC                        | Wake#                  | NC                        | NC                               |
+  | 1       | Wake#                          | RPI_PCIE_DET_nWAKE (NC)   | NC                     | NC                        | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 2       | 3.3 Vaux                       | VCC3P3                    | +3.3V                  | VCC                       | VCC5V_IN                         |
+  | 2       | 3.3 Vaux                       | VCC3P3                    | VCC3P3_MPCIE           | VCC                       | VCC5V_IN                         |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 3       | COEX1                          | PCIE_COEX1                | 1PPSI_GPIO1(1N)        | NC                        | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
@@ -1220,77 +1244,77 @@ LimePSB RPCM board features mini PCIe x1 specification compatible socket. LimePS
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 5       | COEX2                          | PCIE_COEX2                | 1PPSO_GPIO2(1P)        | PPS_IN                    | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 6       | GND                            | VCC1P5                    | +1.5V                  | NC                        | GPIO(6) (NC)                     |
+  | 6       | GND                            | VCC1P5                    | NC                     | NC                        | GPIO(6) (NC)                     |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 7       | CLKREQ#                        | RPI_PCIE_CLK_nREQ         | CLKREQ#                | NC                        | NC                               |
+  | 7       | CLKREQ#                        | RPI_PCIE_CLK_nREQ         | CLK_REQUEST#           | NC                        | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 8       | UIM PWR                        | UIM_PWR                   | UIM_PWR                | NC                        | NC                               |
+  | 8       | UIM PWR                        | UIM_PWR                   | UIM_VCC                | NC                        | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 9       | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 10      | UIM_DATA                       | UIM_DATA                  | UIM_DATA               | SWDIO                     | NC                               |
+  | 10      | UIM_DATA                       | UIM_DATA                  | UIM_DIO                | SWDIO                     | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 11      | REFCLK-                        | RPI_PCIE_CLK_N            | REF_CLK-               | NC                        | NC                               |
+  | 11      | REFCLK-                        | RPI_PCIE_CLK_N            | PCIE_REF_CLK_N         | NC                        | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 12      | UIM_CLK                        | UIM_CLK                   | UIM_CLK                | SWCLK                     | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 13      | REFCLK+                        | RPI_PCIE_CLK_P            | REF_CLK+               | NC                        | NC                               |
+  | 13      | REFCLK+                        | RPI_PCIE_CLK_P            | PCIE_REF_CLK_P         | NC                        | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 14      | UIM_RESET                      | UIM_RESET                 | UIM_RESET              | NC                        | NC                               |
+  | 14      | UIM_RESET                      | UIM_RESET                 | UIM_RST                | NC                        | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 15      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 16      | UIM_VPP                        | UIM_VPP                   | UIM_VPP                | BOOT0                     | POWER_EN(NC)                     |
+  | 16      | UIM_VPP                        | UIM_VPP                   | NC                     | BOOT0                     | POWER_EN(NC)                     |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 17      | Reserved                       | PCIE_UIM8                 | TDD_GPIO3_N            | NC                        | HOST_SCK (NC)                    |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 18      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 19      | Reserved                       | PCIE_UIMC4                | MHZ_IN                 | NC                        | HOST_MISO(NC)                    |
+  | 19      | Reserved                       | PCIE_UIMC4 (NC)           | PCIE_CLK_IN            | NC                        | HOST_MISO(NC)                    |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 20      | W_DISABLE#                     | NC                        | TDD_GPIO3_P            | nDISABLE                  | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 21      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 22      | PERST#                         | RPI_PCIE_nRST             | PERST#                 | nRESET                    | SX1302_RESET_HOST (NC)           |
+  | 22      | PERST#                         | RPI_PCIE_nRST             | PCIE_PERST#            | nRESET                    | SX1302_RESET_HOST (NC)           |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 23      | PERn0                          | RPI_PCIE_RX_N             | PERn0                  | NC                        | HOST_MOSI(NC)                    |
+  | 23      | PERn0                          | RPI_PCIE_RX_N             | PCIE_TX0_N             | NC                        | HOST_MOSI(NC)                    |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 24      | 3.3Vaux                        | VCC3P3                    | +3.3Vaux               | VCC                       | SX1261_BUSY (NC)                 |
+  | 24      | 3.3Vaux                        | VCC3P3                    | NC                     | VCC                       | SX1261_BUSY (NC)                 |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 25      | PERp0                          | RPI_PCIE_RX_P             | PERp0                  | NC                        | HOST_CSN (NC)                    |
+  | 25      | PERp0                          | RPI_PCIE_RX_P             | PCIE_TX0_P             | NC                        | HOST_CSN (NC)                    |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 26      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 27      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 28      | 1.5Volt                        | VCC1P5                    | +1.5V                  | NC                        | SX1302_GPIO_8 (NC)               |
+  | 28      | 1.5Volt                        | VCC1P5                    | NC                     | NC                        | SX1302_GPIO_8 (NC)               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 29      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 30      | SMB CLK                        | PCIE_SMB_CLK              | MHZ_OUT                | NC                        | I2C_SCL (NC)                     |
+  | 30      | SMB CLK                        | PCIE_SMB_CLK              | LMK_CLKOUT4/GPIO8      | NC                        | I2C_SCL (NC)                     |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 31      | PETn0                          | PCIE_PET0_N               | PETn0                  | NC                        | PPS                              |
+  | 31      | PETn0                          | PCIE_PET0_N               | PCIE_RX0_N             | NC                        | PPS                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 32      | SMB Data                       | PCIE_SMB_DATA             | GPIO8                  | NC                        | I2C_SDA (NC)                     |
+  | 32      | SMB Data                       | PCIE_SMB_DATA             | LMK_CLKOUT4/GPIO8      | NC                        | I2C_SDA (NC)                     |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 33      | PETp0                          | PCIE_PET0_P               | PETp0                  | NC                        | NC                               |
+  | 33      | PETp0                          | PCIE_PET0_P               | PCIE_RX0_P             | NC                        | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 34      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 35      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 36      | USB_D-                         | PCIE_USB_N                | USB_DN                 | USB_D- / Tx               | USB_DM                           |
+  | 36      | USB_D-                         | PCIE_USB_N                | USB_D_N                | USB_D- / Tx               | USB_DM                           |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 37      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 38      | USB_D+                         | PCIE_USB_P                | USB_DP                 | USB_D+ / Rx               | USB_DP                           |
+  | 38      | USB_D+                         | PCIE_USB_P                | USB_D_P                | USB_D+ / Rx               | USB_DP                           |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 39      | 3.3Vaux                        | VCC3P3                    | PERp1                  | VCC                       | VCC3V3_IN                        |
+  | 39      | 3.3Vaux                        | VCC3P3                    | PCIE_TX1_N (NC)        | VCC                       | VCC3V3_IN                        |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 40      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 41      | 3.3Vaux                        | VCC3P3                    | PERp1                  | VCC                       | VCC3V3_IN                        |
+  | 41      | 3.3Vaux                        | VCC3P3                    | PCIE_TX1_P (NC)        | VCC                       | VCC3V3_IN                        |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 42      | LED_WWAN#                      | PCIE_LED_WWAN             | LED_WWAN#_GPIO5        | nTX                       | NC                               |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
@@ -1302,17 +1326,17 @@ LimePSB RPCM board features mini PCIe x1 specification compatible socket. LimePS
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 46      | LED_WPAN#                      | PCIE_LED_WPAN             | LED_WPAN#_GPIO7        | NC                        | SX1261_DIO1 (NC)                 |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 47      | Reserved                       | NC                        | PETn1                  | NC                        | JTMS-SWDIO (NC)                  |
+  | 47      | Reserved                       | NC                        | PCIE_RX1_N (NC)        | NC                        | JTMS-SWDIO (NC)                  |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 48      | 1.5Volt                        | VCC1P5                    | +1.5V                  | NC                        | SX1261_NRESET(NC)                |
+  | 48      | 1.5Volt                        | VCC1P5                    | NC                     | NC                        | SX1261_NRESET(NC)                |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 49      | Reserved                       | NC                        | PETp1                  | NC                        | MCU_NRESET (NC)                  |
+  | 49      | Reserved                       | NC                        | PCIE_RX1_P (NC)        | NC                        | MCU_NRESET (NC)                  |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
   | 50      | GND                            | GND                       | GND                    | GND                       | GND                              |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 51      | Reserved                       | NC                        | GND                    | NC                        | MCU_BOOT0 (NC)                   |
+  | 51      | Reserved                       | NC                        | PCIE_W_DISABLE2# (NC)  | NC                        | MCU_BOOT0 (NC)                   |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
-  | 52      | 3.3Vaux                        | VCC3P3                    | +3.3V                  | VCC                       | VCC3V3_IN                        |
+  | 52      | 3.3Vaux                        | VCC3P3                    | VCC3P3_MPCIE           | VCC                       | VCC3V3_IN                        |
   +---------+--------------------------------+---------------------------+------------------------+---------------------------+----------------------------------+
 
 RF Front End
@@ -1325,9 +1349,9 @@ LimePSB RPCM RF path features power amplifiers, low noise amplifiers and SPDT sw
 
   Figure 6 LimePSB RPCM v1.3 RFFE diagram
 
-A single control signal (RF_SW_TDD) is used to control all RF switches simultaneously for both A and B channels to change between TDD and FDD modes as shown in Table 8.
+A single control signal (RF_SW_TDD) is used to control all RF switches simultaneously for both A and B channels to change between TDD and FDD modes as shown in Table 9.
 
-.. table:: Table 8 RF path truth table
+.. table:: Table 9. RF path truth table
 
   +--------------------------------+----------------+----------------+
   | **Control signal (RF_SW_TDD)** | **TRXA/B       | **RXA/B        |
@@ -1342,9 +1366,9 @@ By default RF switches may be controlled from FPGA pin 13 (via resistor R39). Op
 
 RF path contains two types of connectors: board edge SMA connectors (J47, J48, J51, J52) used for external connections (antennas or cables) and U.FL connectors (J45, J46, J49, J50) used for internal connections (for example to connect to XTRX mini PCIe expansion board). 
 
-Signal frequency range of TX and RX paths are listed in Table 9.
+Signal frequency range of TX and RX paths are listed in Table 10.
 
-.. table:: Table 9 RF path signal frequency range
+.. table:: Table 10. RF path signal frequency range
 
   +---------------+---------------------+
   | **Direction** | **Frequency range** |
@@ -1354,31 +1378,31 @@ Signal frequency range of TX and RX paths are listed in Table 9.
   | RX            | 100 MHz - 4 GHz     |
   +---------------+---------------------+
 
-More detailed RF path component parameters are given in Table 10.
+More detailed RF path component parameters are given in Table 11.
 
-.. table:: Table 10 RF path components parameters
+.. table:: Table 11. RF path components parameters
 
-  +---------------+--------------+--------------------------------------+----------------------+------------------+
-  | **Component** | **Function** | **Gain, dB**                         | **Output P1dB, dBm** | **NF, dB**       |
-  +===============+==============+======================================+======================+==================+
-  | SBB-5089      | TX amplifier | 20.5dB (850 MHz)   19.0dB (1950 MHz) | 20.5dBm (850 MHz)    | 3.8dB (850 MHz)  |
-  |               |              +--------------------------------------+----------------------+------------------+
-  |               |              | 15.5dB   (6000 MHz)                  | 20.4dBm (1950 MHz)   | 4.1dB (1950 MHz) |
-  |               |              +--------------------------------------+----------------------+------------------+
-  |               |              |                                      | 14.7dBm (4000 MHz)   | 4.6dB (4000 MHz) |
-  +---------------+--------------+--------------------------------------+----------------------+------------------+
-  | SPF5043Z      | RX amplifier | 18.2dB (900 MHz)                     | 22.6dBm (900 MHz)    | 0.8dB (900 MHz)  |
-  |               |              +--------------------------------------+----------------------+------------------+
-  |               |              | 12.9dB   (1960 MHz)                  | 22.7dBm (1900 MHz)   | 0.8dB (1900 MHz) |
-  |               |              +--------------------------------------+----------------------+------------------+
-  |               |              | 7.0dB   (3800 MHz)                   | 22.8dBm (3800 MHz)   | 1.5dB (3800 MHz) |
-  +---------------+--------------+--------------------------------------+----------------------+------------------+
-  | SKY13286      | RF switch    | -0.7dB (1000 MHz)                    | 30.dBm (2000 MHz)    |                  |
-  |               |              +--------------------------------------+                      |                  |
-  |               |              | -0.8dB   (2000 MHz)                  |                      |                  |
-  |               |              +--------------------------------------+                      |                  |
-  |               |              | -1.6dB   (6000 MHz)                  |                      |                  |
-  +---------------+--------------+--------------------------------------+----------------------+------------------+
+  +--------------+--------------+--------------------+------------------------+------------------+
+  | **Componen** | **Function** |    **Gain, dB**    | **Output P1dB,   dBm** |    **NF, dB**    |
+  +--------------+--------------+--------------------+------------------------+------------------+
+  |              |              | 24.6dB (900   MHz) | 22.3dBm (900   MHz)    | 0.9dB (900 MHz)  |
+  |              |              +--------------------+------------------------+------------------+
+  | TQP3M9018    | TX amplifier | 22dB (1900 MHz)    | 22dBm (1950 MHz)       | 1.3dB (1950 MHz) |
+  |              |              +--------------------+------------------------+------------------+
+  |              |              | 18.3dB (4000 MHz)  | 14.7dBm (4000 MHz)     | 2.4dB (4000 MHz) |
+  +--------------+--------------+--------------------+------------------------+------------------+
+  |              |              | 18.2dB (900 MHz)   | 22.6dBm (900 MHz)      | 0.8dB (900 MHz)  |
+  |              |              +--------------------+------------------------+------------------+
+  | SPF5043Z     | RX amplifier | 12.9dB (1960 MHz)  | 22.7dBm (1900 MHz)     | 0.8dB (1900 MHz) |
+  |              |              +--------------------+------------------------+------------------+
+  |              |              | 7.0dB (3800 MHz)   | 22.8dBm (3800 MHz)     | 1.5dB (3800 MHz) |
+  +--------------+--------------+--------------------+------------------------+------------------+
+  |              |              | -0.7dB (1000 MHz)  |                        |                  |
+  |              |              +--------------------+                        |                  |
+  | SKY13286     | RF switch    |                    | 30.dBm (2000 MHz)      |                  |
+  |              |              +--------------------+                        |                  |
+  |              |              |                    |                        |                  |
+  +--------------+--------------+--------------------+------------------------+------------------+
 
 LimePSB RPCM RF front end uses same design as Front End Adapter, except PA part was changed. For more information about the design look into XTRX documentation [4].
 
@@ -1395,11 +1419,11 @@ LimePSB RPCM contains USB2.0 hub, over current protection, type-C, double type-A
 Main LimePSB RPCM board USB subsystem components:
 
 *	USB type-C socket (J26) is primarily used as LimePSB-RPCM one of power supply sources (for more information check section 2.15 Power Distribution). To enable RPi USB boot mount nRPIBOOT jumper on J12 pins 1-2 and mount a jumper on header J27 to switch Raspberry Pi USB from USB hub to USB C (more information check section 2.2 Raspberry Pi CM4/5 Configuration).
-*	USB type-A dual sockets (J30) may be used to connect USB peripherals to the Raspberry Pi CM4/5. Bottom socket is USB 3.0 if CM5 is used.
+*	USB type-A dual sockets (J30) may be used to connect USB peripherals to the Raspberry Pi CM4/5. Top socket is USB 3.0 if CM5 is used.
+* USB type-A dual socket (J30) and header (J28) have over current protection. Current limit is set to 600 mA. Both sockets share same protection circuitry so if one of them tries to draw more current both sockets will be disabled. Header has it is own separate over current protection.
 *	USB2.0 hub USB2517 (IC19) USB 2.0 hub expands Raspberry Pi CM4/5 USB port to dual USB socket (J30), header (J28) and mPCIe (J3). For more information check Table 12.
-*	Current limit power switches for USB dual socket and header.
 
-.. table:: Table 11 USB2.0 (IC20) Hub signals
+.. table:: Table 12. USB2.0 (IC20) Hub signals
 
   +------------+----------------------+------------------+---------------------------+---------------------------------------+
   | **Pin**    | **Pin name**         | **Function [7]** | **Schematic signal name** | **Connector ID**                      |
@@ -1429,8 +1453,6 @@ Main LimePSB RPCM board USB subsystem components:
   |            | USBDN7_DM            |                  |                           |                                       |
   +------------+----------------------+------------------+---------------------------+---------------------------------------+
 
-Dual USB 3.0 socket (J30) and header (J28) have over current protection. Current limit is set to 600 mA. Both sockets share same protection circuitry so if one of them tries to draw more current both sockets will be disabled. Header has it is own separate over current protection.
-
 User Interface Components
 -------------------------
 
@@ -1445,9 +1467,9 @@ Dual color LEDs (LED1-LED4) are connected to I/O expander (IC13). Their function
  
 Ethernet connector J9 has two LEDs: yellow and green. LEDs indicate wired network activity and speed. 
 
-Default function of LEDs and related information is listed in Table 12. 
+Default function of LEDs and related information is listed in Table 13. 
 
-.. table:: Table 12 Default LEDs functions
+.. table:: Table 13. Default LEDs functions
 
   +-------------------------+------------------+-------------------------+------------------------------------------------------------------------------------------+
   | **Board Reference**     | **Schematic      | **I/O expander**        | **Description**                                                                          |                                          
@@ -1486,9 +1508,9 @@ A user button (BTN1) and buzzer (BZ1) are mounted on the front side of the board
 SPI, I2C, UART Interfaces
 -------------------------
 
-LimePSB-RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB-RPCM low speed interfaces signal names, I/O standards are listed in table 13.
+LimePSB-RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB-RPCM low speed interfaces signal names, I/O standards are listed in table 14.
 
-.. table:: Table 13. CM4/5 low speed interfaces pins
+.. table:: Table 14. CM4/5 low speed interfaces pins
 
   +-----------+-----------------------+-------------+--------------+-------------------------------------------------------+
   | Interface | Schematic signal name | CM4/5 pin   | I/O standard | Comment                                               |
@@ -1524,9 +1546,9 @@ LimePSB-RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB
   |           | RPI_UART0_TX          | 55 (GPIO14) | 3.3V         | Data (CM4/5   output)                                 |
   +-----------+-----------------------+-------------+--------------+-------------------------------------------------------+
 
-FPGA low speed interfaces signal names, I/O standards are listed in table 14.
+FPGA low speed interfaces signal names, I/O standards are listed in table 15.
 
-.. table:: Table 14. FPGA low speed interfaces pins
+.. table:: Table 15. FPGA low speed interfaces pins
 
   +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
   | Interface | Schematic signal name | FPGA pin     | I/O standard | Comment                                          |
@@ -1554,36 +1576,36 @@ FPGA low speed interfaces signal names, I/O standards are listed in table 14.
   |           | GNSS_UART_TX          | 55 (GPIO14)  | 3.3V         | Data (FPGA   output)                             |
   +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
 
-RPI_I2C0 (FPGA_I2C0) interface devices, addresses and other info are shown in table 15.
+RPI_I2C0 (FPGA_I2C0) interface devices, addresses and other info are shown in table 16.
 
-.. table:: Table 15. RPI_I2C0 interface devices
+.. table:: Table 16. RPI_I2C0 interface devices
 
   +-----------------------+------------------------------+-------------------+--------------+------------------------+
   | RPI_I2C0 slave device | Slave device                 | I2C address       | I/O standard | Comment                |
   +=======================+==============================+===================+==============+========================+
-  | IC9                   | Temperature   sensor         | 1 0 0 1 0 0 0 RW  | 3.3V         | LM75                   |
+  | IC9                   | Temperature   sensor         | 1 0 0 1 0 0 0 R/W | 3.3V         | LM75                   |
   +-----------------------+------------------------------+-------------------+--------------+------------------------+
-  | IC10(default)/IC11    | EEPROM                       | 1 0 1 0 0 0 0 RW  | 3.3V         | CAT24C128WI-GT3/M24128 |
+  | IC10(default)/IC11    | EEPROM                       | 1 0 1 0 0 0 0 R/W | 3.3V         | CAT24C128WI-GT3/M24128 |
   +-----------------------+------------------------------+-------------------+--------------+------------------------+
-  | IC13/IC14             | Secure key   storage         | 1 1 0 0 0 0 0 RW  | 3.3V         | ATECC508A              |
+  | IC13/IC14             | Secure key   storage         | 1 1 0 0 0 0 0 R/W | 3.3V         | ATECC508A              |
   +-----------------------+------------------------------+-------------------+--------------+------------------------+
-  | IC16/IC18             | RTC                          | 1 0 1 0 0 0 1 RW  | 3.3V         | PCF85063AT             |
-  +-----------------------+------------------------------+-------------------+--------------+------------------------+
-  | IC22/IC23             | EEPROM for   USB2.0 hub (NF) | 1 0 1 0 0 0 0 RW  | 3.3V         | M24C02/   AT24C02      |
+  | IC16/IC18             | RTC                          | 1 0 1 0 0 0 1 R/W | 3.3V         | PCF85063AT             |
   +-----------------------+------------------------------+-------------------+--------------+------------------------+
   | IC12                  | FAN   controller             | 0 1 0 1 1 1 1 R/W | 3.3V         | EMC2301                |
   +-----------------------+------------------------------+-------------------+--------------+------------------------+
-  | IC51                  | USB PD   controller          | 0 0 0 1 0 0 0 RW  | 3.3V         | CYPD3177-24LQXQT       |
+  | IC51                  | USB PD   controller          | 0 0 0 1 0 0 0 R/W | 3.3V         | CYPD3177-24LQXQT       |
   +-----------------------+------------------------------+-------------------+--------------+------------------------+
-  | IC13                  | I/O expander                 | 0 1 0 0 0 0 0 RW  | 3.3V         | MCP23017-E/ML          |
+  | IC13                  | I/O expander                 | 0 1 0 0 0 0 0 R/W | 3.3V         | MCP23017-E/ML          |
+  +-----------------------+------------------------------+-------------------+--------------+------------------------+
+  | IC20                  | USB2.0 hub                   | 0 1 0 1 1 0 0 R/W | 3.3V         | USB2517 (disabled)     |
   +-----------------------+------------------------------+-------------------+--------------+------------------------+
 
 Front Display Connector
 -----------------------
 
-LimePSB RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 0022112052 [8]). It is dedicated for front display connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided inTable 16.
+LimePSB RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 0022112052 [8]). It is dedicated for front display connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided in Table 17.
 
-.. table:: Table 16 Front screen connector (J8) pinout
+.. table:: Table 17. Front screen connector (J8) pinout
 
   +------------+---------------------------+----------------------------+
   | **J8 pin** | **Schematic signal name** | **Description**            |
@@ -1602,9 +1624,9 @@ LimePSB RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 00
 MIPI DSI Display and CSI Camera Connectors
 ------------------------------------------
 
-LimePSB-RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI camera. MIPI DSI interface is used for connecting serial display. Detailed display 1 connector J15 pinout is as shown in table 17.
+LimePSB-RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI camera. MIPI DSI interface is used for connecting serial display. Detailed display 1 connector J15 pinout is as shown in table 18.
 
-.. table:: Table 17 MIPI DSI Display 1 connector (J15) pinout
+.. table:: Table 18. MIPI DSI Display 1 connector (J15) pinout
 
   +---------+---------------------------+--------------------------------+
   | **Pin** | **Schematic signal name** | **Description [1], [2]**       |
@@ -1640,9 +1662,9 @@ LimePSB-RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI cam
   | 15      | VCC3P3                    | 3.3V power rail                |
   +---------+---------------------------+--------------------------------+
 
-MIPI CSI interface is used for serial camera. Detail camera 1 connector J16 pinout is as shown in table 18.
+MIPI CSI interface is used for serial camera. Detail camera 1 connector J16 pinout is as shown in table 19.
 
-.. table:: Table 18 MIPI CSI Camera 1 connector (J16) pinout
+.. table:: Table 19. MIPI CSI Camera 1 connector (J16) pinout
 
   +---------+---------------------------+----------------------------------------+
   | **Pin** | **Schematic signal name** | **Description [1], [2]**               |
@@ -1690,9 +1712,9 @@ For Raspberry Pi CM4/5L module (Raspberry Pi CM4/5 without eMMC Flash memory) mi
 GPIO Connector
 --------------
 
-Some Raspberry Pi Compute Module 4/5 GPIOs are connected to 20 pin 0.1” J10 header. Several pins of this connector are dedicated for power (1 pin for 3.3 V and 2 pins for 5V). GPIO header pins (J10) and additional information is given in table 19.
+Some Raspberry Pi Compute Module 4/5 GPIOs are connected to 20 pin 0.1” J10 header. Several pins of this connector are dedicated for power (1 pin for 3.3 V and 2 pins for 5V). GPIO header pins (J10) and additional information is given in table 20.
 
-.. table:: Table 19 Raspberry Pi CM4/5 GPIO header (J10) pins
+.. table:: Table 20. Raspberry Pi CM4/5 GPIO header (J10) pins
 
   +---------------+-----------------------+-----------+--------------+---------------------------------------------+
   | Connector pin | Schematic signal name | CM4/5 pin | I/O standard | Comment                                     |
@@ -1757,9 +1779,9 @@ LimePSB-RPCM board clock network comprises of on-board voltage controlled crysta
   Figure 9. LimePSB RPCM v1.3 board clock distribution block diagram
 
 LimePSB-RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. Clock and PPS signals can be sourced from onboard XOs and GNSS transceiver or another boards via J34 (EXT_SYNC_IN) connector. Also J37 (EXT_SYNC_OUT) connector can be used as clock signal output thus synchronizing multiple systems.
-Clock path may be configured using jumpers and resistors as described in table 20.
+Clock path may be configured using jumpers and resistors as described in table 21.
 
-.. table:: Table 20 LimePSB-RPCM clock signals configuration
+.. table:: Table 21. LimePSB-RPCM clock signals configuration
 
   +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
   | Schematic ID | Input signal  | Output signal | Description                                                                           |
@@ -1805,9 +1827,9 @@ Clock path may be configured using jumpers and resistors as described in table 2
   
 LimePSB-RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffers (LMK00101). By default voltage controlled oven compensated crystal oscillators (VCOCXO) XO1 and XO6 are populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 and XO7 – XO10 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC33 default or 8-bit IC35) or phase detector (IC34).
 
-Clock network components are listed in table 21.
+Clock network components are listed in table 22.
 
-.. table:: Table 21 LimePSB-RPCM clock distribution network components
+.. table:: Table 22. LimePSB-RPCM clock distribution network components
 
   +------------+----------------+----------------------------+------------+-------------+
   | Designator | Function       | Part number                | Parameters | Description |
@@ -1860,8 +1882,8 @@ References
 
 1. Raspberry Pi, Compute Module 4 datasheet. URL: https://datasheets.raspberrypi.com/cm4/cm4-datasheet.pdf
 2. Raspberry Pi, Compute Module 5 datasheet. URL: https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf
-3. PCI Express Mini Card Electromechanical Specification Revision 1.2. URL: https://s3.amazonaws.com/fit-iot/download/facet-cards/documents/PCI_Express_miniCard_Electromechanical_specs_rev1.2.pdf
-4. Lime Microsystems, LimeSDR-XTRX. URL: https://github.com/myriadrf 
+3. PCI Express Mini Card Electromechanical Specification Revision 1.2. URL: https://pcisig.com/specifications/
+4. Lime Microsystems, LimeSDR-XTRX. URL: https://github.com/myriadrf/LimeSDR-XTRX 
 5. n-fuse, Concentrator Card LRWCCx-MPCIE for LoRaWAN technology. URL: https://www.n-fuse.co/devices/LoRaWAN-Concentrator-Card-mini-PCIe.html 
 6. Semtech, SX1303CTSXXXGW1, LoRa Corecell Gateway Reference Design for Fine Timestamp Based on SX1303 for LoRa Core. URL: https://www.semtech.com/products/wireless-rf/lora-core/sx1303ctsxxxgw1
 7. Texas Instruments, TUSB2036 2- or 3-Port Hub for the Universal Serial Bus With Optional Serial EEPROM Interface. URL: https://www.ti.com/lit/ds/symlink/tusb2036.pdf
