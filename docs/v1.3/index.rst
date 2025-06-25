@@ -1539,7 +1539,7 @@ LimePSB-RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB
   +-----------+-----------------------+-------------+--------------+-------------------------------------------------------+
   | I2C0      | RPI_I2C0_SCL          | 80          | 3.3V         | Serial Clock   (CM4/5 output)                         |
   |           +-----------------------+-------------+--------------+-------------------------------------------------------+
-  |           | RPI_I2C0_SDA          | 82          | 3.3V         | Data                                                  |
+  |           | RPI_I2C0_SDA          | 82          | 3.3V         | Data (CM4/5 input/output)                             |
   +-----------+-----------------------+-------------+--------------+-------------------------------------------------------+
   | UART0     | RPI_UART0_RX          | 51 (GPIO15) | 3.3V         | Data (CM4/5   input)                                  |
   |           +-----------------------+-------------+--------------+-------------------------------------------------------+
@@ -1569,7 +1569,7 @@ FPGA low speed interfaces signal names, I/O standards are listed in table 15.
   +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
   | I2C0      | FPGA_I2C0_SCL         | 47 (IOB_2A)  | 3.3V         | Serial Clock   (FPGA output)                     |
   |           +-----------------------+--------------+--------------+--------------------------------------------------+
-  |           | FPGA_I2C0_SDA         | 48 (IOB_4A)  | 3.3V         | Data                                             |
+  |           | FPGA_I2C0_SDA         | 48 (IOB_4A)  | 3.3V         | Data (FPGA input/output)                         |
   +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
   | UART      | GNSS_UART_RX          | 51 (GPIO15)  | 3.3V         | Data (FPGA   input)                              |
   |           +-----------------------+--------------+--------------+--------------------------------------------------+
@@ -1875,7 +1875,7 @@ LimePSB RPCM board may be supplied from USB Type-C port (USB Power delivery), Et
 * RJ45 socket is an alternative way to supply the LimePSB RPCM board. Make sure PoE+ (802.3at) class 4 compliant power source is used.
 * Barrel connector (9-14V 2A) also may be used to power LimePSB RPCM board.
 
-To keep RTC running when board power is disconnected lithium coin cell 3V CR1220 battery must be inserted into BATT1 battery holder.
+To keep on board RTC running and enable GNSS hardware backup mode when board power is disconnected lithium coin cell 3V CR1220 battery must be inserted into BATT1 battery holder.
 
 References
 ----------
