@@ -1422,7 +1422,7 @@ More detailed RF path component parameters are given in Table 11.
   |               |              | -0.55B   (6000 MHz)                  |                      |                  |
   +---------------+--------------+--------------------------------------+----------------------+------------------+
 
-Both channels TX PAs TQP3M9018 outputs are coupled by HHM22152A2 (IC53, IC55) to power detectors LTC5587 (IC72, IC73). Power detector is connected to RPi CM4/5 SPI (RPI_SPI0). To enable it drive GPPIO expanders EXP1 GPB3 pin high. Information about LTC5587 is available in datasheet. URL: https://www.analog.com/en/products/ltc5587.html
+Both channels TX PAs TQP3M9018 outputs are coupled by HHM22152A2 (IC53, IC55) to RF power detectors LTC5587 (IC72, IC73). Power detector is connected to RPi CM4/5 SPI (RPI_SPI0). To enable it drive GPPIO expanders EXP1 GPB3 pin high. Information about LTC5587 is available in datasheet. URL: https://www.analog.com/en/products/ltc5587.html
 
 USB Subsystem
 -------------
@@ -1516,9 +1516,9 @@ Default LEDs function and related information is listed in Table 13.
   +-------------------------+------------------+-------------------------+------------------------------------------------------------------------------------------+
   | LED6                    | VCC3P3           |                         | Board power. Connected to 3.3 V power rail.                                              |
   +-------------------------+------------------+-------------------------+------------------------------------------------------------------------------------------+
-  | LED7                    | VCC3P3           |                         | Indictes FPGA configuration status                                                       |
+  | LED7                    | FPGA_LED_R       |                         | User defined                                                                             |
   |                         +------------------+-------------------------+                                                                                          |
-  |                         | FPGA_CDONE       |                         |                                                                                          |
+  |                         | FPGA_CDONE       |                         | Indictes FPGA configuration status                                                       |
   +-------------------------+------------------+-------------------------+------------------------------------------------------------------------------------------+
   | Ethernet   connector J9 | ETH_LED_Y        |                         | Green is connected to Ethernet_nLED2 (Ethernet speed   indicator: 1Gbit or 100Mbit Link) |
   |                         +------------------+-------------------------+                                                                                          |
@@ -1547,7 +1547,9 @@ LimePSB-RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB
   |           +-----------------------+-------------+--------------+-------------------------------------------------------+
   |           | RPI_SPI0_SS1          | 37 (GPIO7)  | 3.3V         | IC37 phase detector SPI slave select (CM4/5 output)   |
   |           +-----------------------+-------------+--------------+-------------------------------------------------------+ 
-  |           | RFPD_EN               | EXP1 GPB3   | 3.3V         | IC72 and IC73 RF power detector                       |
+  |           | RFPDA_CONV            | 41 (GPIO25) | 3.3V         | IC72 RF power detector SPI slave select (CM4/5 output)|
+  |           +-----------------------+-------------+--------------+-------------------------------------------------------+ 
+  |           | RFPDB_CONV            | 24 (GPIO26) | 3.3V         | IC73 RF power detector SPI slave select (CM4/5 output)|
   +-----------+-----------------------+-------------+--------------+-------------------------------------------------------+
   | SPI1      | RPI_SPI1_SCLK         | 25 (GPIO21) | 3.3V         | Serial Clock (CM4/5 output)                           |
   |           +-----------------------+-------------+--------------+-------------------------------------------------------+
@@ -1563,7 +1565,7 @@ LimePSB-RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB
   +-----------+-----------------------+-------------+--------------+-------------------------------------------------------+
   | I2C0      | RPI_I2C0_SCL          | 80          | 3.3V         | Serial Clock (CM4/5 output)                           |
   |           +-----------------------+-------------+--------------+-------------------------------------------------------+
-  |           | RPI_I2C0_SDA          | 82          | 3.3V         | Data                                                  |
+  |           | RPI_I2C0_SDA          | 82          | 3.3V         | Data (CM4/5 input/output)                             |
   +-----------+-----------------------+-------------+--------------+-------------------------------------------------------+
   | UART0     | RPI_UART0_RX          | 51 (GPIO15) | 3.3V         | Data (CM4/5 input)                                    |
   |           +-----------------------+-------------+--------------+-------------------------------------------------------+
@@ -1593,7 +1595,7 @@ FPGA low speed interfaces signal names, I/O standards are listed in table 15.
   +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
   | I2C0      | FPGA_I2C0_SCL         | 47 (IOB_2A)  | 3.3V         | Serial Clock (FPGA output)                       |
   |           +-----------------------+--------------+--------------+--------------------------------------------------+
-  |           | FPGA_I2C0_SDA         | 48 (IOB_4A)  | 3.3V         | Data                                             |
+  |           | FPGA_I2C0_SDA         | 48 (IOB_4A)  | 3.3V         | Data (FPGA input/output)                         |
   +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
   | UART      | GNSS_UART_RX          | 51 (GPIO15)  | 3.3V         | Data (FPGA input)                                |
   |           +-----------------------+--------------+--------------+--------------------------------------------------+
@@ -1900,7 +1902,7 @@ LimePSB RPCM board may be supplied from USB Type-C port (USB Power delivery), Et
 * RJ45 socket is an alternative way to supply the LimePSB RPCM board. Make sure PoE+ (802.3at) class 4 compliant power source is used.
 * Barrel connector (9-14V 2A) also may be used to power LimePSB RPCM board.
 
-To keep RTC running when board power is disconnected lithium coin cell 3V CR1220 battery must be inserted into BATT1 battery holder.
+To keep on board RTC running and enable GNSS hardware backup mode when board power is disconnected lithium coin cell 3V CR1220 battery must be inserted into BATT1 battery holder.
 
 References
 ----------
