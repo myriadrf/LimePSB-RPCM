@@ -1,6 +1,7 @@
 Changes:
 LimePSB-RPCM_1v4(_DB)_DFMr2:
  - Schematic changes:
+	> BOM version changed from 0 to 1
 	> Changed L2, L3 part number (wrong tolerance)
 	> R153, R154 NF (disconnected USB hub SMBus from RPI_I2C0)
 	> J3 - added additional info parameter and its value

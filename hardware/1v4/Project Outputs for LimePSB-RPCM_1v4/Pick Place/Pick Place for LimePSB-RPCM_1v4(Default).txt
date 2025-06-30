@@ -4,9 +4,9 @@ d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v4\Project Outputs for LimePSB-RPCM_1v4\P
 ========================================================================================================================
 File Design Information:
 
-Date:       20-06-25
-Time:       12:57
-Revision:   c3c3daceb34e2eb0064f6173af109606c330b875
+Date:       30-06-25
+Time:       14:16
+Revision:   08887c6980ce9edf9fda71021dcbaa9768d241c8
 Variant:    Default
 Units used: mm
 
@@ -116,7 +116,6 @@ R322       "510R, 1%"                  BottomLayer RES0402                      
 R320       "1.6k, 1%"                  BottomLayer RES0402                                126.6000     51.4750      90       ""                                                                                                                                          
 R106       0R                          BottomLayer RES0402                                118.0750     49.5000      90       ""                                                                                                                                          
 R105       0R                          BottomLayer RES0402                                119.1750     49.5000      90       ""                                                                                                                                          
-R103       0R                          BottomLayer RES0402                                120.2750     49.5000      90       ""                                                                                                                                          
 R220       "49.9R, 1%"                 BottomLayer RES0402                                126.6643     13.7494      360      ""                                                                                                                                          
 R219       0R                          BottomLayer RES0402                                128.8393     11.5244      180      ""                                                                                                                                          
 R218       0R                          BottomLayer RES0402                                134.9000     3.0472       90       ""                                                                                                                                          
