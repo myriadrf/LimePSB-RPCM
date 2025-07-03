@@ -13,12 +13,12 @@ The LimePSB RPCM is carrier board for Raspberry Pi Compute Module 4 or 5 (CM4 or
 .. figure:: images/LimePSB-RPCM_v1.4_3D_top.png
   :width: 600
   
-  Figure 1: LimePSB RPCM v1.4 board top view
+  Figure 1 LimePSB RPCM v1.4 board top view
 
 .. figure:: images/LimePSB-RPCM_v1.4_3D_bot.png
   :width: 600
   
-  Figure 2: LimePSB RPCM v1.4 board bottom view
+  Figure 2 LimePSB RPCM v1.4 board bottom view
 
   LimePSB RPCM board features:
 
@@ -94,21 +94,21 @@ he heart of the LimePSB RPCM carrier board is Raspberry PI Compute Module 4 or C
 .. figure:: images/LimePSB-RPCM_v1.4_diagrams_r3_block.png
   :width: 600
   
-  Figure 3. LimePSB RPCM v1.4 carrier Board Block Diagram
+  Figure 3 LimePSB RPCM v1.4 carrier Board Block Diagram
 
 LimePSB RPCM board picture with highlighted connectors and main components are presented in Figure 4 and Figure 5. 
 
 .. figure:: images/LimePSB-RPCM_v1.4_top_components.png
   :width: 600
   
-  Figure 4. LimePSB RPCM v1.4 board top connectors and main components
+  Figure 4 LimePSB RPCM v1.4 board top connectors and main components
 
 .. _target1:
 
 .. figure:: images/LimePSB-RPCM_v1.4_bot_components.png
   :width: 600
   
-  Figure 5. LimePSB RPCM v1.4 board bottom connectors and main components
+  Figure 5 LimePSB RPCM v1.4 board bottom connectors and main components
 
 Board components are described in the Table 1.
 
@@ -1806,7 +1806,7 @@ Board clock distribution block diagram is as shown in figure 9.
 
   Figure 9. LimePSB RPCM v1.4 board clock distribution block diagram
 
-LimePSB-RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. Clock and PPS signals can be sourced from onboard XOs and GNSS transceiver or another external source via J36 (EXT_SYNC_IN) connector. Also J38 (EXT_SYNC_OUT) connector can be used as clock signal output thus synchronizing multiple systems.
+LimePSB-RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. Clock and PPS signals can be sourced from on board XOs and GNSS transceiver or another external source via J36 (EXT_SYNC_IN) connector. Also J38 (EXT_SYNC_OUT) connector can be used as clock signal output thus synchronizing multiple systems.
 Clock path may be configured using analog muxes that are controlled by CM4/5 module as described in table 21.
 
 .. table:: Table 21. LimePSB-RPCM clock signals configuration
@@ -1915,5 +1915,257 @@ References
 6. Semtech, SX1303CTSXXXGW1, LoRa Corecell Gateway Reference Design for Fine Timestamp Based on SX1303 for LoRa Core. URL: https://www.semtech.com/products/wireless-rf/lora-core/sx1303ctsxxxgw1
 7. Texas Instruments, TUSB2036 2- or 3-Port Hub for the Universal Serial Bus With Optional Serial EEPROM Interface. URL: https://www.ti.com/lit/ds/symlink/tusb2036.pdf
 8. Molex, 0022112052, KK 254 Solid Header, Vertical, with Friction Lock, 5 Circuits, Gold (Au) Plating, Bag. URL: https://www.molex.com/molex/products/part-detail/pcb_headers/0022112052
+
+Differencies from LimePSB RPCM v1.3
+====================================
+
+Changes introduction
+--------------------
+
+LimeSDR-PSB RPCM v1.4 implementation is based on LimeSDR-KEY RPCM v1.3 board with the schematic and PCB Layout changes described in this document. The major changes are:
+
+* Replaced discontinued SKY13286-359LF RF switches with F2972NEGK. Swapped RF switches RF1 and RF2 ports so RF_SW_TDD polarity inverted.
+* Added RF couplers and power detectors on both TX channels
+* Changed discrete PoE solution (NCP1083) to PoE module (AG5712-LPB)
+*	Changed from Type A HDMI sockets to Type D(Micro) HDMI sockets
+*	Replaced clock configuration path jumpers with switches
+*	Altium variant function used in the project
+
+Board size and main components positions remained the same as in LimePPSB RPCM v1.3. New LimePSB RPCM v1.4 block diagram is shown in Figure 11.
+
+.. figure:: images/LimePSB-RPCM_v1.4_diagrams_r3_block.png
+  :width: 600
+  
+  Figure 11 LimePSB RPCM v1.4 block diagram
+  
+Minor Changes
+-------------
+
+Minor Changes
+
+*	Updated diagrams
+*	Cosmetic changes (notes etc.)
+
+Raspberry Pi Connector Changes
+------------------------------
+
+Raspberry Pi CM4/5 connector signal changes are:
+
+* PCIe LEDs (PCIE_LED_WWAN, PCIE_LED_WLAN, PCIE_LED_WPAN) were moved from RPI connector to I2C GPIO expander number 2 (EXP2).
+* Newly added RF power detectors (RFPD) were connected to RPI I2C. Their enable signals RFPD1_CONV and RFPD2_CONV were connected to RPI GPIO25 and RPI GPIO26 respectively. 
+* RPI_GPIO3 and RPI_GPIO6 connected to GPIO header (J10).
+* ADF_MUXOUT moved from RPI_GPIO3 to EXP2 GPB4.
+
+New Raspberry Pi CM4/5 connector changes are shown in Figure 12.
+
+.. figure:: images/LimePSB-RPCM_v1.4_RPI_changes.png
+  :width: 600
+  
+  Figure 12 Raspberry Pi CM4/5 connector changes
+
+mPCIe Connector Changes
+-----------------------
+
+Added 0R resistor in series to PCIE_UIM4 for mPCIe modules compatibility porpuses. mPCIe connector changes are shown in Figure 13.
+
+.. figure:: images/LimePSB-RPCM_v1.4_mPCIe_changes.png
+  :width: 600
+  
+  Figure 13 mPCIe connector changes
+
+Replaced PCIE_PPS_OUT selection resistors R3 and R8 with analog mux as shown in Figure 14.
+
+.. figure:: images/LimePSB-RPCM_v1.4_COEX_changes.png
+  :width: 600
+  
+  Figure 14 mPCIe PCIE_PPS_OUT changes
+
+Miscellaneous changes
+---------------------
+
+Raspberry button was changed to a part with a longer cap (from 3.86 mm to 6.85 mm). Also added option to change button function to RPI CM5 power on/off as shown in Figure 15. 
+
+.. figure:: images/LimePSB-RPCM_v1.4_BUTTON_changes.png
+  :width: 600
+  
+  Figure 15 RPI button changes
+
+Changed GPIO header (J10) GND pins 7 and 6 to RPI_GPIO6 and RPI_GPIO3 as shown in Figure 16.
+
+.. figure:: images/LimePSB-RPCM_v1.4_GPIO_changes.png
+  :width: 600
+  
+  Figure 16 GPIO header (J10) changes
+
+Added test points for Raspberry Pi I2C0 signals (RPI_I2C0_SCL and RPI_I2C0_SDA) as hsown in Figure 17.
+
+.. figure:: images/LimePSB-RPCM_v1.4_I2C_changes.png
+  :width: 600
+  
+  Figure 17 I2C signal changes
+
+Added new additional I2C IO expander (EXP2). All signals connected to EXP2 are shown in Figure 18.
+
+.. figure:: images/LimePSB-RPCM_v1.4_EXP_changes.png
+  :width: 600
+  
+  Figure 18 New GPIO expander (EXP2)
+
+New GPIO expander was mainly added to control all new muxes added to clock circuitry. But also some already existing signals were added to it:
+
+* FPGA configuration signals (FPGA_CRESET and FPGA_CDONE). FPGA_CRESET signal moved from EXP1 to EXP2. Also added posibility to monitor FPGA_CDONE by adding it to EXP2. 
+* PCIE_LED_WLAN, PCIE_LED_WPAN and PCIE_LED_WWAN were disconnected from RPI connector and connected to EXP2.
+* ADF_MUXOUT was moved from RPI GPIO3 to EXP2 GPB4. 
+
+Added Internal U.FL to external SMA connector (EXT2) and renamed old internal U.FL to external SMA connectors to EXT1. New EXT2 SMA connector can be directly connected to on board GNSS module (IC48) RF_IN pin (default) as shown in Figure 19.
+
+.. figure:: images/LimePSB-RPCM_v1.4_EXT_changes.png
+  :width: 600
+  
+  Figure 19 Internal to external connectors changes
+
+FPGA changes
+------------
+
+Added FPGA_CDONE signal to EXP2 for monitoring purposes. Also 0R was added as a option to disconnect FPGA LED from FPGA_CDONE signal when monitoring by RPI is required. In this case FPGA LED can still indicate CDONE by EXP2 GPB2 pin (FPGA_CDONE_LED). FPGA LED changes are shown in Figure 20.
+
+.. figure:: images/LimePSB-RPCM_v1.4_CDONE_changes.png
+  :width: 600
+  
+  Figure 20 FPGA CDONE changes
+
+Removed FPGA configuration flash from default BOM as shown in Figure 21.
+
+.. figure:: images/LimePSB-RPCM_v1.4_FLASH_changes.png
+  :width: 600
+  
+  Figure 21 FPGA flash changes
+
+Increased HW_VER from 0 to 1. And added test point for FPGA I2C0 signals (FPGA_I2C0_SCL, FPGA_I2C0_SDA) as shown in Figure 22.
+
+.. figure:: images/LimePSB-RPCM_v1.4_HW_changes.png
+  :width: 600
+  
+  Figure 22 HW_VER and FPGA I2C0 changes
+
+USB changes
+-----------
+
+Changed USB header (J31) to Amphenol ICC G823J201240BHR. New header is fully compatible with standard USB header connectors.
+
+HDMI changes
+------------
+
+Changed Type A HDMI soctes (J34, J35) to Type D (Micro) HDMI.
+
+Clock changes
+------------
+
+Renamed XO_VC signal name to XORF_VC.
+
+Added testpoint for XO DACs outputs as shown in Figure 23.
+
+.. figure:: images/LimePSB-RPCM_v1.4_DACTP_changes.png
+  :width: 600
+  
+  Figure 23 XO DAC test point
+
+Renamed phase detectors signals names REF_ADF to ADF_RFIN and also REF_CLK_IN to ADF_REFIN to better reflect signals purpose as shown in Figure 24.
+
+.. figure:: images/LimePSB-RPCM_v1.4_DACTP_changes.png
+  :width: 600
+  
+  Figure 24 Phase detector schematics
+
+Added 0R NF on GNSS_RF_IN net in series with U.FL connector and changed J44 to NF. By default GNSS_RF_IN is connected to INT_TO_EXT2 (SMA) as shown in Figure 25.
+
+.. figure:: images/LimePSB-RPCM_v1.4_GNSS_changes.png
+  :width: 600
+  
+  Figure 25 GNSS antenna connection schematics
+
+Added pull down resistor for RPI_PIN18 (2.2k) and RPI_PIN16 (2.2k NF). This change fixes Raspberry Pi CM4/5 ethernet connection not working after booting up. 
+
+All clock circuitry selection jumper were changed to analog muxes a shown in Figure 26.
+
+.. figure:: images/LimePSB-RPCM_v1.4_diagrams_r3_clock.png
+  :width: 600
+  
+  Figure 26 LimePSB RPCM v1.4 clock diagram
+
+RFFE Changes
+------------
+
+Replaced discontinued SKY13286-359LF RF switches with F2972NEGK. Swapped RF switches RF1 and RF2 ports so RF_SW_TDD polarity inverted.
+
+Added RF couplers (HHM22152A2) for channel A and B TX PA RF outputs.
+
+Mentioned RFFE schematic changes are highlighted in Figure 27.
+
+.. figure:: images/LimePSB-RPCM_v1.4_RFFE_changes.png
+  :width: 600
+  
+  Figure 27 RFFE changes
+
+Due to changed RF_SW_TDD polarity a pull-up resistor was added and pull-down resistor was removed from BOM as shown in Figure 28.
+
+.. figure:: images/LimePSB-RPCM_v1.4_TDD_changes.png
+  :width: 600
+  
+  Figure 28 TDD control changes
+
+Added RF power detectors (LTC5587) for channel A and B TX PA RF outputs. RF power detector schematic is shown in Figure 29
+.
+
+.. figure:: images/LimePSB-RPCM_v1.4_RFPD_changes.png
+  :width: 600
+  
+  Figure 29 RF power detectors schematics
+
+Power Changes
+-------------
+
+Changed discrete PoE solution (NCP1083) to PoE module (AG5712-LPB). New POE shcmatic is shown in Figure 30.
+
+.. figure:: images/LimePSB-RPCM_v1.4_POE_changes.png
+  :width: 600
+  
+  Figure 30 POE module schematics
+
+Removed VCC2P5 circuit from BOM as shown in Figure 31.
+
+.. figure:: images/LimePSB-RPCM_v1.4_VCC2P5_changes.png
+  :width: 600
+  
+  Figure 31 VCC2P5 schematics
+
+Changed R135 from 1k to 330R as shown in Figure 32.
+
+.. figure:: images/LimePSB-RPCM_v1.4_R135_changes.png
+  :width: 600
+  
+  Figure 32 Voltage reference schematic
+
+PCB Changes
+-----------
+
+Layout and PCB changes for LimePSB-RPCM v1.4 board are as follows:
+
+* Changes made according to schematic.
+* Moved 3.5mm A/V socked to the PCB edge and made cutout for socket ring.
+*	Changed tactile switch from 1825027-5 (L=3.86mm) to CT1102V6.85F160 (L=6.85mm).
+*	Changed LED light pipes from SLP3-200-100-F (center line 0.2" (5.1mm)) to SLP3-150-100-F (center line 0.15" (3.8mm)).
+*	Added HDMI and USB3 internal layer trace impedance requirements in specification.
+*	Board size and main components positions remained the same.
+
+.. figure:: images/LimePSB-RPCM_v1.4_3D_top.png
+  :width: 600
+  
+  Figure 33 LimePSB RPCM v1.4 board top view
+
+.. figure:: images/LimePSB-RPCM_v1.4_3D_bot.png
+  :width: 600
+  
+  Figure 34 LimePSB RPCM v1.4 board bottom view
 
 
