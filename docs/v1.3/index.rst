@@ -1889,4 +1889,238 @@ References
 7. Texas Instruments, TUSB2036 2- or 3-Port Hub for the Universal Serial Bus With Optional Serial EEPROM Interface. URL: https://www.ti.com/lit/ds/symlink/tusb2036.pdf
 8. Molex, 0022112052, KK 254 Solid Header, Vertical, with Friction Lock, 5 Circuits, Gold (Au) Plating, Bag. URL: https://www.molex.com/molex/products/part-detail/pcb_headers/0022112052
 
+Differencies from LimePSB RPCM v1.2
+===================================
 
+Changes introduction
+--------------------
+
+LimeSDR-PSB RPCM v1.3 implementation is based on LimeSDR-KEY RPCM v1.2 board with the schematic and PCB Layout changes described in this document. The major changes are added FPGA (Lattice), 10 MHZ OCXO with alternatives and GNSS receiver. This enables disciplined OCXO function from hardware perspective. For these modifications required to add two additional schematic sheets and change project structure
+
+Board size and main components positions remained the same.
+
+Minor Changes
+-------------
+
+*	Updated diagrams
+*	Cosmetic changes (notes etc.)
+
+Raspberry Pi Connector Changes
+------------------------------
+
+Disconnected PCIE_LED_WWAN from RPi GPIO16 and connected RPI_SPI1_SS2 (XO DAC SS).
+
+Disconnected RPI_RF_SW_TDD from RPi GPIO6 and connected PCIE_LED_WWAN.
+
+Changed SPI interfaces: 
+ * RPI_SPI0 SS0 changed from XO DA to FPGA CFG
+ * RPI_SPI1 SS1 changed from SR to FPGA
+ * RPI_SPI1 SS2 connected to XO DAC (GPIO16 to FPGA)
+
+Board SPI interfaces:
+ * RPI_SPI0 (3.3V): FPGA CFG (SS0 - GPIO8), ADF (SS1 - GPIO7)
+ * RPI_SPI1 (3.3V): ADC (SS0 - GPIO18), FPGA (SS1 - GPIO17), XO DAC (SS2 - GPIO16 to FPGA)
+
+RPI connector schematic changes are shown in Figure 11.
+
+.. figure:: images/LimePSB-RPCM_v1.3_RPI_changes.png
+  :width: 600
+  
+  Figure 11 Raspberry Pi CM4/5 connector changes
+
+Added bypass option for RPI_PIN11 as shown in Figure 12.
+
+.. figure:: images/LimePSB-RPCM_v1.3_RPIMUX_changes.png
+  :width: 600
+  
+  Figure 12 RPI_PIN11 analog mux changes
+
+Miscellaneous changes
+---------------------
+
+Connected FPGA_GPIO0 and FPGA_GPIO1 to J10 pins 10 and 12 instead GND pins as shown in figure 13. 
+
+.. figure:: images/LimePSB-RPCM_v1.3_GPIO_changes.png
+  :width: 600
+  
+  Figure 13 GPIO connector changes
+
+Changed shift registers to I2C I/O expander (MCP23017) because there was not enough SS pins on RPi.
+
+Connected FPGA_CRESET and XO_VC_SEL to IO I2C expander
+
+New I2C I/O expander schematic is given in Figure 14
+
+
+.. figure:: images/LimePSB-RPCM_v1.3_EXP_changes.png
+  :width: 600
+  
+  Figure 14 new I2C I/O expander
+
+Disconnected RPI_RF_SW_TDD and PCIE_UIM8 from RF_SW_TDD and connected FPGA_RF_SW_TDD. Resulting RFFE TDD control schematic is shown in Figure 15.
+
+.. figure:: images/LimePSB-RPCM_v1.3_TDD_changes.png
+  :width: 600
+  
+  Figure 15 RFFE TDD control changes
+
+Corrected FAN controller I2C address note.
+
+Added EMC2301 CLK pull up for fan default drive setting decode.
+
+Added EMC2301 PWM pull up.
+
+.. figure:: images/LimePSB-RPCM_v1.3_FAN_changes.png
+  :width: 600
+  
+  Figure 16 Fan controller changes
+
+FPGA changes
+------------
+
+Added Lattice ICE5LP4K-SG48ITR FPGA. Schematics are designed for two FPGA configuration modes: Slave SPI (default) and master SPI. 
+Connected GNSS interface, clocks, XO DAC, RPI_SPI1, RPI_I2C0, RPI_UART0, HW_VER, BOM_VER, FPGA_GPIO, TDD control and other lines to FPGA as shown in Figure 17.
+
+.. figure:: images/LimePSB-RPCM_v1.3_FPGA_changes.png
+  :width: 600
+  
+  Figure 17 New FPGA schematics
+
+Added hard ware (HW_VER) and Bill of materials (BOM_VER) version indentification to schemtics as shown in Figure 18.
+
+.. figure:: images/LimePSB-RPCM_v1.3_BOM_changes.png
+  :width: 600
+  
+  Figure 18 New HW_VER and BOM_VER schematics 
+
+Added new power rails (VCC1P2 and VCC2P5) for FPGA. FPGA power schematics are shown in Figure 19.
+
+.. figure:: images/LimePSB-RPCM_v1.3_FPGAPOW_changes.png
+  :width: 600
+  
+  Figure 19 New FPGA power schematics
+
+Added configuration flash for FPGA as shown in Figure 20.
+
+.. figure:: images/LimePSB-RPCM_v1.3_FLASH_changes.png
+  :width: 600
+  
+  Figure 20 New FPGA flash schematics
+
+USB changes
+-----------
+
+Replaced USB 2.0 header (J27) with USB 3.0 header. Removed one of the USB 2.0 port and added USB 3.0 port. Renamed USB header power rail to VCC5P0_USB3H. New USB header shcemtics are given in Figure 21. 
+
+.. figure:: images/LimePSB-RPCM_v1.3_USBHDR_changes.png
+  :width: 600
+  
+  Figure 21 USB header changes
+
+
+
+Replaced USB 3.0 port from dual USB top socket (J30) with a USB 2.0 port. Renamed dual USB  as shown in Figure 22. 
+
+.. figure:: images/LimePSB-RPCM_v1.3_USBSOC_changes.png
+  :width: 600
+  
+  Figure 22 USB socket changes
+
+From now on when CM4 is used all socket ports are USB2.0. When CM5 is used only bottom port is USB3.0.
+
+Renamed dual USB top socket port signals prefixes to USB3H_1, since they are now connected to USB 3.0 header. 
+
+.. figure:: images/LimePSB-RPCM_v1.3_USBSW_changes.png
+  :width: 600
+  
+  Figure 23 USB switch changes
+
+Connected GNSS USB to USB HUB port 6 via 0R. 
+Swapped some ports between USB header and socket. Changed USB2.0 hub OCS and PRTPWR lines connections according to swapped USB ports between USB header and socket. 
+New USB hub schamtics are given in Figure 24.
+
+.. figure:: images/LimePSB-RPCM_v1.3_USBHUB_changes.png
+  :width: 600
+  
+  Figure 24 USB hub changes
+
+Clock changes
+-------------
+Renamed clock buffer signals:
+ * LMK_CLK_OUTn to LMKRF_CLK_OUTn
+ * VCC3P3_LMK to VCC3P3_LMKRF
+ * VCC3P3_LMK_VDDO to VCC3P3_LMKRF_VDDO  
+ 
+Resulting clock buffer schematics are shown in Figure 25.
+
+.. figure:: images/LimePSB-RPCM_v1.3_RFREF_changes.png
+  :width: 600
+  
+  Figure 25 Reference clock buffer changes
+
+Connected XO DAC SPI to FPGA_SPI0. Added TCXO_DAC mux for two groups of XOs as shown in Figure 26.
+
+.. figure:: images/LimePSB-RPCM_v1.3_DAC_changes.png
+  :width: 600
+  
+  Figure 26 XO DAC and mux changes
+
+Added 10 MHz OCXO reference with alternatives and clock buffer.
+
+.. figure:: images/LimePSB-RPCM_v1.3_10MHZ_changes.png
+  :width: 600
+  
+  Figure 27 XO New 10 MHz reference with clock buffer
+
+Changed EXT_SYNC_OUT header (J36) wit a bigger one. Added new 10 MHz clock LMK10_CLK_OUT3 as one of possible EXT_SYNC_OUT sources. 
+
+Added new clock signal SYNC_OUT that can be sourced by RPI_SYNC_OUT or FPGA_SYNC_OUT. Added new header (J42) for RPI_SYNC_OUT/FPGA_SYNC_OUT path selection to SYNC_OUT.
+
+Changed REF_CLK_IN header (J38) input signal RPI_SYNC_OUT to LMK10_CLK_OUT2.
+
+Changed PCIE_PPS_IN header (J39) input signal RPI_SYNC_OUT to SYNC_OUT.
+
+New clock schematics are given in Figure 28.
+
+.. figure:: images/LimePSB-RPCM_v1.3_CLKJMP_changes.png
+  :width: 600
+  
+  Figure 28 Clock config jumpers and connectors changes
+
+Added GNSS receiver ublox NEO-M8Q. Possible to use LynQ N20B (without USB).
+
+
+Added ESDs for Dual USB 3.0 socket. 
+
+.. figure:: images/LimePSB-RPCM_v1.3_GNSS_changes.png
+  :width: 600
+  
+  Figure 29 New GNSS receiver
+
+Power changes
+-------------
+
+Added new LDOs for VCC3P3_CLK2, VCC1P2 and VCC2P5
+
+.. figure:: images/LimePSB-RPCM_v1.3_PWR_changes.png
+  :width: 600
+  
+  Figure 30 New GNSS receiver
+
+PCB changes
+-----------
+
+Layout and PCB changes for LimePSB-RPCM v1.3 board are as follows:
+
+*	Changes made according to schematic
+*	Board size and main components positions remained the same
+
+.. figure:: images/LimePSB-RPCM_v1.3_3D_top.png
+  :width: 600
+  
+  Figure 31 LimePSB-RPCM v1.3 3D top view 
+
+.. figure:: images/LimePSB-RPCM_v1.3_3D_bot.png
+  :width: 600
+  
+  Figure 32 LimePSB-RPCM v1.3 3D bottom view
