@@ -1303,7 +1303,7 @@ LimePSB RPCM RF path features power amplifiers, low noise amplifiers and SPDT sw
 .. figure:: images/LimePSB-RPCM_v1.2_diagrams_RFFE.png
   :width: 600
 
-  Figure 6 LimePSB RPCM v1.2 RFFE diagram
+  Figure 6. LimePSB RPCM v1.2 RFFE diagram
   
 A single control signal (RF_SW_TDD) is used to control all RF switches simultaneously for both A and B channels to change between TDD and FDD modes as shown in Table 8.
 
@@ -1793,7 +1793,7 @@ LimePSB RPCM board power delivery network consists of different power rails with
 .. figure:: images/LimePSB-RPCM_v1.2_diagrams_power.png
   :width: 600
   
-  Figure 10 LimePSB RPCM v1.2 board power distribution block diagram
+  Figure 10. LimePSB RPCM v1.2 board power distribution block diagram
   
 LimePSB RPCM board may be supplied from USB Type-C port (USB Power delivery), Ethernet RJ45 port (PoE) or barrel DC connector (9-14V):
 
@@ -1815,3 +1815,228 @@ References
 7. Texas Instruments, TUSB2036 2- or 3-Port Hub for the Universal Serial Bus With Optional Serial EEPROM Interface. URL: https://www.ti.com/lit/ds/symlink/tusb2036.pdf
 8. Molex, 0022112052, KK 254 Solid Header, Vertical, with Friction Lock, 5 Circuits, Gold (Au) Plating, Bag. URL: https://www.molex.com/molex/products/part-detail/pcb_headers/0022112052
 
+Differencies from LimePSB RPCM v1.1
+===================================
+
+Changes introduction
+--------------------
+
+LimeSDR-PSB RPCM v1.2 implementation is based on LimeSDR-KEY RPCM v1.1 board with the schematic and PCB Layout changes described in this document. The major changes were made to make the board compatible with Raspberry Pi CM4 and CM5 compute modules.
+
+Minor Changes
+-------------
+
+Minor Changes:
+
+*	Updated diagrams
+*	Cosmetic changes (notes etc.)
+
+Raspberry Pi Connector Changes
+------------------------------
+
+Added USB 3.0 (RPI_USB3) signals for RPi CM5 USB3 ports 0, 1 and added RPI_VBAT as shown in figure 11.
+
+.. figure:: images/LimePSB-RPCM_v1.2_RPI_changes.png
+  :width: 600
+  
+  Figure 11. Raspberry Pi CM4/5 connector changes
+
+Changed CM4/5 connector from DF40C-100DS-0.4V(51) to 10164227-1001A1RLF. New connector supports higher current (old 0.25A, new 0.3A per contact).
+
+Connected analog mux 74LVC1G3157FZ4 between RPI_TVDAC and CVIDEO as shown in figure 12.
+
+.. figure:: images/LimePSB-RPCM_v1.2_mux_changes.png
+  :width: 600
+  
+  Figure 12. RPI_PIN11 analog mux
+
+mPCIe Connector Changes
+-----------------------
+
+Connected RPI_PCIE_DET_nWAKE signal to mPCIe pin 1 via 0R resistor. Also added capacitor for PCIE_CLK signals because CM5 PCIe CLK signals are no longer capacitively coupled as shown in figure 13.
+
+.. figure:: images/LimePSB-RPCM_v1.2_mPCIe_changes.png
+  :width: 600
+  
+  Figure 13. mPCIe connector changes
+
+Miscellaneous changes
+---------------------
+
+Changed RPI_SYNC_OUT voltage converters VCCA from VCC1P8_RPI to VCC3P3. Populated bypass resistors and voltage converters are no longer mounted (NF) in default BOM as shown in figure 14.
+
+.. figure:: images/LimePSB-RPCM_v1.2_sync_changes.png
+  :width: 600
+  
+  Figure 14. RPI_SYNC_OUT voltage converters changes
+
+Changed SYS header (J12) pins:
+
+* Pin 11 connected to RPI_PIN11 instead of RPI_TVDAC
+* Pin 10 connected to RPI_RUN_PF instead of GND
+
+New system header schematics are given in figure 15.
+
+.. figure:: images/LimePSB-RPCM_v1.2_sys_changes.png
+  :width: 600
+  
+  Figure 15. SYS header changes
+
+Added 4 bit DIP switch to configure:
+
+* Bit 1 RPi boot source.
+* Bit 2 RPi USB 2.0 port mux control.
+* Bit 3 USB C PD current.
+* Bit 4 dual USB socket source. 
+
+New configuratio DIP switch schematics are shown in figure 16.
+
+.. figure:: images/LimePSB-RPCM_v1.2_dip_changes.png
+  :width: 600
+  
+  Figure 16. New 4 bit configuration DIP switch
+
+Added possibility to connect RPI_VBAT to coin cell via not mouted (NF) 0R. Also added 0R for RPI_GLOBAL_EN (PMIC_ENABLE) as shown in figure 17.
+
+.. figure:: images/LimePSB-RPCM_v1.2_vbat_changes.png
+  :width: 600
+  
+  Figure 17. New VBAT and RPI_GLOBAL_EN 0R resistors
+
+Connected PTP_SYNC_SEL to shift register (SR1) pin Q6 as hsown in figure 18.
+
+.. figure:: images/LimePSB-RPCM_v1.2_shift_changes.png
+  :width: 600
+  
+  Figure 18. Shift register (SR1) changes
+
+Fan control changes
+-------------------
+
+Added EMC2301 fan controller as shown in figure 19.
+
+.. figure:: images/LimePSB-RPCM_v1.2_fan_changes.png
+  :width: 600
+  
+  Figure 19. New fan controller
+
+ESDs changes
+------------
+
+Added ESD for INT_TO_EXT SMA  as shown in figure 20.
+
+.. figure:: images/LimePSB-RPCM_v1.2_rfesd_changes.png
+  :width: 600
+  
+  Figure 20. New INT_TO EXT ESD protection
+
+Added extra ESD for HDMI (CM5) as shown in figure 21.
+
+.. figure:: images/LimePSB-RPCM_v1.2_hdmiesd_changes.png
+  :width: 600
+  
+  Figure 21. New HDMI ports ESD protection
+
+Added ESDs for Dual USB 3.0 socket as shown in figure 22.
+
+.. figure:: images/LimePSB-RPCM_v1.2_usbesd_changes.png
+  :width: 600
+  
+  Figure 22. New Dual USB 3.0 ESD protection
+
+Fitted ESDs on RF ports as shown in figure 23.
+
+.. figure:: images/LimePSB-RPCM_v1.2_rffeesd_changes.png
+  :width: 600
+  
+  Figure 23. New RF ports ESD rotection
+
+USB changes
+-----------
+
+Changed USB switch FSUSB42UMX to NX3DV42GU,115 due stock absence. RPI boot header is no longer mounted (NF) since RPI boot source can be configured from new configuration DIP switch. New USB switch schematics are shown in figure 24.
+
+.. figure:: images/LimePSB-RPCM_v1.2_usbsw_changes.png
+  :width: 600
+  
+  Figure 24. USB switch changes
+
+Added bypass option for USB_HUB_D0 and PCIE_USB port as shown in figure 25.
+
+.. figure:: images/LimePSB-RPCM_v1.2_usbbypass_changes.png
+  :width: 600
+  
+  Figure 25. New USB_HUB_D0 and PCIE_USB bypass option
+
+Changed USB 2.0 dual socket to USB 3.0 socket as shown in figure 26. CM5 module offers USB 3.0 ports. 
+
+.. figure:: images/LimePSB-RPCM_v1.2_usbsocket_changes.png
+  :width: 600
+  
+  Figure 26. New dual USB3 socket changes
+
+Connected RPI_VBUS_EN IC24 as optional EN control source as shown in figure 27.
+
+.. figure:: images/LimePSB-RPCM_v1.2_vbus_changes.png
+  :width: 600
+  
+  Figure 27. RPI_VBUS_EN connection changes
+
+Added USB switches for USB3 socket to switch dual USB socket between USB2.0 hub and CM5 USB3.0 lines as shown in figure 28.
+
+.. figure:: images/LimePSB-RPCM_v1.2_usbsws_changes.png
+  :width: 600
+  
+  Figure 28. USB 2.0 and 3.0 switches changes
+
+XO DAC and ADC reference source changes
+---------------------------------------
+
+Populated 2.5V voltage reference for XO DAC and DAC as shown in figure 29.
+
+.. figure:: images/LimePSB-RPCM_v1.2_vref_changes.png
+  :width: 600
+  
+  Figure 29. New 2.5V reference source
+
+Selected VCC2P5_VREF as source for ADC (R48 fit, R45, R49, C34, C35 NF) as shwn in figure 30.
+
+.. figure:: images/LimePSB-RPCM_v1.2_adcvref_changes.png
+  :width: 600
+  
+  Figure 30. ADC VREF source changes
+
+Selected VCC2P5_VREF as source for XO DAC (R165 fit, R166, R172, C139, C140 NF) as shown in figure 31. Also possibility to hard enable OE with resistors is left.
+
+.. figure:: images/LimePSB-RPCM_v1.2_dacref_changes.png
+  :width: 600
+  
+  Figure 31. DAC VREF source changes
+
+RFFE changes
+------------
+
+PA changed from SBB-5089 to TQP3M9018. Also inductor added for low frequency range. New RF PA schematic are shown in figure 32.
+
+.. figure:: images/LimePSB-RPCM_v1.2_rffe_changes.png
+  :width: 600
+  
+  Figure 32. RFFE changes
+
+PCB changes
+-----------
+
+Layout and PCB changes for LimePSB-RPCM v1.2 board are as follows:
+
+* Passive components moved from under RPi CM4/5
+* Changes made according to schematic
+
+.. figure:: images/LimePSB-RPCM_v1.2_3D_top.png
+  :width: 600
+  
+  Figure 33. LimePSB RPCM v1.2 board top view
+
+.. figure:: images/LimePSB-RPCM_v1.2_3D_bot.png
+  :width: 600
+  
+  Figure 34. LimePSB RPCM v1.2 board bottom view
