@@ -19,7 +19,9 @@ highlight_language = 'console'
 # Intersphinx mapping
 # To minimise build time only include projects that are referenced.
 intersphinx_internal = [
-#    'suiteng',
+    'ppsdo',
+    'sdrxtrx',
+    'suiteng',
 ]
 
 intersphinx_external = [
@@ -30,4 +32,4 @@ intersphinx_external = [
 archived = False
 
 # When True internal intersphinx targets point at stage.myriadrf.org.
-staging = True
+staging = False
