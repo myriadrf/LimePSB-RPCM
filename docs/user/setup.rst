@@ -30,7 +30,7 @@ RF Connections
 .. figure:: /images/LimePSB-RPCM_v1.4_RFCON.png
   :width: 600
   
-  Figure 8: LimeSDR USB board top with RF connector positions
+  Figure 8: LimePSB RPCM board top with RF connector positions
 
 .. list-table:: Table 1. RF Connectors
     :header-rows: 1

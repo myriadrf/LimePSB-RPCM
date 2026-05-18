@@ -2,7 +2,7 @@ Clock Distribution
 ##################
 
 
-LimePSB-RPCM board clock network comprises of on-board voltage controlled crystal oscillators, phase detector, clock buffers, GNSS receiver, clock source selection analog muxes, reference clock input and output connectors.
+LimePSB RPCM board clock network comprises of on-board voltage controlled crystal oscillators, phase detector, clock buffers, GNSS receiver, clock source selection analog muxes, reference clock input and output connectors.
 Board clock distribution block diagram is as shown in figure 7.
 
 .. figure:: /images/LimePSB-RPCM_v1.3_diagrams_clock.png
@@ -10,10 +10,10 @@ Board clock distribution block diagram is as shown in figure 7.
 
   Figure 7: LimePSB RPCM v1.3 board clock distribution block diagram
 
-LimePSB-RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. Clock and PPS signals can be sourced from on board XOs and GNSS transceiver or another external source via J36 (EXT_SYNC_IN) connector. Also J38 (EXT_SYNC_OUT) connector can be used as clock signal output thus synchronizing multiple systems.
+LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. Clock and PPS signals can be sourced from on board XOs and GNSS transceiver or another external source via J36 (EXT_SYNC_IN) connector. Also J38 (EXT_SYNC_OUT) connector can be used as clock signal output thus synchronizing multiple systems.
 Clock path may be configured using analog muxes that are controlled by CM4/5 module as described in table 11.
 
-.. table:: Table 11. LimePSB-RPCM clock signals configuration
+.. table:: Table 11. LimePSB RPCM clock signals configuration
 
   +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
   | Schematic ID | Input signal  | Output signal | Description                                                                           |
@@ -57,10 +57,10 @@ Clock path may be configured using analog muxes that are controlled by CM4/5 mod
   | R8           | PCIE_SMB_CLK  | PCIE_PPS_OUT  | Clock signal input from mPCIE expansion board (XTRX)                                  |
   +--------------+---------------+---------------+---------------------------------------------------------------------------------------+  
    
-LimePSB-RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffers (LMK00101). By default voltage controlled oven compensated crystal oscillators (VCOCXO) XO1 and XO6 are populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 and XO7 – XO10 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC36 default or 8-bit IC38) or phase detector (IC37).
+LimePSB RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffers (LMK00101). By default voltage controlled oven compensated crystal oscillators (VCOCXO) XO1 and XO6 are populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 and XO7 – XO10 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC36 default or 8-bit IC38) or phase detector (IC37).
 Clock network components are listed in table 12.
 
-.. list-table:: Table 12. LimePSB-RPCM clock distribution network components
+.. list-table:: Table 12. LimePSB RPCM clock distribution network components
    :header-rows: 1
 
    * - Designator

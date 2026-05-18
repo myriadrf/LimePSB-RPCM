@@ -1,7 +1,7 @@
 Reference Clock
 ###############
 
-The LimeSDR USB clock system is based on a high stability 30.72 MHz and 10 MHz VCTCXOs (Voltage Controlled Temperature Compensated Crystal Oscillators) which can be tuned via an external 1PPS reference signal or GPSDO function.
+The LimePSB RPCM clock system is based on a high stability 30.72 MHz and 10 MHz VCTCXOs (Voltage Controlled Temperature Compensated Crystal Oscillators) which can be tuned via an external 1PPS reference signal or GPSDO function.
 
 
 The board provides external synchronization input and output signals, including 1PPS and reference clocks, via SMA and U.FL connectors. 

@@ -1,7 +1,7 @@
 MIPI DSI Display and CSI Camera Connectors
 ##########################################
 
-LimePSB-RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI camera. MIPI DSI interface is used for connecting serial display. Detailed display 1 connector J15 pinout is as shown in table 13.
+LimePSB RPCM has two 15-pin FPC connectors for MIPI DSI display and MIPI CSI camera. MIPI DSI interface is used for connecting serial display. Detailed display 1 connector J15 pinout is as shown in table 13.
 
 .. list-table:: Table 13. MIPI DSI display 1 connector (J15) pinout
    :header-rows: 1

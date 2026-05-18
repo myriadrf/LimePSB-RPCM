@@ -229,7 +229,7 @@ Added Internal U.FL to external SMA connector (EXT2) and renamed old internal U.
 PCB
 ===
 
-Layout and PCB changes for LimePSB-RPCM v1.4 board are as follows:
+Layout and PCB changes for LimePSB RPCM v1.4 board are as follows:
 
 * Changes made according to schematic.
 * Moved 3.5mm A/V socked to the PCB edge and made cutout for socket ring.
@@ -460,7 +460,7 @@ Added EMC2301 PWM pull up.
 PCB
 ===
 
-Layout and PCB changes for LimePSB-RPCM v1.3 board are as follows:
+Layout and PCB changes for LimePSB RPCM v1.3 board are as follows:
 
 *	Changes made according to schematic
 *	Board size and main components positions remained the same
@@ -468,12 +468,12 @@ Layout and PCB changes for LimePSB-RPCM v1.3 board are as follows:
 .. figure:: /images/LimePSB-RPCM_v1.3_3D_top.png
   :width: 600
   
-  Figure 46: LimePSB-RPCM v1.3 3D top view 
+  Figure 46: LimePSB RPCM v1.3 3D top view 
 
 .. figure:: /images/LimePSB-RPCM_v1.3_3D_bot.png
   :width: 600
   
-  Figure 47: LimePSB-RPCM v1.3 3D bottom view
+  Figure 47: LimePSB RPCM v1.3 3D bottom view
 
 v1.2
 ****
@@ -675,7 +675,7 @@ PA changed from SBB-5089 to TQP3M9018. Also inductor added for low frequency ran
 PCB
 ===
 
-Layout and PCB changes for LimePSB-RPCM v1.2 board are as follows:
+Layout and PCB changes for LimePSB RPCM v1.2 board are as follows:
 
 * Passive components moved from under RPi CM4/5
 * Changes made according to schematic
