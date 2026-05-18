@@ -1,7 +1,7 @@
 Changelog
 #########
 
-The first production LimeSDR XTRX was revision v1.1 and so this changelog starts with changes from that point.
+The first production LimePSB RPCM was revision v1.1 and so this changelog starts with changes from that point.
 
 .. note::
    Details of internal-only versions which were never released are not included here.
@@ -10,7 +10,7 @@ v1.4
 ****
 
 
-LimeSDR-PSB RPCM v1.4 implementation is based on LimePSB RPCM v1.3 board with the schematic and PCB Layout changes described in this document. The major changes are:
+LimePSB RPCM v1.4 implementation is based on LimePSB RPCM v1.3 board with the schematic and PCB Layout changes described in this document. The major changes are:
 
 * Replaced discontinued SKY13286-359LF RF switches with F2972NEGK. Swapped RF switches RF1 and RF2 ports so RF_SW_TDD polarity inverted.
 * Added RF couplers and power detectors on both TX channels
@@ -251,7 +251,7 @@ Layout and PCB changes for LimePSB RPCM v1.4 board are as follows:
 v1.3
 ****
 
-LimeSDR-PSB RPCM v1.3 implementation is based on LimeSDR-KEY RPCM v1.2 board with the schematic and PCB Layout changes described in this document. The major changes are added FPGA (Lattice), 10 MHZ OCXO with alternatives and GNSS receiver. This enables disciplined OCXO function from hardware perspective. For these modifications required to add two additional schematic sheets and change project structure
+LimePSB RPCM v1.3 implementation is based on LimePSB RPCM RPCM v1.2 board with the schematic and PCB Layout changes described in this document. The major changes are added FPGA (Lattice), 10 MHZ OCXO with alternatives and GNSS receiver. This enables disciplined OCXO function from hardware perspective. For these modifications required to add two additional schematic sheets and change project structure
 
 Board size and main components positions remained the same.
 
@@ -478,7 +478,7 @@ Layout and PCB changes for LimePSB RPCM v1.3 board are as follows:
 v1.2
 ****
 
-LimeSDR-PSB RPCM v1.2 implementation is based on LimeSDR-KEY RPCM v1.1 board with the schematic and PCB Layout changes described in this document. The major changes were made to make the board compatible with Raspberry Pi CM4 and CM5 compute modules.
+LimePSB RPCM v1.2 implementation is based on LimePSB RPCM v1.1 board with the schematic and PCB Layout changes described in this document. The major changes were made to make the board compatible with Raspberry Pi CM4 and CM5 compute modules.
 
 Raspberry Pi Connector
 ======================
