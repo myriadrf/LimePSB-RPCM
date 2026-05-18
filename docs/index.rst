@@ -173,7 +173,7 @@ General user inputs/outputs
 Connectors
 ==========
 
-* Raspberry CM4 and CM5 connector (dual row)
+* Raspberry Pi CM4 and CM5 connector (dual row)
 * USB 2.0 Type-C socket (USB boot and power delivery)
 * Dual USB 3.0 (type A) socket and USB header (downstream ports) or Front Panel USB 2.0 header (unpopulated)
 * Ethernet jack (Gigabit Ethernet with PoE)
@@ -186,10 +186,10 @@ Connectors
 * Coaxial RF (4x SMA female + 4x U.FL female) connectors for RF front end
 * External synchronization (2x SMA female) connectors for input and output
 * 2x Coaxial pass-through U.FL to external SMA connectors
-* 20-pin Raspberry CM4/5 GPIO header (3.3V)
-* 14-pin Raspberry CM4/5 SYS header
+* 20-pin Raspberry Pi CM4/5 GPIO header (3.3V)
+* 14-pin Raspberry Pi CM4/5 SYS header
 * 5-pin front display connector (power, I2C, button)
-* Raspberry CM4/5 UART0 header (unpopulated)
+* Raspberry Pi CM4/5 UART0 header (unpopulated)
 * 2-pin and 4-pin FAN connector (5V default or 3.3V or VCC_INT voltage)
   
 

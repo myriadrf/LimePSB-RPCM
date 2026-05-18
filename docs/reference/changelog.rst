@@ -185,7 +185,7 @@ Changed R135 from 1k to 330R as shown in Figure 17.
 Miscellaneous
 =============
 
-Raspberry button was changed to a part with a longer cap (from 3.86 mm to 6.85 mm). Also added option to change button function to RPI CM5 power on/off as shown in Figure 18. 
+Raspberry Pi button was changed to a part with a longer cap (from 3.86 mm to 6.85 mm). Also added option to change button function to RPI CM5 power on/off as shown in Figure 18. 
 
 .. figure:: /images/LimePSB-RPCM_v1.4_BUTTON_changes.png
   :width: 600
