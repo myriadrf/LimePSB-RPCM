@@ -5,6 +5,8 @@ docs/venv/
 History/
 Schematics/__Previews
 __Previews
+*.AnnotationPreview
+*.SchDocPreview
 *.$$$
 *.PrjPcb.Zip
 *.log
