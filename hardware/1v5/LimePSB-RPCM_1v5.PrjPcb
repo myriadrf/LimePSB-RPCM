@@ -813,129 +813,13 @@ Variation240=Designator=R154|UniqueId=\UVJDAIID|Kind=1|AlternatePart=
 Variation241=Designator=R103|UniqueId=\IOWJDVQT|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
-[GeneratedDocument1]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\NC Drill\LimePSB-RPCM_1v5-RoundHoles.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\NC Drill\LimePSB-RPCM_1v5-SlotHoles.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\NC Drill\LimePSB-RPCM_1v5.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.G1
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.G2
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.G3
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.G4
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GM6
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GM14
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GM15
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GPB
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GPT
-DItemRevisionGUID=
-
-[GeneratedDocument19]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument20]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\DRC\LimePSB-RPCM_1v5.html
-DItemRevisionGUID=
-
-[GeneratedDocument24]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\ERC\LimePSB-RPCM_1v5.html
-DItemRevisionGUID=
-
-[GeneratedDocument25]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\NC Drill\LimePSB-RPCM_1v5.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument26]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.REP
-DItemRevisionGUID=
-
-[GeneratedDocument27]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Gerber\LimePSB-RPCM_1v5.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument28]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Pick Place\Pick Place for LimePSB-RPCM_1v5(Default).csv
-DItemRevisionGUID=
-
-[GeneratedDocument29]
-DocumentPath=Project Outputs for LimePSB-RPCM_1v5\Pick Place\Pick Place for LimePSB-RPCM_1v5(Default).txt
-DItemRevisionGUID=
-
 [Parameter1]
-Name=PROJECT_VERSION
-Value=1.4
-
-[Parameter2]
 Name=SHEET_TOTAL
 Value=15
+
+[Parameter2]
+Name=PROJECT_VERSION
+Value=1.5
 
 [Configuration1]
 Name=Default Configuration
@@ -1591,6 +1475,36 @@ OutputName11=Export STEP
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
+OutputType12=Ansoft Neutral
+OutputName12=Ansoft Neutral (AutoPCB)
+OutputDocumentPath12=
+OutputVariantName12=
+OutputDefault12=0
+OutputType13=HyperLynx
+OutputName13=HyperLynx (AutoPCB)
+OutputDocumentPath13=
+OutputVariantName13=
+OutputDefault13=0
+OutputType14=Orcad v7 Capture Design
+OutputName14=Orcad v7 Capture Design (AutoSCH)
+OutputDocumentPath14=
+OutputVariantName14=
+OutputDefault14=0
+OutputType15=P-CAD ASCII
+OutputName15=P-CAD ASCII (AutoPCB)
+OutputDocumentPath15=
+OutputVariantName15=
+OutputDefault15=0
+OutputType16=P-CAD V16 Schematic Design
+OutputName16=P-CAD V16 Schematic Design (AutoSCH)
+OutputDocumentPath16=
+OutputVariantName16=
+OutputDefault16=0
+OutputType17=SiSoft
+OutputName17=SiSoft (AutoPCB)
+OutputDocumentPath17=
+OutputVariantName17=
+OutputDefault17=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
