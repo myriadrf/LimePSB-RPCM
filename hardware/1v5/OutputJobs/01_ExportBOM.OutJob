@@ -48,7 +48,7 @@ PageOptions1=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 Configuration1_Name1=ColumnNameFormat
 Configuration1_Item1=CaptionAsName
 Configuration1_Name2=General
-Configuration1_Item2=OpenExported=False|AddToProject=False|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=False|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=OutputJobs\BOM_Lime.xlt|TemplateVaultGuid=|TemplateRevisionGuid=|BatchMode=5|FormWidth=950|FormHeight=661|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=<none>|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=0|UseDirectApi=False|BomSetName=
+Configuration1_Item2=OpenExported=True|AddToProject=True|ReportBOMViolationsInMessages=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePcbData=False|IncludeVaultData=False|IncludeCloudData=False|IncludeDocumentData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=OutputJobs\BOM_Lime2026r1.xltx|TemplateVaultGuid=|TemplateRevisionGuid=|BatchMode=5|FormWidth=950|FormHeight=677|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=<none>|SolutionsPerItem=1|SuppliersPerSolution=1|ViewType=1|UseDirectApi=False|BomSetName=
 Configuration1_Name3=GroupOrder
 Configuration1_Item3=Comment=True|Footprint=True
 Configuration1_Name4=SortOrder
@@ -61,7 +61,7 @@ Configuration1_Item6=Comment=100|Description=100|Designator=100|Footprint=100|Qu
 [PublishSettings]
 OutputFilePath2=
 ReleaseManaged2=1
-OutputBasePath2=Project Outputs for LimePSB-RPCM_1v4
+OutputBasePath2=Project Outputs for LimePSB-RPCM_1v5
 OutputPathMedia2=
 OutputPathMediaValue2=
 OutputPathOutputer2=[Output Type]
@@ -88,7 +88,7 @@ PDFACompliance2=Disabled
 PDFVersion2=Default
 OutputFilePath3=d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v4\Project Outputs for LimePSB-RPCM_1v4\
 ReleaseManaged3=1
-OutputBasePath3=Project Outputs for LimePSB-RPCM_1v4
+OutputBasePath3=Project Outputs for LimePSB-RPCM_1v5
 OutputPathMedia3=
 OutputPathMediaValue3=
 OutputPathOutputer3=[Output Type]
@@ -101,7 +101,7 @@ OutputFileNameSpecial3=
 OpenOutput3=1
 OutputFilePath4=
 ReleaseManaged4=1
-OutputBasePath4=Project Outputs for LimePSB-RPCM_1v4
+OutputBasePath4=Project Outputs for LimePSB-RPCM_1v5
 OutputPathMedia4=
 OutputPathMediaValue4=
 OutputPathOutputer4=[Output Type]
