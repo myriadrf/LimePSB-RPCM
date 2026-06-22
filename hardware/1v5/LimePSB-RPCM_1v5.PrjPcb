@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=
+OutputPath=Project Outputs for LimePSB-RPCM_1v5
 LogFolderPath=
 ManagedProjectGUID=2ECE73BD-F6F1-4025-997E-9D7B03CDF58F
 IncludeDesignInRelease=0
@@ -569,7 +569,7 @@ UniqueID=C4CDED0A-96C9-4016-916F-3F9F121FB863
 Description=Default
 AllowFabrication=0
 ParameterCount=0
-VariationCount=248
+VariationCount=249
 Variation1=Designator=J5|UniqueId=\MTCYZGQY|Kind=1|AlternatePart= 
 Variation2=Designator=J6|UniqueId=\BVIDYGIC|Kind=1|AlternatePart= 
 Variation3=Designator=R9|UniqueId=\JRMJUZOY|Kind=1|AlternatePart= 
@@ -807,7 +807,7 @@ Variation234=Designator=R263|UniqueId=\GCFHNBLZ|Kind=1|AlternatePart=
 Variation235=Designator=R269|UniqueId=\DRFOQLKS|Kind=1|AlternatePart= 
 Variation236=Designator=R264|UniqueId=\IOFMZOPL|Kind=1|AlternatePart= 
 Variation237=Designator=R270|UniqueId=\IUUDDRGE|Kind=1|AlternatePart= 
-Variation238=Designator=R44|UniqueId=\BXGLUBCW|Kind=1|AlternatePart= 
+Variation238=Designator=R44|UniqueId=\BXGLUBCW|Kind=0|AlternatePart= 
 Variation239=Designator=R153|UniqueId=\FTNXHSDV|Kind=1|AlternatePart= 
 Variation240=Designator=R154|UniqueId=\UVJDAIID|Kind=1|AlternatePart= 
 Variation241=Designator=R103|UniqueId=\IOWJDVQT|Kind=0|AlternatePart= 
@@ -818,15 +818,16 @@ Variation245=Designator=C212|UniqueId=\LHGJYSXC|Kind=1|AlternatePart=
 Variation246=Designator=C245|UniqueId=\EPCSYPJU|Kind=0|AlternatePart= 
 Variation247=Designator=C211|UniqueId=\IRQBNJUR|Kind=1|AlternatePart= 
 Variation248=Designator=C212|UniqueId=\UFHKSPAA|Kind=1|AlternatePart= 
+Variation249=Designator=R41|UniqueId=\UMXBFQWX|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [Parameter1]
-Name=SHEET_TOTAL
-Value=15
-
-[Parameter2]
 Name=PROJECT_VERSION
 Value=1.5
+
+[Parameter2]
+Name=SHEET_TOTAL
+Value=15
 
 [Configuration1]
 Name=Default Configuration
@@ -875,7 +876,7 @@ SCH_HasExpandLogicalToPhysicalSheets=-1
 SaveSettingsToOutJob=0
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for LimePSB-RPCM_1v5
 
 [OutputGroup1]
 Name=Netlist Outputs
