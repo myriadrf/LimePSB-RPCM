@@ -15,7 +15,7 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=01_ExportBOM.OutJob
+Name=
 Description=
 TargetOutputMedium=Folder Structure
 VariantName=Default
@@ -86,7 +86,7 @@ ShowComponentParameters2=1
 GlobalBookmarks2=0
 PDFACompliance2=Disabled
 PDFVersion2=Default
-OutputFilePath3=d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v4\Project Outputs for LimePSB-RPCM_1v4\
+OutputFilePath3=d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v5\Project Outputs for LimePSB-RPCM_1v5\
 ReleaseManaged3=1
 OutputBasePath3=Project Outputs for LimePSB-RPCM_1v5
 OutputPathMedia3=
@@ -95,7 +95,7 @@ OutputPathOutputer3=[Output Type]
 OutputPathOutputerPrefix3=
 OutputPathOutputerValue3=
 OutputFileName3=
-OutputFileNameMulti3=LimePSB-RPCM_1v4_BOMr0
+OutputFileNameMulti3=LimePSB-RPCM_1v5_BOMr0_(Default)
 UseOutputNameForMulti3=0
 OutputFileNameSpecial3=
 OpenOutput3=1
@@ -140,7 +140,7 @@ WmvQuality4=80
 [GeneratedFilesSettings]
 RelativeOutputPath2=
 OpenOutputs2=1
-RelativeOutputPath3=d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v4\Project Outputs for LimePSB-RPCM_1v4\
+RelativeOutputPath3=d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v5\Project Outputs for LimePSB-RPCM_1v5\
 OpenOutputs3=1
 AddToProject3=1
 TimestampFolder3=0
