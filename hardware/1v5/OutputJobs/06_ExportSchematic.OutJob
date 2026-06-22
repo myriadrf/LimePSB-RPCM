@@ -259,15 +259,15 @@ Configuration16_Name1=OutputConfigurationParameter1
 Configuration16_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowProbe=True|ShowBlanket=True|NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle|ShowNote=True|ShowNoteCollapsed=True|ExpandDesignator=True|ExpandNetLabel=False|ExpandPort=False|ExpandSheetNum=False|ExpandDocNum=False|PrintArea=0|PrintAreaRect.X1=0|PrintAreaRect.Y1=0|PrintAreaRect.X2=0|PrintAreaRect.Y2=0
 
 [PublishSettings]
-OutputFilePath2=d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v4\Project Outputs for LimePSB-RPCM_1v4\LimePSB-RPCM_1v4_Schematic_r1(Default).PDF
+OutputFilePath2=D:\Projektai\Lime Microsystems\LimePSB-RPCM\git\hardware\1v5\Project Outputs for LimePSB-RPCM_1v5\LimePSB-RPCM_1v5_Schematic_r0_(Default).PDF
 ReleaseManaged2=1
-OutputBasePath2=Project Outputs for LimePSB-RPCM_1v4
+OutputBasePath2=Project Outputs for LimePSB-RPCM_1v5
 OutputPathMedia2=
 OutputPathMediaValue2=
 OutputPathOutputer2=[Output Type]
 OutputPathOutputerPrefix2=
 OutputPathOutputerValue2=
-OutputFileName2=LimePSB-RPCM_1v4_Schematic_r2_(Default).PDF
+OutputFileName2=LimePSB-RPCM_1v5_Schematic_r0_(Default).PDF
 OutputFileNameMulti2=
 UseOutputNameForMulti2=0
 OutputFileNameSpecial2=
@@ -288,7 +288,7 @@ PDFACompliance2=Disabled
 PDFVersion2=Default
 OutputFilePath3=
 ReleaseManaged3=1
-OutputBasePath3=Project Outputs for LimePSB-RPCM_1v4
+OutputBasePath3=Project Outputs for LimePSB-RPCM_1v5
 OutputPathMedia3=
 OutputPathMediaValue3=
 OutputPathOutputer3=[Output Type]
@@ -301,7 +301,7 @@ OutputFileNameSpecial3=
 OpenOutput3=1
 OutputFilePath4=
 ReleaseManaged4=1
-OutputBasePath4=Project Outputs for LimePSB-RPCM_1v4
+OutputBasePath4=Project Outputs for LimePSB-RPCM_1v5
 OutputPathMedia4=
 OutputPathMediaValue4=
 OutputPathOutputer4=[Output Type]
@@ -338,7 +338,7 @@ WmvVideoCodecName4=Windows Media Video V7
 WmvQuality4=80
 
 [GeneratedFilesSettings]
-RelativeOutputPath2=d:\LimePCBs\LimeKEY_RPCM\GIT\hardware\1v4\Project Outputs for LimePSB-RPCM_1v4\LimePSB-RPCM_1v4_Schematic_r1(Default).PDF
+RelativeOutputPath2=D:\Projektai\Lime Microsystems\LimePSB-RPCM\git\hardware\1v5\Project Outputs for LimePSB-RPCM_1v5\LimePSB-RPCM_1v5_Schematic_r0_(Default).PDF
 OpenOutputs2=1
 RelativeOutputPath3=
 OpenOutputs3=1
