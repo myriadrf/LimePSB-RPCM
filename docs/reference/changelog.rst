@@ -1,7 +1,7 @@
 Changelog
 #########
 
-The first production LimeSDR XTRX was revision v1.1 and so this changelog starts with changes from that point.
+The first production LimePSB RPCM was revision v1.1 and so this changelog starts with changes from that point.
 
 .. note::
    Details of internal-only versions which were never released are not included here.
@@ -10,7 +10,7 @@ v1.4
 ****
 
 
-LimeSDR-PSB RPCM v1.4 implementation is based on LimePSB RPCM v1.3 board with the schematic and PCB Layout changes described in this document. The major changes are:
+LimePSB RPCM v1.4 implementation is based on LimePSB RPCM v1.3 board with the schematic and PCB Layout changes described in this document. The major changes are:
 
 * Replaced discontinued SKY13286-359LF RF switches with F2972NEGK. Swapped RF switches RF1 and RF2 ports so RF_SW_TDD polarity inverted.
 * Added RF couplers and power detectors on both TX channels
@@ -185,7 +185,7 @@ Changed R135 from 1k to 330R as shown in Figure 17.
 Miscellaneous
 =============
 
-Raspberry button was changed to a part with a longer cap (from 3.86 mm to 6.85 mm). Also added option to change button function to RPI CM5 power on/off as shown in Figure 18. 
+Raspberry Pi button was changed to a part with a longer cap (from 3.86 mm to 6.85 mm). Also added option to change button function to RPI CM5 power on/off as shown in Figure 18. 
 
 .. figure:: /images/LimePSB-RPCM_v1.4_BUTTON_changes.png
   :width: 600
@@ -229,7 +229,7 @@ Added Internal U.FL to external SMA connector (EXT2) and renamed old internal U.
 PCB
 ===
 
-Layout and PCB changes for LimePSB-RPCM v1.4 board are as follows:
+Layout and PCB changes for LimePSB RPCM v1.4 board are as follows:
 
 * Changes made according to schematic.
 * Moved 3.5mm A/V socked to the PCB edge and made cutout for socket ring.
@@ -251,7 +251,7 @@ Layout and PCB changes for LimePSB-RPCM v1.4 board are as follows:
 v1.3
 ****
 
-LimeSDR-PSB RPCM v1.3 implementation is based on LimeSDR-KEY RPCM v1.2 board with the schematic and PCB Layout changes described in this document. The major changes are added FPGA (Lattice), 10 MHZ OCXO with alternatives and GNSS receiver. This enables disciplined OCXO function from hardware perspective. For these modifications required to add two additional schematic sheets and change project structure
+LimePSB RPCM v1.3 implementation is based on LimePSB RPCM RPCM v1.2 board with the schematic and PCB Layout changes described in this document. The major changes are added FPGA (Lattice), 10 MHZ OCXO with alternatives and GNSS receiver. This enables disciplined OCXO function from hardware perspective. For these modifications required to add two additional schematic sheets and change project structure
 
 Board size and main components positions remained the same.
 
@@ -460,7 +460,7 @@ Added EMC2301 PWM pull up.
 PCB
 ===
 
-Layout and PCB changes for LimePSB-RPCM v1.3 board are as follows:
+Layout and PCB changes for LimePSB RPCM v1.3 board are as follows:
 
 *	Changes made according to schematic
 *	Board size and main components positions remained the same
@@ -468,17 +468,17 @@ Layout and PCB changes for LimePSB-RPCM v1.3 board are as follows:
 .. figure:: /images/LimePSB-RPCM_v1.3_3D_top.png
   :width: 600
   
-  Figure 46: LimePSB-RPCM v1.3 3D top view 
+  Figure 46: LimePSB RPCM v1.3 3D top view 
 
 .. figure:: /images/LimePSB-RPCM_v1.3_3D_bot.png
   :width: 600
   
-  Figure 47: LimePSB-RPCM v1.3 3D bottom view
+  Figure 47: LimePSB RPCM v1.3 3D bottom view
 
 v1.2
 ****
 
-LimeSDR-PSB RPCM v1.2 implementation is based on LimeSDR-KEY RPCM v1.1 board with the schematic and PCB Layout changes described in this document. The major changes were made to make the board compatible with Raspberry Pi CM4 and CM5 compute modules.
+LimePSB RPCM v1.2 implementation is based on LimePSB RPCM v1.1 board with the schematic and PCB Layout changes described in this document. The major changes were made to make the board compatible with Raspberry Pi CM4 and CM5 compute modules.
 
 Raspberry Pi Connector
 ======================
@@ -675,7 +675,7 @@ PA changed from SBB-5089 to TQP3M9018. Also inductor added for low frequency ran
 PCB
 ===
 
-Layout and PCB changes for LimePSB-RPCM v1.2 board are as follows:
+Layout and PCB changes for LimePSB RPCM v1.2 board are as follows:
 
 * Passive components moved from under RPi CM4/5
 * Changes made according to schematic

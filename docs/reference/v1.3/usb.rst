@@ -10,7 +10,7 @@ LimePSB RPCM contains USB 2.0 hub, over current protection, type-C, double type-
   
 Main LimePSB RPCM board USB subsystem components:
 
-*	USB type-C socket (J26) is primarily used as LimePSB-RPCM one of power supply sources (for more information check section 2.15 Power Distribution). To enable RPi USB boot mount nRPIBOOT jumper on J12 pins 1-2 and mount a jumper on header J27 to switch Raspberry Pi USB from USB hub to USB C (more information check section 2.2 Raspberry Pi CM4/5 Configuration).
+*	USB type-C socket (J26) is primarily used as LimePSB RPCM one of power supply sources (for more information check section 2.15 Power Distribution). To enable RPi USB boot mount nRPIBOOT jumper on J12 pins 1-2 and mount a jumper on header J27 to switch Raspberry Pi USB from USB hub to USB C (more information check section 2.2 Raspberry Pi CM4/5 Configuration).
 *	USB type-A dual sockets (J30) may be used to connect USB peripherals to the Raspberry Pi CM4/5. Top socket is USB 3.0 if CM5 is used.
 * USB type-A dual socket (J30) and header (J28) have over current protection. Current limit is set to 600 mA. Both sockets share same protection circuitry so if one of them tries to draw more current both sockets will be disabled. Header has it is own separate over current protection.
 *	USB2.0 hub USB2517 (IC19) USB 2.0 hub expands Raspberry Pi CM4/5 USB port to dual USB socket (J30), header (J28) and mPCIe (J3). For more information check Table 15.

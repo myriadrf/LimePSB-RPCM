@@ -1,5 +1,5 @@
-Raspberry CM4/5 Connector
-#########################
+Raspberry Pi CM4/5 Connector
+############################
 
 LimePSB RPCM board is designed to use Raspberry Pi CM4 as a host computer. Raspberry Pi CM4 version without eMMC Flash memory is also supported. Board to board connectors (J1 and J2) are used to connect CM4 to the LimePSB RPCM board. Connector pinout, CM4 signals and schematic signal names are listed and described in Table 2.
 
