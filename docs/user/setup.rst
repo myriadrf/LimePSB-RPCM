@@ -30,9 +30,9 @@ RF Connections
 .. figure:: /images/LimePSB-RPCM_v1.4_RFCON.png
   :width: 600
   
-  Figure 8: LimePSB RPCM board top with RF connector positions
+  Figure 5: LimePSB RPCM board top with RF connector positions
 
-.. list-table:: Table 1. RF Connectors
+.. list-table:: Table 2. RF Connectors
     :header-rows: 1
     :stub-columns: 1
 
