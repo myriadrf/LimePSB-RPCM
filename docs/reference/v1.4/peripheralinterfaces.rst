@@ -1,7 +1,12 @@
 Peripheral Interfaces
 #####################
 
-LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB RPCM low speed interfaces signal names, I/O standards are listed in table 17.
+LimePSB RPCM features multiple low speed interfaces like SPI, I2C and UART. They are provided by the Raspberry Pi CM4/5 and by the FPGA.
+
+Raspberry Pi CM4/5
+==================
+
+Raspberry Pi CM4/5 low speed interface signal names, pins and I/O standards are listed in Table 17.
 
 .. table:: Table 17. CM4/5 low speed interfaces pins
 
@@ -43,39 +48,12 @@ LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB
   |           | RPI_UART0_TX          | 55 (GPIO14) | 3.3V         | Data (CM4/5 output)                                   |
   +-----------+-----------------------+-------------+--------------+-------------------------------------------------------+
 
-FPGA low speed interfaces signal names, I/O standards are listed in table 18.
+Devices connected to RPI_I2C0, their addresses and other information are listed in Table 18.
 
-.. table:: Table 18. FPGA low speed interfaces pins
+.. note::
+   FPGA_I2C is connected to RPI_I2C0 through resistors R111 and R112.
 
-  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
-  | Interface | Schematic signal name | FPGA pin     | I/O standard | Comment                                          |
-  +===========+=======================+==============+==============+==================================================+
-  | CFG       | FPGA_CFG_SCK          | 15 (IOB_34A) | 3.3V         | Serial Clock (FPGA output)                       |
-  |           +-----------------------+--------------+--------------+--------------------------------------------------+
-  |           | FPGA_CFG_SO           | 14 (IOB_32A) | 3.3V         | FPGA configuration flash Data (FPGA input)       |
-  |           +-----------------------+--------------+--------------+--------------------------------------------------+
-  |           | FPGA_CFG_SI           | 17 (IOB_33B) | 3.3V         | FPGA configuration flash Data (FPGA output)      |
-  |           +-----------------------+--------------+--------------+--------------------------------------------------+
-  |           | FPGA_CFG_CSN          | 16 (IOB_35B) | 3.3V         | FPGA SPI slave select (FPGA input)               |
-  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
-  | SPI0      | FPGA_SPI0_SCLK        | 43 (IOT_49A) | 3.3V         | Serial Clock (FPGA output)                       |
-  |           +-----------------------+--------------+--------------+--------------------------------------------------+
-  |           | FPGA_SPI0_MOSI        | 38 (IOT_50B) | 3.3V         | Data (FPGA output)                               |
-  |           +-----------------------+--------------+--------------+--------------------------------------------------+
-  |           | FPGA_SPI0_DAC_SS      | 42 (IOT_51A) | 3.3V         | IC36/IC38 DAC SPI slave select (FPGA output)     |
-  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
-  | I2C0      | FPGA_I2C0_SCL         | 47 (IOB_2A)  | 3.3V         | Serial Clock (FPGA output)                       |
-  |           +-----------------------+--------------+--------------+--------------------------------------------------+
-  |           | FPGA_I2C0_SDA         | 48 (IOB_4A)  | 3.3V         | Data (FPGA input/output)                         |
-  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
-  | UART      | GNSS_UART_RX          | 51 (GPIO15)  | 3.3V         | Data (FPGA input)                                |
-  |           +-----------------------+--------------+--------------+--------------------------------------------------+
-  |           | GNSS_UART_TX          | 55 (GPIO14)  | 3.3V         | Data (FPGA output)                               |
-  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
-
-RPI_I2C0 (FPGA_I2C0) interface devices, addresses and other info are shown in table 19.
-
-.. list-table:: Table 19. RPI_I2C0 interface devices
+.. list-table:: Table 18. RPI_I2C0 interface devices
    :header-rows: 1
 
    * - Slave device
@@ -128,3 +106,36 @@ RPI_I2C0 (FPGA_I2C0) interface devices, addresses and other info are shown in ta
      - 0 1 0 1 1 0 0 R/W
      - 3.3V
      - USB2517 (disabled)
+
+FPGA
+====
+
+FPGA low speed interface signal names, pins and I/O standards are listed in Table 19. FPGA configuration modes are described in :doc:`fpga`.
+
+.. table:: Table 19. FPGA low speed interfaces pins
+
+  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
+  | Interface | Schematic signal name | FPGA pin     | I/O standard | Comment                                          |
+  +===========+=======================+==============+==============+==================================================+
+  | CFG       | FPGA_CFG_SPI_SCK      | 15 (IOB_34A) | 3.3V         | Serial Clock (FPGA input, output in master mode) |
+  |           +-----------------------+--------------+--------------+--------------------------------------------------+
+  |           | FPGA_CFG_SPI_SO       | 14 (IOB_32A) | 3.3V         | Configuration data (FPGA output)                 |
+  |           +-----------------------+--------------+--------------+--------------------------------------------------+
+  |           | FPGA_CFG_SPI_SI       | 17 (IOB_33B) | 3.3V         | Configuration data (FPGA input)                  |
+  |           +-----------------------+--------------+--------------+--------------------------------------------------+
+  |           | FPGA_CFG_SPI_CSN      | 16 (IOB_35B) | 3.3V         | FPGA SPI slave select (FPGA input)               |
+  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
+  | SPI0      | FPGA_SPI0_SCLK        | 43 (IOT_49A) | 3.3V         | Serial Clock (FPGA output)                       |
+  |           +-----------------------+--------------+--------------+--------------------------------------------------+
+  |           | FPGA_SPI0_MOSI        | 38 (IOT_50B) | 3.3V         | Data (FPGA output)                               |
+  |           +-----------------------+--------------+--------------+--------------------------------------------------+
+  |           | FPGA_SPI0_DAC_SS      | 42 (IOT_51A) | 3.3V         | IC36/IC38 DAC SPI slave select (FPGA output)     |
+  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
+  | I2C       | FPGA_I2C_SCL          | 47 (IOB_2A)  | 3.3V         | Serial Clock (FPGA output)                       |
+  |           +-----------------------+--------------+--------------+--------------------------------------------------+
+  |           | FPGA_I2C_SDA          | 48 (IOB_4A)  | 3.3V         | Data (FPGA input/output)                         |
+  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
+  | UART      | GNSS_UART_RX          | 32 (IOT_43A) | 3.3V         | Data (FPGA output)                               |
+  |           +-----------------------+--------------+--------------+--------------------------------------------------+
+  |           | GNSS_UART_TX          | 31 (IOT_42B) | 3.3V         | Data (FPGA input)                                |
+  +-----------+-----------------------+--------------+--------------+--------------------------------------------------+
