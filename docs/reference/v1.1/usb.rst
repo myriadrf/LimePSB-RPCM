@@ -10,11 +10,11 @@ LimePSB RPCM contains USB 2.0 hub, over current protection, type-C, double type-
   
 Main LimePSB RPCM board USB subsystem components:
 
-  * USB type-C socket (J27) is primarily used as LimeSPB RPCM one of power supply sources (for more information check Power Distribution section). To enable RPi USB boot mount nRPIBOOT jumper on J14 pins 1-2 and mount a jumper on header J28 to switch Raspberry Pi USB from USB hub to USB C (more information check section 2.2 Raspberry Pi CM4 Configuration Headers).
+  * USB type-C socket (J27) is primarily used as LimePSB RPCM one of power supply sources (for more information check Power Distribution section). To enable RPi USB boot mount nRPIBOOT jumper on J14 pins 1-2 and mount a jumper on header J28 to switch Raspberry Pi USB from USB hub to USB C (for more information check System Header section).
   * USB type-A dual sockets (J29) may be used to connect USB peripherals to the Raspberry Pi CM4.
-  * USB2.0 hub USB2517 (IC19) USB 2.0 hub expands Raspberry Pi CM4 USB port to dual USB socket (J29), header (J31) and mPCIe (J3). For more information check Table 13.
+  * USB2.0 hub USB2517 (IC18) USB 2.0 hub expands Raspberry Pi CM4 USB port to dual USB socket (J29), header (J31) and mPCIe (J3). For more information check Table 13.
 
-.. list-table:: Table 13. USB2.0 (IC19) Hub signals
+.. list-table:: Table 13. USB2.0 (IC18) Hub signals
    :header-rows: 1
    :stub-columns: 1
 
@@ -92,4 +92,4 @@ Main LimePSB RPCM board USB subsystem components:
      - NC
      - NC
 
-Dual USB 3.0 socket (J29) and header (J27) have over current protection. Current limit is set to 600 mA. Both sockets share same protection circuitry so if one of them tries to draw more current both sockets will be disabled. Header has it is own separate over current protection.
+Dual USB 2.0 socket (J29) and header (J31) have over current protection. Current limit is set to 600 mA. Both sockets share same protection circuitry so if one of them tries to draw more current both sockets will be disabled. Header has its own separate over current protection.

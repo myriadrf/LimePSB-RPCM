@@ -2,8 +2,8 @@ Clock Distribution
 ##################
 
 
-LimePSB-RPCM board clock network comprises of on-board voltage controlled crystal oscillators, phase detector, clock buffers, GNSS receiver, clock source selection analog muxes, reference clock input and output connectors.
-Board clock distribution block diagram is as shown in figure 7.
+LimePSB-RPCM board clock network comprises of on-board voltage controlled crystal oscillators, phase detector, clock buffer, clock configuration jumpers, reference clock input and output connectors.
+Board clock distribution block diagram is as shown in Figure 7.
 
 .. figure:: /images/LimePSB-RPCM_v1.1_diagrams_r1_clock.png
   :width: 600
@@ -17,19 +17,19 @@ LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute 
   +------------------+--------------------+-------------------+-------------------------------------------------------------------------------------+
   | **Schematic ID** | **Input signal**   | **Output signal** | **Description**                                                                     |
   +==================+====================+===================+=====================================================================================+
-  | J36              | EXT_SYNC_IN        | REF_CLK_IN        | Phase detector (IC28) input selection                                               |
+  | J36              | EXT_SYNC_IN        | REF_CLK_IN        | Phase detector (IC27) input selection                                               |
   |                  +--------------------+                   |                                                                                     |
   |                  | RPI_SYNC_OUT       |                   |                                                                                     |
   +------------------+--------------------+-------------------+-------------------------------------------------------------------------------------+
   | J37              | RPI_SYNC_OUT       | PCIE_PPS_IN       | PPS signal source selection for mPCIe expansion boards                              |
-  |                  +--------------------+                   |                                                                                     +
+  |                  +--------------------+                   |                                                                                     |
   |                  | EXT_SYNC_IN        |                   |                                                                                     |
   +------------------+--------------------+-------------------+-------------------------------------------------------------------------------------+
   | J38              | EXT_SYNC_IN        | RPI_SYNC_IN       | CM4 SYNC_IN synchronization input source selection                                  |
   |                  +--------------------+                   |                                                                                     |
   |                  | PCIE_PPS_OUT       |                   |                                                                                     |
   +------------------+--------------------+-------------------+-------------------------------------------------------------------------------------+
-  | J39              | EXT_SYNC_IN        | PCIE_UIMC4        | Reference clock selection for mPCIE exanpsion board (XTRX)                          |
+  | J39              | EXT_SYNC_IN        | PCIE_UIMC4        | Reference clock selection for mPCIE expansion board (XTRX)                          |
   |                  +--------------------+                   |                                                                                     |
   |                  | LMK_CLK_OUT2       |                   |                                                                                     |
   +------------------+--------------------+-------------------+-------------------------------------------------------------------------------------+
@@ -50,14 +50,14 @@ LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute 
   | R6               | PCIE_SMB_CLK       | PCIE_PPS_OUT      | Clock signal input from mPCIE expansion board (XTRX)                                |
   +------------------+--------------------+-------------------+-------------------------------------------------------------------------------------+
 
-LimePSB RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffer LMK00101. By default voltage controlled oven compensated crystal oscillator (VCOCXO) XO1 is populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC27 default or 8-bit IC29) or phase detector (IC28).
+LimePSB RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffer LMK00105. By default voltage controlled oven compensated crystal oscillator (VCOCXO) XO1 is populated. Optional voltage controlled temperature compensated crystal oscillators XO2 to XO5 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC26 default or 8-bit IC28) or phase detector (IC27).
 
 Clock network components are listed in Table 10.
 
 .. table:: Table 10. LimePSB-RPCM clock distribution network components
 
   +----------------+----------------+----------------------------+-----------------+------------------+
-  | **Designator** | **Type**       | **Part number**            | **Description** | **Description**  |
+  | **Designator** | **Type**       | **Part number**            | **Parameters**  | **Description**  |
   +================+================+============================+=================+==================+
   | XO1            | VCOCXO         | U7475LF 30.72MHz           | 30.72 MHz       |                  |
   +----------------+----------------+----------------------------+-----------------+------------------+
@@ -69,13 +69,11 @@ Clock network components are listed in Table 10.
   +----------------+                +----------------------------+-----------------+------------------+
   | XO5            |                | ASVTX-12-A-38.400MHZ-H10-T | 38.4 MHz        | Not mounted      |
   +----------------+----------------+----------------------------+-----------------+------------------+
-  | IC27           | DAC            | AD5662                     | 16 Bit          |                  |
+  | IC26           | DAC            | AD5662                     | 16 Bit          |                  |
   +----------------+                +----------------------------+-----------------+------------------+
-  | IC29           |                | AD5601BKSZ-REEL7           | 8 Bit           | Not mounted      |
+  | IC28           |                | AD5601BKSZ-REEL7           | 8 Bit           | Not mounted      |
   +----------------+----------------+----------------------------+-----------------+------------------+
-  | IC25           | Clock buffer   | LMK00105SQ/NOPB            |                 |                  |
+  | IC24           | Clock buffer   | LMK00105SQ/NOPB            |                 |                  |
   +----------------+----------------+----------------------------+-----------------+------------------+
-  | IC28           | Phase detector | ADF4002BCPZ-RL7            |                 |                  |
+  | IC27           | Phase detector | ADF4002BCPZ-RL7            |                 |                  |
   +----------------+----------------+----------------------------+-----------------+------------------+
-
-RPI_SYNC mux (IC35) is needed for CM4 and CM5 compatibility purposes.

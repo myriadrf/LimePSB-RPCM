@@ -1,7 +1,7 @@
 Peripheral Interfaces
 #####################
 
-LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB RPCM low speed interfaces signal names, I/O standards are listed in table 15.
+LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB RPCM low speed interfaces signal names, I/O standards are listed in Table 15.
 
 .. table:: Table 15. CM4 Peripheral interfaces pins
 
@@ -14,9 +14,9 @@ LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB
   |               +---------------------------+-------------+------------------+-------------------------------------------------------------+
   |               | RPI_SPI0_MISO             | 40 (GPIO9)  | 3.3V             | Data (CM4 input)                                            |
   |               +---------------------------+-------------+------------------+-------------------------------------------------------------+
-  |               | RPI_SPI0_SS0              | 39 (GPIO8)  | 3.3V             | IC27 and IC29 DACs SPI slave select (CM4 output)            |
+  |               | RPI_SPI0_SS0              | 39 (GPIO8)  | 3.3V             | IC26 and IC28 DACs SPI slave select (CM4 output)            |
   |               +---------------------------+-------------+------------------+-------------------------------------------------------------+
-  |               | RPI_SPI0_SS1              | 37 (GPIO7)  | 3.3V             | IC28 phase detector SPI slave select (CM4 output)           |
+  |               | RPI_SPI0_SS1              | 37 (GPIO7)  | 3.3V             | IC27 phase detector SPI slave select (CM4 output)           |
   +---------------+---------------------------+-------------+------------------+-------------------------------------------------------------+
   | SPI1          | RPI_SPI1_SCLK             | 25 (GPIO21) | 3.3V             | Serial Clock (CM4 output)                                   |
   |               +---------------------------+-------------+------------------+-------------------------------------------------------------+
@@ -26,7 +26,7 @@ LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB
   |               +---------------------------+-------------+------------------+-------------------------------------------------------------+
   |               | RPI_SPI1_SS0              | 49 (GPIO18) | 3.3V             | IC8 ADC SPI slave select (CM4 output)                       |
   |               +---------------------------+-------------+------------------+-------------------------------------------------------------+
-  |               | RPI_SPI1_SS1              | 50 (GPIO17) | 3.3V             | IC14 AND IC16 Shift registers SPI slave select (CM4 output) |
+  |               | RPI_SPI1_SS1              | 50 (GPIO17) | 3.3V             | IC12 and IC15 shift registers SPI slave select (CM4 output) |
   +---------------+---------------------------+-------------+------------------+-------------------------------------------------------------+
   | I2C0          | RPI_I2C0_SCL              | 80          | 3.3V             | Serial Clock (CM4 output)                                   |
   |               +---------------------------+-------------+------------------+-------------------------------------------------------------+
@@ -38,7 +38,7 @@ LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB
   +---------------+---------------------------+-------------+------------------+-------------------------------------------------------------+
 
 
-RPI_I2C0 (FPGA_I2C0) interface devices, addresses and other info are shown in table 16.
+RPI_I2C0 interface devices, addresses and other info are shown in Table 16.
 
 .. list-table:: Table 16. RPI_I2C0 interface devices
    :header-rows: 1
@@ -58,17 +58,17 @@ RPI_I2C0 (FPGA_I2C0) interface devices, addresses and other info are shown in ta
      - 1 0 1 0 0 0 0 RW
      - 3.3V
      - CAT24C128WI-GT3/M24128
-   * - IC12/IC13
-     - secure key storage
+   * - IC14(default)/IC13
+     - Secure key storage
      - 1 1 0 0 0 0 0 RW
      - 3.3V
      - ATECC508A
-   * - IC15/IC17
+   * - IC16
      - RTC
      - 1 0 1 0 0 0 1 RW
      - 3.3V
      - PCF85063AT
-   * - IC44
+   * - IC43
      - USB PD controller
      - 0 0 0 1 0 0 0 RW
      - 3.3V

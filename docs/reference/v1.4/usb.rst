@@ -10,10 +10,10 @@ LimePSB RPCM contains USB 2.0 hub, over current protection, type-C, double type-
   
 Main LimePSB RPCM board USB subsystem components:
 
-*	USB type-C socket (J29) is primarily used as one of power supply sources (for more information check section 2.15 Power Distribution). Also it is used to boot CM4/5. To enable RPi USB boot change configuration dip switch (DSW1) bits 1 and 2 to on positions.
-*	USB type-A dual socket (J33) may be used to connect USB peripherals to the Raspberry Pi CM4/5. Top socket is USB 3.0 if CM5 is used.
+* USB type-C socket (J29) is primarily used as one of power supply sources (for more information see :doc:`power`). Also it is used to boot CM4/5. To enable RPi USB boot change configuration dip switch (DSW1) bits 1 and 2 to on positions.
+* USB type-A dual socket (J33) may be used to connect USB peripherals to the Raspberry Pi CM4/5. Top socket is USB 3.0 if CM5 is used.
 * USB type-A dual socket (J33) and header (J31) have over current protection. Current limit is set to 600 mA. Both sockets share same protection circuitry so if one of them tries to draw more current both sockets will be disabled. Header has it is own separate over current protection.
-*	USB2.0 hub USB2517 (IC20) USB 2.0 hub expands Raspberry Pi CM4/5 USB port to dual USB socket (J33), header (J31) and mPCIe (J3). For more information check Table 15.
+* USB2.0 hub USB2517 (IC20) USB 2.0 hub expands Raspberry Pi CM4/5 USB port to dual USB socket (J33), header (J31) and mPCIe (J3). For more information check Table 15.
 
 .. list-table:: Table 15. USB2.0 (IC20) Hub signals
    :header-rows: 1
@@ -57,7 +57,7 @@ Main LimePSB RPCM board USB subsystem components:
    * - 54/53
      - USBDN6_DP / USBDN6_DM
      - Downstream port
-     - USB_HUB_D6_P / USB_HUB_D5_N
+     - USB_HUB_D6_P / USB_HUB_D6_N
      - IC48 (GNSS)
    * - 56/55
      - USBDN7_DP / USBDN7_DM

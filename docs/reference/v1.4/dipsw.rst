@@ -1,9 +1,9 @@
 Configuration Switch
 ####################
 
-Boot source, USB 2.0 mux, USB PD configuration and CM4/5 compatibility can be done by switching SW1 DIP switch bits. Detailed switch bit descriptions is given in Table 6.
+Boot source, USB 2.0 mux, USB PD configuration and CM4/5 compatibility can be done by switching DSW1 DIP switch bits. Detailed switch bit descriptions is given in Table 7.
 
-.. table:: Table 6. DIP switch configuration bits
+.. table:: Table 7. DIP switch configuration bits
 
   +---------+---------------------------+-----------------------------------------------------------------------------------------------------+
   | **Bit** | **Schematic signal name** | **Description**                                                                                     |

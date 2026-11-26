@@ -46,7 +46,7 @@ Default function of LEDs and related information is listed in Table 20.
   +-------------------------+------------------+-------------------------+------------------------------------------------------------------------------------------+
   | LED7                    | FPGA_LED_R       |                         | User defined                                                                             |
   |                         +------------------+-------------------------+                                                                                          |
-  |                         | FPGA_CDONE       |                         | Indictes FPGA configuration status                                                       |
+  |                         | FPGA_CDONE       |                         | Indicates FPGA configuration status                                                      |
   +-------------------------+------------------+-------------------------+------------------------------------------------------------------------------------------+
   | Ethernet   connector J9 | ETH_LED_Y        |                         | Green is connected to Ethernet_nLED2 (Ethernet speed   indicator: 1Gbit or 100Mbit Link) |
   |                         +------------------+-------------------------+                                                                                          |

@@ -14,7 +14,7 @@ Introduction
       :align: center
 
 
-The LimePSB RPCM is a carrier board designed for the Raspberry Pi Computes Module 4 and 5. In addition to providing access to all interfaces of the Raspberry Pi Compute Modules, the LimePSB RPCM features an onboard 2T2R TDD-capable RF front end.
+The LimePSB RPCM is a carrier board designed for the Raspberry Pi Compute Modules 4 and 5. In addition to providing access to all interfaces of the Raspberry Pi Compute Modules, the LimePSB RPCM features an onboard 2T2R TDD-capable RF front end.
 
 This combination delivers a versatile hardware platform for the development and prototyping of high-performance systems based on the Raspberry Pi Compute Modules 4 and 5, integrating an RF front end, clock distribution network, and mPCIe connectivity.
 
@@ -35,26 +35,26 @@ RF Front-end
      - MIMO (2T2R)
      - 2 Full-duplex channels
    * - Frequency Range
-     - 100 MHz – 4 GHz
-     - Continuos coverage
+     - 100 MHz - 4 GHz
+     - Continuous coverage
    * - Tx Gain
      - 16 dB - 20 dB
-     - Depended on frequency
+     - Depends on frequency
    * - Rx Gain
      - 6 dB - 17 dB
-     - Depended on frequency
+     - Depends on frequency
    * - TX NF
      - 1.9 dB - 3.4 dB
-     - Depended on frequency
+     - Depends on frequency
    * - RX NF
      - 1.8 dB - 2.5 dB
-     - Depended on frequency
+     - Depends on frequency
    * - TX P1dB
      - 18.2 dBm - 20.4 dBm
-     - Depended on frequency
+     - Depends on frequency
    * - RX P1dB
      - 21.6 dBm - 21.8 dBm
-     - Depended on frequency
+     - Depends on frequency
 
 .. note::
    RF front-end parameters may vary depending on the board version.
@@ -62,7 +62,7 @@ RF Front-end
 Digital Interfaces
 ==================
 
-Raspbery Pi compute module (system host) interfaces:
+Raspberry Pi Compute Module (system host) interfaces:
    
    * PCIe 2.0 x1 (Mini PCIe expansion card slot)
    * 2x HDMI 2.0
@@ -88,7 +88,7 @@ Power Supply
      - Notes
    * - Input Voltage (DC Barrel)
      - 9 V - 14 V DC
-     - Inner diameter 2 mm outer, outer diameter 6.5 mm
+     - Inner diameter 2 mm, outer diameter 6.5 mm
    * - Input Voltage (USB PD)
      - 9 V - 12 V DC
      - Via USB type C connector
@@ -116,10 +116,10 @@ Environmental
      - Value
      - Notes
    * - Operating Temperature
-     - 0 °C to +70 °C
+     - 0 |deg|\ C to +70 |deg|\ C
      - Commercial-grade
    * - Storage Temperature
-     - -40 °C to +85 °C
+     - -40 |deg|\ C to +85 |deg|\ C
      - N/A
    * - Operating Humidity
      - 10% to 90% RH  
@@ -128,7 +128,7 @@ Environmental
 Mechanical
 ==========
 
-Board size 170 × 110 mm.
+Board size 170 x 110 mm.
 
 Features
 ********
@@ -146,6 +146,7 @@ Devices
 * Secure key storage, I/O expander
 * RTC, ADC
 * USB 2.0 hub
+* RF TX output power detectors (v1.4 and newer)
 
 Clock System
 ============
@@ -185,12 +186,12 @@ Connectors
 * Nano-SIM socket
 * Coaxial RF (4x SMA female + 4x U.FL female) connectors for RF front end
 * External synchronization (2x SMA female) connectors for input and output
-* 2x Coaxial pass-through U.FL to external SMA connectors
+* 2x Coaxial pass-through U.FL to external SMA connectors (INT to EXT 2 is connected to the GNSS receiver antenna input by default, v1.4 and newer)
 * 20-pin Raspberry Pi CM4/5 GPIO header (3.3V)
 * 14-pin Raspberry Pi CM4/5 SYS header
 * 5-pin front display connector (power, I2C, button)
 * Raspberry Pi CM4/5 UART0 header (unpopulated)
-* 2-pin and 4-pin FAN connector (5V default or 3.3V or VCC_INT voltage)
+* 2-pin and 4-pin FAN connector (12V default, or 3.3V or 5V)
   
 
 

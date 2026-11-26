@@ -6,14 +6,14 @@ v1.2
    :hidden:
    
    overview
-   CMcon
+   cmcon
    syscon
    pwrcon
    wifiandbluecntrl
    dipsw
    rffe
    clock
-   DSIandCSIcons
+   dsiandcsicons
    usb
    frontdiscon
    peripheralinterfaces

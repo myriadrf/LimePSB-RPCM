@@ -1,14 +1,14 @@
 User Interface
 ##############
 
-LimePSB RPCM board features button, buzzer, five dual colour (red and green (RG)) LEDs, one green indication LED and two Ethernet activity LEDs (yellow and green). All board user interface components are highlighted in Figure 8.
+LimePSB RPCM board features button, buzzer, five dual colour (red and green (RG)) LEDs, one green indication LED and two Ethernet activity LEDs (yellow and green). All board user interface components are highlighted in Figure 9.
 
 .. figure:: /images/LimePSB-RPCM_v1.1_user_interface_components.png
   :width: 600
 
   Figure 9: LimePSB RPCM v1.1 user interface components
    
-Dual color LEDs (LED1-LED4) are connected to shift register (IC14). Their function may be programmed according to the user requirements. Dual color LED5 indicates Raspberry Pi status. Green LED6 indicates board power. These LEDs are mounted on the front side of the board.
+Dual color LEDs (LED1-LED4) are connected to shift register (IC12). Their function may be programmed according to the user requirements. Dual color LED5 indicates Raspberry Pi status. Green LED6 indicates board power. These LEDs are mounted on the front side of the board.
 
 Ethernet connector J9 has two LEDs: yellow and green. LEDs indicate wired network activity and speed. 
 
@@ -18,7 +18,7 @@ Default function of LEDs and related information is listed in Table 17.
 .. table:: Table 17. Default LEDs functions
 
   +-----------------------+--------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-  | **Board Reference**   | **Schematic name** | **Shift register (IC14) pin** | **Description**                                                                                                                                                 |
+  | **Board Reference**   | **Schematic name** | **Shift register (IC12) pin** | **Description**                                                                                                                                                 |
   +=======================+====================+===============================+=================================================================================================================================================================+
   | LED1                  | RPI_LED1_R         | Q0                            | User defined.                                                                                                                                                   |
   +-----------------------+--------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -16,12 +16,14 @@ A single control signal (RF_SW_TDD) is used to control all RF switches simultane
   | **Control signal (RF_SW_TDD)** | **TRXA/B       | **RXA/B        |
   |                                | connected to** | connected to** |
   +================================+================+================+
-  | High                           | TXA/B_IN       | RXA/B_OUT      |
+  | Low                            | TXA/B_IN       | RXA/B_OUT      |
   +--------------------------------+----------------+----------------+
-  | Low                            | RXA/B_OUT      | NC             |
+  | High                           | RXA/B_OUT      | NC             |
   +--------------------------------+----------------+----------------+
 
 By default RF switches may be controlled from mPCIe expansion board pin 17 (via resistor R39). Optional control source may be RFFE TDD control header (J19) or CM4/5 GPIO6 (resistor R40 must be soldered).
+
+RF_SW_TDD is pulled low by resistor R42.
 
 RF path contains two types of connectors: board edge SMA connectors (J42, J43, J46, J47) used for external connections (antennas or cables) and U.FL connectors (J40, J41, J44, J45) used for internal connections (for example to connect to XTRX mini PCIe expansion board). 
 Signal frequency range of TX and RX paths are listed in Table 8.
@@ -55,7 +57,7 @@ More detailed RF path component parameters are given in Table 9.
   |               |              +--------------------------------------+----------------------+------------------+
   |               |              | 7.0dB   (3800 MHz)                   | 22.8dBm (3800 MHz)   | 1.5dB (3800 MHz) |
   +---------------+--------------+--------------------------------------+----------------------+------------------+
-  | SKY13286      | RF switch    | -0.7dB (1000 MHz)                    | 30.dBm (2000 MHz)    |                  |
+  | SKY13286      | RF switch    | -0.7dB (1000 MHz)                    | 30dBm (2000 MHz)     |                  |
   |               |              +--------------------------------------+                      |                  |
   |               |              | -0.8dB   (2000 MHz)                  |                      |                  |
   |               |              +--------------------------------------+                      |                  |

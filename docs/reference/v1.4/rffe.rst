@@ -21,7 +21,9 @@ A single control signal (RF_SW_TDD) is used to control all RF switches simultane
   | Low                            | RXA/B_OUT      | NC             |
   +--------------------------------+----------------+----------------+
 
-By default RF switches may be controlled from FPGA pin 13 (via resistor R43). Optional control source may be RFFE TDD control header (J18).
+By default RF switches may be controlled from FPGA pin 13 (via resistor R43). Optional control source may be RFFE TDD control header J18 (not fitted by default).
+
+RF_SW_TDD is pulled high by resistor R41. If RF_SW_TDD is not driven, TRXA/B is connected to TXA/B_IN and RXA/B is connected to RXA/B_OUT.
 
 RF path contains two types of connectors: board edge SMA connectors (J42, J43, J46, J47) used for external connections (antennas or cables) and U.FL connectors (J44, J45, J48, 49) used for internal connections (for example to connect to XTRX mini PCIe expansion board). 
 
@@ -60,10 +62,12 @@ More detailed RF path component parameters are given in Table 10.
   |               |              +--------------------------------------+                      |                   |
   |               |              | -0.4 dB   (2000 MHz)                 |                      |                   |
   |               |              +--------------------------------------+                      |                   |
-  |               |              | -0.55 B   (6000 MHz)                 |                      |                   |
+  |               |              | -0.55 dB  (6000 MHz)                 |                      |                   |
   +---------------+--------------+--------------------------------------+----------------------+-------------------+
 
-Both channels TX PAs `TQP3M9018`_ outputs are coupled by `HHM22152A2`_ (IC53, IC55) to RF power detectors `LTC5587`_ (IC72, IC73). Power detector is connected to RPi CM4/5 SPI (RPI_SPI0). To enable it drive GPPIO expanders EXP1 GPB3 pin high.
+Both channels TX PAs `TQP3M9018`_ outputs are coupled by `HHM22152A2`_ (IC53, IC55) to RF power detectors `LTC5587`_ (IC72, IC73). The power detectors are read by Raspberry Pi CM4/5 over SPI (RPI_SPI0): RPI_SPI0_SCLK is connected to the detector SCK pins and RPI_SPI0_MISO to the SDO pins. Conversion and readout of each detector is controlled by its own CONV signal: RFPDA_CONV (RPI GPIO25) for channel A and RFPDB_CONV (RPI GPIO26) for channel B.
+
+To enable the power detectors, drive I/O expander EXP1 (IC15) pin GPB3 (RFPD_EN) high.
 
 .. _LTC5587: https://www.analog.com/en/products/ltc5587.html
 .. _HHM22152A2: https://product.tdk.com/en/search/rf/rf/coupler/info?part_no=hhm22152a2

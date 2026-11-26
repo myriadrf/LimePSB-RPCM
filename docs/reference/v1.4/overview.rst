@@ -1,7 +1,7 @@
 Overview
 ########
 
-The heart of the LimePSB RPCM carrier board is Raspberry PI Compute Module 4 (CM4) or Compute Module 5 (CM5). The module is connect to a one lane mPCIe connector with a FPGA controlled RF front end. The block diagram for LimePSB RPCM board is as shown in Figure 3.e 
+The heart of the LimePSB RPCM carrier board is Raspberry PI Compute Module 4 (CM4) or Compute Module 5 (CM5). The module is connected to a one lane mPCIe connector with a FPGA controlled RF front end. The block diagram for LimePSB RPCM board is as shown in Figure 3. 
 
 .. figure:: /images/LimePSB-RPCM_v1.4_diagrams_r3_block.png
   :width: 600
@@ -31,25 +31,25 @@ Description of board components is given in the Table 1.
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | IC18                         | FPGA                  | Lattice iCE40 Ultra family (iCE5LP4K)                                    |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | IC19                         | IC                    | FPGA configuration flash (16 MBIT)                                       |
+  | IC19                         | IC                    | FPGA configuration flash (16 MBIT, not fitted)                           |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | IC7                          | IC                    | I²C temperature sensor LM75                                              |
+  | IC7                          | IC                    | I |sup2|\ C temperature sensor LM75                                      |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | IC8/IC9                      | IC                    | I²C EEPROM Memory 128Kb (16K x 8), connected   to RF transceiver I2C bus |
+  | IC8/IC9                      | IC                    | I |sup2|\ C EEPROM Memory 128Kb (16K x 8), connected to RPI_I2C0 bus     |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | IC10/IC11                    | IC                    | I²C secure key storage                                                   |
+  | IC10/IC11                    | IC                    | I |sup2|\ C secure key storage                                           |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | IC14/IC16                    | IC                    | I²C Real time clock                                                      |
+  | IC14/IC16                    | IC                    | I |sup2|\ C Real time clock                                              |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | IC6                          | IC                    | 8 channel 12 bit ADC                                                     |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | IC12, IC15                   | IC                    | I²C I/O expander                                                         |
+  | IC12, IC15                   | IC                    | I |sup2|\ C I/O expander                                                 |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | IC20                         | IC                    | USB2.0 HUB                                                               |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | IC21, IC26, IC27, IC29, IC30 | IC                    | USB switch                                                               |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | J27, J26                     | Pin header            | 2-pin and 4-pin FAN connector (5V default or   3.3V or VCC_INT voltage)  |
+  | J27, J26                     | Pin header            | 2-pin and 4-pin FAN connector (VCC_INT default, or 3.3V or 5V)           |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | **Configuration,   Status, Setup Elements and GPIOs**                                                                           |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
@@ -65,13 +65,13 @@ Description of board components is given in the Table 1.
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | J12                          | Header                | 14-pin Raspberry Pi CM4 SYS header                                       |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | J5                           | Header                | Power control and PG status                                              |
+  | J5                           | Header                | Power control and PG status (not fitted)                                 |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | J6                           | Header                | Wireless LAN and Bluetooth control                                       |
+  | J6                           | Header                | Wireless LAN and Bluetooth control (not fitted)                          |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | J10                          | Header                | 20-pin CM4 GPIO header                                                   |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | J28                          | Header                | FPGA configuration                                                       |
+  | J28                          | Header                | FPGA configuration (not fitted)                                          |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | DSW1                         | DIP switch            | Boot and USB configuration                                               |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
@@ -145,7 +145,7 @@ Description of board components is given in the Table 1.
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | J20/J22, J23/25, J21, J24    | Multiple              | Internal U.FL connectors J20/J22, J23/J25 to external SMA J21, J24       |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
-  | J41                          | U.FL connector        | External GNSS antenna                                                    |
+  | J41                          | U.FL connector        | External GNSS antenna (not fitted)                                       |
   +------------------------------+-----------------------+--------------------------------------------------------------------------+
   | IC33, IC32, IC35, IC40,      | IC                    | Clock signal analog mux                                                  |
   | IC41, IC42, IC43, IC45       |                       |                                                                          |
