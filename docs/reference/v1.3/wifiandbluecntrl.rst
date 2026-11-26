@@ -1,10 +1,10 @@
 WiFi and Bluetooth Control Header
 #################################
 
-Raspberry Pi Compute Module 4/5 on board WiFi and Bluetooth disable signals may be controlled from header J6 (not fitted) as shown in Table 5.
+Raspberry Pi Compute Module 4/5 on board WiFi and Bluetooth disable signals may be controlled from header J6 (not fitted) as shown in Table 6.
 
 
-.. table:: Table 5. Raspberry Pi CM4/5 J6 WiFi and Bluetooth control header pinout
+.. table:: Table 6. Raspberry Pi CM4/5 J6 WiFi and Bluetooth control header pinout
 
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
   | **Pin** | **Schematic signal**      | **Description**                                                                                                                                                                                                                                                                                                                     |

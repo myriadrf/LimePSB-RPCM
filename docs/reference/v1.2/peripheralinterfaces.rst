@@ -1,7 +1,7 @@
 Peripheral Interfaces
 #####################
 
-LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB RPCM low speed interfaces signal names, I/O standards are listed in table 16.
+LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB RPCM low speed interfaces signal names, I/O standards are listed in Table 16.
 
 .. table:: Table 16. CM4/5 Peripheral interfaces pins
 
@@ -53,7 +53,7 @@ LimePSB RPCM features multiple low speed interfaces like SPI, I2C, UART. LimePSB
   |               | RPI_UART0_TX              | 55 (GPIO14)    | 3.3V             | Data   (CM4/5 output)                                              |
   +---------------+---------------------------+----------------+------------------+--------------------------------------------------------------------+
 
-RPI_I2C0 (FPGA_I2C0) interface devices, addresses and other info are shown in table 17.
+RPI_I2C0 interface devices, addresses and other info are shown in Table 17.
 
 .. list-table:: Table 17. RPI_I2C0 interface devices
    :header-rows: 1

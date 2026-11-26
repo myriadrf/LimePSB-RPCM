@@ -1,7 +1,7 @@
 Overview
 ########
 
-The heart of the LimePSB RPCM carrier board is Raspberry PI Compute Module 4 (CM4) or Compute Module 5 (CM5). The module is connect to a one lane mPCIe connector with a FPGA controlled RF front end. The block diagram for LimePSB RPCM board is as shown in Figure 3.
+The heart of the LimePSB RPCM carrier board is Raspberry PI Compute Module 4 (CM4) or Compute Module 5 (CM5). The module is connected to a one lane mPCIe connector with a FPGA controlled RF front end. The block diagram for LimePSB RPCM board is as shown in Figure 3.
 
 .. figure:: /images/LimePSB-RPCM_v1.2_diagrams_block.png
   :width: 600
@@ -27,13 +27,13 @@ Description of board components is given in the Table 1.
   +--------------------------------------------------------------------------------------------------------------------------------------------+
   | **Miscellaneous devices**                                                                                                                  |
   +=================================+============================+=============================================================================+
-  | IC9                             | IC                         | I²C temperature   sensor LM75                                               |
+  | IC9                             | IC                         | I |sup2|\ C temperature   sensor LM75                                       |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
-  | IC10/IC11                       | IC                         | I²C   EEPROM Memory 128Kb (16K x 8), connected to RF transceiver I2C bus    |
+  | IC10/IC11                       | IC                         | I |sup2|\ C   EEPROM Memory 128Kb (16K x 8), connected to RPI_I2C0 bus      |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
-  | IC13/IC14                       | IC                         | I²C   secure key storage                                                    |
+  | IC13/IC14                       | IC                         | I |sup2|\ C   secure key storage                                            |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
-  | IC16/IC18                       | IC                         | I²C   Real time clock                                                       |
+  | IC16/IC18                       | IC                         | I |sup2|\ C   Real time clock                                               |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
   | IC8                             | IC                         | 8   channel 12 bit ADC                                                      |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
@@ -43,7 +43,7 @@ Description of board components is given in the Table 1.
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
   | IC21, IC26, IC27, IC29, IC30    | IC                         | USB   switch                                                                |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
-  | J24, J23                        | Pin   header               | 2-pin   and 4-pin FAN connector (5V default or 3.3V or VCC_INT voltage)     |
+  | J24, J23                        | Pin   header               | 2-pin   and 4-pin FAN connector (VCC_INT default, or 3.3V or 5V)            |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
   | **Configuration, Status, Setup Elements and GPIOs**                                                                                        |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
@@ -57,9 +57,9 @@ Description of board components is given in the Table 1.
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
   | J12                             | Header                     | 14-pin Raspberry Pi CM4 SYS header                                          |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
-  | J5                              | Header                     | Power   control and PG status                                               |
+  | J5                              | Header                     | Power control and PG status (not fitted)                                    |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
-  | J6                              | Header                     | Wireless   LAN and Bluetooth control                                        |
+  | J6                              | Header                     | Wireless LAN and Bluetooth control (not fitted)                             |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+
   | J10                             | Header                     | 20-pin   CM4 GPIO header                                                    |
   +---------------------------------+----------------------------+-----------------------------------------------------------------------------+

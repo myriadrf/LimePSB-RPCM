@@ -1,9 +1,9 @@
 System Header
 #############
 
-Raspberry Pi CM4/5 configuration, debug and analog signals can be accessed in system (SYS) header J12. SYS headers pins, schematic signal names and description are given in Table 3.
+Raspberry Pi CM4/5 configuration, debug and analog signals can be accessed in system (SYS) header J12. SYS headers pins, schematic signal names and description are given in Table 4.
 
-.. table:: Table 3. SYS header (J12) pinout
+.. table:: Table 4. SYS header (J12) pinout
 
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
   | **Pin** | **Schematic signal name** | **Description**                                                                                                                                                                                             |
@@ -13,7 +13,7 @@ Raspberry Pi CM4/5 configuration, debug and analog signals can be accessed in sy
   | 2       | RPI_nRPIBOOT              | A low on this pin forces CM4/5 booting.                                                                                                                                                                     |
   |         |                           | To enable Raspberry Pi USB boot also place nRPIBOOT jumper on J12 pins 1-2.                                                                                                                                 |
   |         |                           |                                                                                                                                                                                                             |
-  |         |                           | Place jumper on header J26 to switch Raspberry Pi USB from USB hub to USB C connector.                                                                                                                      |
+  |         |                           | Set DIP switch DSW1 bit 2 to ON to switch Raspberry Pi USB from USB hub to USB C connector.                                                                                                                 |
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
   | 3       | GND                       | Ground (0V)                                                                                                                                                                                                 |
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -31,7 +31,7 @@ Raspberry Pi CM4/5 configuration, debug and analog signals can be accessed in sy
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
   | 10      | RPI_RUN_PG                | RUN_PG pin when high signals that the CM4/5 has started. Driving this pin low resets the module.                                                                                                            |
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-  | 11      | RPI_PIN11                 | Video DAC output (CM4) / USB3 VBUS enable (CM5)                                                                                                                                                             |
+  | 11      | RPI_PIN111                | Video DAC output (CM4) / USB3 VBUS enable (CM5)                                                                                                                                                             |
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
   | 12      | GND                       | Ground (0V)                                                                                                                                                                                                 |
   +---------+---------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -1,7 +1,7 @@
 RF Front End
 ############
 
-LimePSB RPCM RF path features power amplifiers, low noise amplifiers, SPDT switches, Couplers and power detectors as shown in Figure 6.
+LimePSB RPCM RF path features power amplifiers, low noise amplifiers and SPDT switches as shown in Figure 6.
 
 .. figure:: /images/LimePSB-RPCM_v1.1_diagrams_r1_RFFE.png
   :width: 600
@@ -26,6 +26,8 @@ A single control signal (RF_SW_TDD) is used to control all RF switches simultane
 
 By default RF switches may be controlled from mPCIe expansion board pin 17 (via resistor R40). Optional control source may be RFFE TDD control header (J21) or CM4 GPIO6 (resistor R41 must be soldered).
 
+RF_SW_TDD is pulled low by resistor R43.
+
 RF path contains two types of connectors: board edge SMA connectors (J42, J43, J46, J47) used for external connections (antennas or cables) and U.FL connectors (J40, J41, J44, J45) used for internal connections (for example to connect to XTRX mini PCIe expansion board). 
 
 Signal frequency range of TX and RX paths are listed in Table 7.
@@ -36,9 +38,9 @@ Signal frequency range of TX and RX paths are listed in Table 7.
    * - Direction
      - Frequency range
    * - TX
-     - 100 MHz - 6 GHz
+     - 100 MHz to 6 GHz
    * - RX
-     - 100 MHz - 4 GHz
+     - 100 MHz to 4 GHz
 
 More detailed RF path component parameters are given in Table 8.
 
@@ -59,7 +61,7 @@ More detailed RF path component parameters are given in Table 8.
   |               |              |                                    |                      |                  |
   |               |              | 7.0dB (3800 MHz)                   | 22.8dBm (3800 MHz)   | 1.5dB (3800 MHz) |
   +---------------+--------------+------------------------------------+----------------------+------------------+
-  | SKY13286      | RF switch    | -0.7dB (1000 MHz)                  | 30.dBm (2000 MHz)    |                  |
+  | SKY13286      | RF switch    | -0.7dB (1000 MHz)                  | 30dBm (2000 MHz)     |                  |
   |               |              |                                    |                      |                  |
   |               |              | -0.8dB (2000 MHz)                  |                      |                  |
   |               |              |                                    |                      |                  |

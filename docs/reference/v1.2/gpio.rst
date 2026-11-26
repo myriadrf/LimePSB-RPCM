@@ -1,7 +1,7 @@
 GPIO Connector
 ##############
 
-Some Raspberry Pi Compute Module 4/5 and FPGA GPIOs are connected to 20 pin 0.1‚Äù J10 header. Several pins of this connector are dedicated for power (1 pin for 3.3 V and 2 pins for 5V). GPIO header pins (J10) and additional information is given in table 19.
+Some Raspberry Pi Compute Module 4/5 GPIOs are connected to 20-pin 0.1" J10 header. Several pins of this connector are dedicated for power (1 pin for 3.3 V and 2 pins for 5V). GPIO header pins (J10) and additional information is given in Table 19.
 
 .. list-table:: Table 19. Raspberry Pi CM4/5 GPIO header (J10) pins
    :header-rows: 1
@@ -68,20 +68,20 @@ Some Raspberry Pi Compute Module 4/5 and FPGA GPIOs are connected to 20 pin 0.1‚
      - 3.3V
      - General purpose configured as SPI input
    * - 12
-     - FPGA_GPIO0
+     - GND
      - 
      - 
-     - FPGA pin 45 (IOB_5B)
+     - Ground (0V)
    * - 13
      - RPI_SPI0_SCLK
      - GPIO11
      - 3.3V
      - General purpose configured as SPI clock
    * - 14
-     - FPGA_GPIO1
+     - GND
      - 
      - 
-     - FPGA pin 21 (IOB_23B)
+     - Ground (0V)
    * - 15
      - RPI_GPIO2
      - GPIO2

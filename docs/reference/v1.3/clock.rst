@@ -3,62 +3,62 @@ Clock Distribution
 
 
 LimePSB RPCM board clock network comprises of on-board voltage controlled crystal oscillators, phase detector, clock buffers, GNSS receiver, clock source selection analog muxes, reference clock input and output connectors.
-Board clock distribution block diagram is as shown in figure 7.
+Board clock distribution block diagram is as shown in Figure 7.
 
 .. figure:: /images/LimePSB-RPCM_v1.3_diagrams_clock.png
   :width: 600
 
   Figure 7: LimePSB RPCM v1.3 board clock distribution block diagram
 
-LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. Clock and PPS signals can be sourced from on board XOs and GNSS transceiver or another external source via J36 (EXT_SYNC_IN) connector. Also J38 (EXT_SYNC_OUT) connector can be used as clock signal output thus synchronizing multiple systems.
-Clock path may be configured using analog muxes that are controlled by CM4/5 module as described in table 11.
+LimePSB RPCM board distributes reference clock to and from Raspberry Pi Compute Module 4/5, mini PCIe connector and external sources. Clock and PPS signals can be sourced from on board XOs and GNSS transceiver or another external source via J34 (EXT_SYNC_IN) connector. Also J37 (EXT_SYNC_OUT) connector can be used as clock signal output thus synchronizing multiple systems.
+Clock path may be configured using jumpers and resistors as described in Table 11.
 
 .. table:: Table 11. LimePSB RPCM clock signals configuration
 
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | Schematic ID | Input signal  | Output signal | Description                                                                           |
-  +==============+===============+===============+=======================================================================================+
-  | J38          | EXT_SYNC_IN   | REF_CLK_IN    | Phase   detector (IC34) input selection                                               |
-  |              +---------------+               |                                                                                       |
-  |              | LMK10_CLK_OUT |               |                                                                                       |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | J39          | SYNC_OUT      | PCIE_PPS_IN   | PPS   signal source selection for mPCIe expansion boards                              |
-  |              +---------------+               |                                                                                       |
-  |              | EXT_SYNC_IN   |               |                                                                                       |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | J40          | EXT_SYNC_IN   | RPI_SYNC_IN   | CM4/5   SYNC_IN synchronization input source selection                                |
-  |              +---------------+               |                                                                                       |
-  |              | PCIE_PPS_OUT  |               |                                                                                       |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | J41          | EXT_SYNC_IN   | PCIE_UIMC4    | Reference   clock selection for mPCIE exanpsion board (XTRX)                          |
-  |              +---------------+               |                                                                                       |
-  |              | LMK_CLK_OUT2  |               |                                                                                       |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | J36          | RPI_SYNC_OUT  | EXT_SYNC_OUT  | Synchronization   output signal selection                                             |
-  |              +---------------+               |                                                                                       |
-  |              | SYNC_OUT      |               |                                                                                       |
-  |              +---------------+               |                                                                                       |
-  |              | PCIE_PPS_OUT  |               |                                                                                       |
-  |              +---------------+               |                                                                                       |
-  |              | LMK_CLK_OUT3  |               |                                                                                       |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | J42          | RPI_SYNC_OUT  | SYNC_OUT      | PPS   signal source selection                                                         |
-  |              +---------------+               |                                                                                       |
-  |              | FPGA_SYNC_OUT |               |                                                                                       |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | R221         | PCIE_PPS_IN   | PCIE_COEX1    | PPS signal output for mPCIE expansion board (XTRX)                                    |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | R4           | PCIE_PPS_IN   | PCIE_PETn0    | PPS signal output for mPCIE expansion board (LoRa Semtech)                            |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | R2           | PCIE_PPS_IN   | PCIE_COEX2    | PPS signal output for mPCIE expansion board (LoRa n-Fuse) and PPS   output for (XTRX) |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | R3           | PCIE_COEX2    | PCIE_PPS_OUT  | PPS signal input from mPCIE expansion board (XTRX)                                    |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+
-  | R8           | PCIE_SMB_CLK  | PCIE_PPS_OUT  | Clock signal input from mPCIE expansion board (XTRX)                                  |
-  +--------------+---------------+---------------+---------------------------------------------------------------------------------------+  
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | Schematic ID | Input signal   | Output signal | Description                                                                           |
+  +==============+================+===============+=======================================================================================+
+  | J38          | EXT_SYNC_IN    | REF_CLK_IN    | Phase   detector (IC34) input selection                                               |
+  |              +----------------+               |                                                                                       |
+  |              | LMK10_CLK_OUT2 |               |                                                                                       |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | J39          | SYNC_OUT       | PCIE_PPS_IN   | PPS   signal source selection for mPCIe expansion boards                              |
+  |              +----------------+               |                                                                                       |
+  |              | EXT_SYNC_IN    |               |                                                                                       |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | J40          | EXT_SYNC_IN    | RPI_SYNC_IN   | CM4/5   SYNC_IN synchronization input source selection                                |
+  |              +----------------+               |                                                                                       |
+  |              | PCIE_PPS_OUT   |               |                                                                                       |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | J41          | EXT_SYNC_IN    | PCIE_UIMC4    | Reference   clock selection for mPCIE expansion board (XTRX)                          |
+  |              +----------------+               |                                                                                       |
+  |              | LMKRF_CLK_OUT2 |               |                                                                                       |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | J36          | SYNC_OUT       | EXT_SYNC_OUT  | Synchronization   output signal selection                                             |
+  |              +----------------+               |                                                                                       |
+  |              | PCIE_PPS_OUT   |               |                                                                                       |
+  |              +----------------+               |                                                                                       |
+  |              | LMKRF_CLK_OUT3 |               |                                                                                       |
+  |              +----------------+               |                                                                                       |
+  |              | LMK10_CLK_OUT3 |               |                                                                                       |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | J42          | RPI_SYNC_OUT   | SYNC_OUT      | PPS   signal source selection                                                         |
+  |              +----------------+               |                                                                                       |
+  |              | FPGA_SYNC_OUT  |               |                                                                                       |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | R211         | PCIE_PPS_IN    | PCIE_COEX1    | PPS signal output for mPCIE expansion board (XTRX)                                    |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | R4           | PCIE_PPS_IN    | PCIE_PET0_N   | PPS output for mPCIE expansion board (LoRa Semtech). Not fitted by default            |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | R2           | PCIE_PPS_IN    | PCIE_COEX2    | PPS output for mPCIE expansion board (LoRa n-Fuse) or XTRX. Not fitted by default     |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | R3           | PCIE_COEX2     | PCIE_PPS_OUT  | PPS signal input from mPCIE expansion board (XTRX)                                    |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+
+  | R8           | PCIE_SMB_CLK   | PCIE_PPS_OUT  | Clock signal input from mPCIE expansion board (XTRX). Not fitted by default           |
+  +--------------+----------------+---------------+---------------------------------------------------------------------------------------+  
    
-LimePSB RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffers (LMK00101). By default voltage controlled oven compensated crystal oscillators (VCOCXO) XO1 and XO6 are populated. Optional voltage controlled temperature compensated crystal oscillators XO2 – XO5 and XO7 – XO10 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC36 default or 8-bit IC38) or phase detector (IC37).
-Clock network components are listed in table 12.
+LimePSB RPCM board has several on-board crystal oscillator (XO) options that may be used as source for clock buffers (LMK00105). By default voltage controlled oven compensated crystal oscillators (VCOCXO) XO1 and XO6 are populated. Optional voltage controlled temperature compensated crystal oscillators XO2 to XO5 and XO7 to XO10 (VCTCXO) are not populated by default. All these XOs may be tuned by DAC (16-bit IC33 default or 8-bit IC35) or phase detector (IC34).
+Clock network components are listed in Table 12.
 
 .. list-table:: Table 12. LimePSB RPCM clock distribution network components
    :header-rows: 1
@@ -124,4 +124,4 @@ Clock network components are listed in table 12.
      - 
      - 
 
-RPI_SYNC mux (IC47) is needed for CM4 and CM5 compatibility purposes.
+RPI_SYNC mux (IC39) is needed for CM4 and CM5 compatibility purposes.

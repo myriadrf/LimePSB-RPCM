@@ -3,7 +3,7 @@ Power Control Header
 
 Raspberry Pi CM4/5 power state can be controlled using J5 header. By default the CM4/5 power control header is not populated. 
 
-.. list-table:: Table 4 Raspberry Pi CM4/5 power control (J5) header
+.. list-table:: Table 5. Raspberry Pi CM4/5 power control (J5) header
    :header-rows: 1
    :stub-columns: 1
 

@@ -1,5 +1,5 @@
-Raspberry Pi CM4/5 Connector
-############################
+Raspberry Pi CM4 Connector
+##########################
 
 LimePSB RPCM board is designed to use Raspberry Pi CM4 as a host computer. Raspberry Pi CM4 version without eMMC Flash memory is also supported. Board to board connectors (J1 and J2) are used to connect CM4 to the LimePSB RPCM board. Connector pinout, CM4 signals and schematic signal names are listed and described in Table 2.
 
@@ -24,13 +24,13 @@ LimePSB RPCM board is designed to use Raspberry Pi CM4 as a host computer. Raspb
     +-------------+-------------------+---------------------------+----------------------------------------+
     | 8           | GND               | GND                       | Ground (0V)                            |
     +-------------+-------------------+---------------------------+----------------------------------------+
-    | 9           | Ethernet_Pair2_N  | ETH_TRD2_N                | Ethernet pair 2 negative               |
+    | 9           | Ethernet_Pair2_N  | ETH_TRD2_P                | Ethernet pair 2 negative               |
     +-------------+-------------------+---------------------------+----------------------------------------+
-    | 10          | Ethernet_Pair0_N  | ETH_TRD0_N                | Ethernet pair 0 negative               |
+    | 10          | Ethernet_Pair0_N  | ETH_TRD0_P                | Ethernet pair 0 negative               |
     +-------------+-------------------+---------------------------+----------------------------------------+
-    | 11          | Ethernet_Pair2_P  | ETH_TRD2_P                | Ethernet pair 2 positive               |
+    | 11          | Ethernet_Pair2_P  | ETH_TRD2_N                | Ethernet pair 2 positive               |
     +-------------+-------------------+---------------------------+----------------------------------------+
-    | 12          | Ethernet_Pair0_P  | ETH_TRD0_P                | Ethernet pair 0 positive               |
+    | 12          | Ethernet_Pair0_P  | ETH_TRD0_N                | Ethernet pair 0 positive               |
     +-------------+-------------------+---------------------------+----------------------------------------+
     | 13          | GND               | GND                       | Ground (0V)                            |
     +-------------+-------------------+---------------------------+----------------------------------------+
@@ -48,7 +48,7 @@ LimePSB RPCM board is designed to use Raspberry Pi CM4 as a host computer. Raspb
     +-------------+-------------------+---------------------------+----------------------------------------+
     | 20          | EEPROM_nWP        | RPI_EEPROM_nWP            | EEPROM write protect                   |
     +-------------+-------------------+---------------------------+----------------------------------------+
-    | 21          | Pi_nLED_Activity  | RPI_STATUS_LED_G          | Pi activity LED                        |
+    | 21          | Pi_nLED_Activity  | RPI_STATUS_LED_R          | Pi activity LED                        |
     +-------------+-------------------+---------------------------+----------------------------------------+
     | 22          | GND               | GND                       | Ground (0V)                            |
     +-------------+-------------------+---------------------------+----------------------------------------+
@@ -174,19 +174,19 @@ LimePSB RPCM board is designed to use Raspberry Pi CM4 as a host computer. Raspb
     +-------------+-------------------+---------------------------+----------------------------------------+
     | 83          | +5V (Input)       | VCC5P0                    | 4.75V-5.25V. Main power input          |
     +-------------+-------------------+---------------------------+----------------------------------------+
-    | 84          | CM4_3.3V (Output) | VCC3P3_RPI                | 3.3V ± 2.5%. Power Output              |
+    | 84          | CM4_3.3V (Output) | VCC3P3_RPI                | 3.3V |plusminus| 2.5%. Power Output    |
     +-------------+-------------------+---------------------------+----------------------------------------+
     | 85          | +5V (Input)       | VCC5P0                    | 4.75V-5.25V. Main power input          |
     +-------------+-------------------+---------------------------+----------------------------------------+
-    | 86          | CM4_3.3V (Output) | VCC3P3_RPI                | 3.3V ± 2.5%. Power Output              |
+    | 86          | CM4_3.3V (Output) | VCC3P3_RPI                | 3.3V |plusminus| 2.5%. Power Output    |
     +-------------+-------------------+---------------------------+----------------------------------------+
     | 87          | +5V (Input)       | VCC5P0                    | 4.75V-5.25V. Main power input          |
     +-------------+-------------------+---------------------------+----------------------------------------+
-    | 88          | CM4_1.8V (Output) | VCC1P8_RPI                | 1.8V ± 2.5%. Power Output              |
+    | 88          | CM4_1.8V (Output) | VCC1P8_RPI                | 1.8V |plusminus| 2.5%. Power Output    |
     +-------------+-------------------+---------------------------+----------------------------------------+
     | 89          | WL_nDisable       | RPI_WL_nDISABLE           | Wireless interface disable             |
     +-------------+-------------------+---------------------------+----------------------------------------+
-    | 90          | CM4_1.8V (Output) | VCC1P8_RPI                | 1.8V ± 2.5%. Power Output              |
+    | 90          | CM4_1.8V (Output) | VCC1P8_RPI                | 1.8V |plusminus| 2.5%. Power Output    |
     +-------------+-------------------+---------------------------+----------------------------------------+
     | 91          | BT_nDisable       | RPI_BT_nDISABLE           | Bluetooth interface disable            |
     +-------------+-------------------+---------------------------+----------------------------------------+

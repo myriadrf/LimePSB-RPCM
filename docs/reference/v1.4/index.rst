@@ -6,15 +6,15 @@ v1.4
    :hidden:
    
    overview
-   CMcon
+   cmcon
+   fpga
    syscon
    pwrcon
    wifiandbluecntrl
    dipsw
-   FPGA
    rffe
    clock
-   DSIandCSIcons
+   dsiandcsicons
    usb
    frontdiscon
    peripheralinterfaces

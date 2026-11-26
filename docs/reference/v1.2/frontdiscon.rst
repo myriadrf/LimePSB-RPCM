@@ -1,7 +1,7 @@
 Front Display Connector
 #######################
 
-LimePSB RPCM board has 5-pin 0.1” pitch header J8 with friction lock (Molex 0022112052) dedicated for front screen connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided in table 15.
+LimePSB RPCM board has 5-pin 0.1" pitch header J8 with friction lock (Molex 0022112052) dedicated for front screen connection. Front display connector J8 contains signals for I2C interface, button and power rail. More detailed information about the front display connector is provided in Table 15.
 
 .. list-table:: Table 15. Front screen connector (J8) pinout
    :header-rows: 1

@@ -1,7 +1,7 @@
 Board Versions
 ##############
 
-The LimePSB RPCM has several hardware versions (v1.1–v1.5), with new features added in each version. A summary of the added features is provided in the table below.
+The LimePSB RPCM has several hardware versions (v1.1 to v1.5), with new features added in each version. A summary of the added features is provided in the table below.
 
 .. table:: Table 1. Added features
 
@@ -31,6 +31,8 @@ The LimePSB RPCM has several hardware versions (v1.1–v1.5), with new features 
   |                   |                                          | Added board configuration 4 bit DIP switch          |
   |                   +------------------------------------------+-----------------------------------------------------+
   |                   | Fan Speed control                        | Added fan speed controller EMC2301                  |
+  +-------------------+------------------------------------------+-----------------------------------------------------+
+  | v1.1              | Initial version                          | Supports Raspberry Pi CM4 only                      |
   +-------------------+------------------------------------------+-----------------------------------------------------+
 
 .. warning::

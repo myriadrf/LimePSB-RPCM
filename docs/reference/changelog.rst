@@ -102,9 +102,9 @@ LimePSB RPCM v1.4 implementation is based on LimePSB RPCM v1.3 board with the sc
 * Replaced discontinued SKY13286-359LF RF switches with F2972NEGK. Swapped RF switches RF1 and RF2 ports so RF_SW_TDD polarity inverted.
 * Added RF couplers and power detectors on both TX channels
 * Changed discrete PoE solution (NCP1083) to PoE module (AG5712-LPB)
-*	Changed from Type A HDMI sockets to Type D(Micro) HDMI sockets
-*	Replaced clock configuration path jumpers with switches
-*	Altium variant function used in the project
+* Changed from Type A HDMI sockets to Type D (Micro) HDMI sockets
+* Replaced clock configuration path jumpers with switches
+* Altium variant function used in the project
 
 Board size and main components positions remained the same as in LimePSB RPCM v1.3. New LimePSB RPCM v1.4 block diagram is shown in Figure 10.
 
@@ -118,10 +118,10 @@ Raspberry Pi Connector
 
 Raspberry Pi CM4/5 connector signal changes are:
 
-* PCIe LEDs (PCIE_LED_WWAN, PCIE_LED_WLAN, PCIE_LED_WPAN) were moved from RPI connector to I2C GPIO expander number 2 (EXP2).
-* Newly added RF power detectors (RFPD) were connected to RPI I2C. Their enable signals RFPD1_CONV and RFPD2_CONV were connected to RPI GPIO25 and RPI GPIO26 respectively. 
+* PCIe LEDs (PCIE_LED_WWAN, PCIE_LED_WLAN, PCIE_LED_WPAN) were moved from RPI connector to the new I2C I/O expander IC15 (EXP1).
+* Newly added RF power detectors (RFPD) were connected to RPI SPI0 (RPI_SPI0_SCLK and RPI_SPI0_MISO). Their conversion control signals RFPDA_CONV and RFPDB_CONV were connected to RPI GPIO25 and RPI GPIO26 respectively. 
 * RPI_GPIO3 and RPI_GPIO6 connected to GPIO header (J10).
-* ADF_MUXOUT moved from RPI_GPIO3 to EXP2 GPB4.
+* ADF_MUXOUT moved from RPI_GPIO3 to EXP1 GPB4.
 
 New Raspberry Pi CM4/5 connector changes are shown in Figure 11.
 
@@ -133,7 +133,7 @@ New Raspberry Pi CM4/5 connector changes are shown in Figure 11.
 mPCIe Connector
 ===============
 
-Added 0R resistor in series to PCIE_UIM4 for mPCIe modules compatibility porpuses. mPCIe connector changes are shown in Figure 12.
+Added 0R resistor in series to PCIE_UIMC4 (R2) for mPCIe modules compatibility purposes. mPCIe connector changes are shown in Figure 12.
 
 .. figure:: /images/LimePSB-RPCM_v1.4_mPCIE_changes.png
   :width: 600
@@ -151,7 +151,7 @@ Replaced PCIE_PPS_OUT selection resistors R3 and R8 with analog mux as shown in 
 FPGA
 ====
 
-Added FPGA_CDONE signal to EXP2 for monitoring purposes. Also 0R was added as a option to disconnect FPGA LED from FPGA_CDONE signal when monitoring by RPI is required. In this case FPGA LED can still indicate CDONE by EXP2 GPB2 pin (FPGA_CDONE_LED). FPGA LED changes are shown in Figure 14.
+Added FPGA_CDONE signal to EXP1 for monitoring purposes. Also 0R was added as an option to disconnect FPGA LED from FPGA_CDONE signal when monitoring by RPI is required. In this case FPGA LED can still indicate CDONE by EXP1 GPB2 pin (FPGA_CDONE_LED). FPGA LED changes are shown in Figure 14.
 
 .. figure:: /images/LimePSB-RPCM_v1.4_CDONE_changes.png
   :width: 600
@@ -165,12 +165,12 @@ Removed FPGA configuration flash from default BOM as shown in Figure 15.
   
   Figure 15: FPGA flash
 
-Increased HW_VER from 0 to 1. And added test point for FPGA I2C0 signals (FPGA_I2C0_SCL, FPGA_I2C0_SDA) as shown in Figure 16.
+Increased HW_VER from 0 to 1. And added test points for FPGA I2C signals (FPGA_I2C_SCL, FPGA_I2C_SDA) as shown in Figure 16.
 
 .. figure:: /images/LimePSB-RPCM_v1.4_HW_changes.png
   :width: 600
   
-  Figure 16: HW_VER and FPGA I2C0
+  Figure 16: HW_VER and FPGA I2C
 
 USB
 ===
@@ -180,7 +180,7 @@ Changed USB header (J31) to Amphenol ICC G823J201240BHR. New header is fully com
 HDMI
 ====
 
-Changed Type A HDMI soctes (J34, J35) to Type D (Micro) HDMI.
+Changed Type A HDMI sockets (J34, J35) to Type D (Micro) HDMI.
 
 Clock
 =====
@@ -194,9 +194,9 @@ Added testpoint for XO DACs outputs as shown in Figure 17.
   
   Figure 17: XO DAC test point
 
-Renamed phase detectors signals names REF_ADF to ADF_RFIN and also REF_CLK_IN to ADF_REFIN to better reflect signals purpose as shown in Figure 18.
+Renamed phase detector signal names REF_ADF to ADF_RFIN and also REF_CLK_IN to ADF_REFIN to better reflect signal purpose as shown in Figure 18.
 
-.. figure:: /images/LimePSB-RPCM_v1.4_DACTP_changes.png
+.. figure:: /images/LimePSB-RPCM_v1.4_ADF_changes.png
   :width: 600
   
   Figure 18: Phase detector schematics
@@ -210,7 +210,7 @@ Added 0R NF on GNSS_RF_IN net in series with U.FL connector and changed J44 to N
 
 Added pull down resistor for RPI_PIN18 (2.2k) and RPI_PIN16 (2.2k NF). This change fixes Raspberry Pi CM4/5 ethernet connection not working after booting up. 
 
-All clock circuitry selection jumper were changed to analog muxes a shown in Figure 20.
+All clock circuitry selection jumpers were changed to analog muxes as shown in Figure 20.
 
 .. figure:: /images/LimePSB-RPCM_v1.4_diagrams_r3_clock.png
   :width: 600
@@ -248,7 +248,7 @@ Added RF power detectors (LTC5587) for channel A and B TX PA RF outputs. RF powe
 Power 
 =====
 
-Changed discrete PoE solution (NCP1083) to PoE module (AG5712-LPB). New POE shcmatic is shown in Figure 24.
+Changed discrete PoE solution (NCP1083) to PoE module (AG5712-LPB). New PoE schematic is shown in Figure 24.
 
 .. figure:: /images/LimePSB-RPCM_v1.4_POE_changes.png
   :width: 600
@@ -286,25 +286,25 @@ Changed GPIO header (J10) GND pins 7 and 6 to RPI_GPIO6 and RPI_GPIO3 as shown i
   
   Figure 28: GPIO header (J10)
 
-Added test points for Raspberry Pi I2C0 signals (RPI_I2C0_SCL and RPI_I2C0_SDA) as hsown in Figure 29.
+Added test points for Raspberry Pi I2C0 signals (RPI_I2C0_SCL and RPI_I2C0_SDA) as shown in Figure 29.
 
 .. figure:: /images/LimePSB-RPCM_v1.4_I2C_changes.png
   :width: 600
   
   Figure 29: I2C signal
 
-Added new additional I2C IO expander (EXP2). All signals connected to EXP2 are shown in Figure 30.
+Added new additional I2C I/O expander IC15 (EXP1). All signals connected to EXP1 are shown in Figure 30.
 
 .. figure:: /images/LimePSB-RPCM_v1.4_EXP_changes.png
   :width: 600
   
-  Figure 30: New GPIO expander (EXP2)
+  Figure 30: New I/O expander IC15 (EXP1)
 
 New GPIO expander was mainly added to control all new muxes added to clock circuitry. But also some already existing signals were added to it:
 
-* FPGA configuration signals (FPGA_CRESET and FPGA_CDONE). FPGA_CRESET signal moved from EXP1 to EXP2. Also added posibility to monitor FPGA_CDONE by adding it to EXP2. 
-* PCIE_LED_WLAN, PCIE_LED_WPAN and PCIE_LED_WWAN were disconnected from RPI connector and connected to EXP2.
-* ADF_MUXOUT was moved from RPI GPIO3 to EXP2 GPB4. 
+* FPGA configuration signals (FPGA_CRESET and FPGA_CDONE). FPGA_CRESET signal moved from EXP0 (IC12) to EXP1 (IC15). Also added possibility to monitor FPGA_CDONE by adding it to EXP1. 
+* PCIE_LED_WLAN, PCIE_LED_WPAN and PCIE_LED_WWAN were disconnected from RPI connector and connected to EXP1.
+* ADF_MUXOUT was moved from RPI GPIO3 to EXP1 GPB4. 
 
 Added Internal U.FL to external SMA connector (EXT2) and renamed old internal U.FL to external SMA connectors to EXT1. New EXT2 SMA connector can be directly connected to on board GNSS module (IC48) RF_IN pin (default) as shown in Figure 31.
 
@@ -320,10 +320,10 @@ Layout and PCB changes for LimePSB RPCM v1.4 board are as follows:
 
 * Changes made according to schematic.
 * Moved 3.5mm A/V socked to the PCB edge and made cutout for socket ring.
-*	Changed tactile switch from 1825027-5 (L=3.86mm) to CT1102V6.85F160 (L=6.85mm).
-*	Changed LED light pipes from SLP3-200-100-F (center line 0.2" (5.1mm)) to SLP3-150-100-F (center line 0.15" (3.8mm)).
-*	Added HDMI and USB3 internal layer trace impedance requirements in specification.
-*	Board size and main components positions remained the same.
+* Changed tactile switch from 1825027-5 (L=3.86mm) to CT1102V6.85F160 (L=6.85mm).
+* Changed LED light pipes from SLP3-200-100-F (center line 0.2" (5.1mm)) to SLP3-150-100-F (center line 0.15" (3.8mm)).
+* Added HDMI and USB3 internal layer trace impedance requirements in specification.
+* Board size and main components positions remained the same.
 
 .. figure:: /images/LimePSB-RPCM_v1.4_3D_top.png
   :width: 600

@@ -8,7 +8,7 @@ LimePSB RPCM board features button, buzzer, 5 dual colour (red and green (RG)) L
 
   Figure 9: LimePSB RPCM v1.2 user interface components
    
-Dual color LEDs (LED1-LED4) are connected to shift register (IC14). Their function may be programmed according to the user requirements. Dual color LED5 indicates Raspberry Pi status. Green LED6 indicates board power. These LEDs are mounted on the front side of the board.
+Dual color LEDs (LED1-LED4) are connected to shift register (IC15). Their function may be programmed according to the user requirements. Dual color LED5 indicates Raspberry Pi status. Green LED6 indicates board power. These LEDs are mounted on the front side of the board.
 Ethernet connector J9 has two LEDs: yellow and green. LEDs indicate wired network activity and speed. 
 
 Default function of LEDs and related information is listed in Table 18. 
@@ -19,7 +19,7 @@ Default function of LEDs and related information is listed in Table 18.
   +---------------------+--------------------+-----------------------+-------------------------------------------------------------------------------------------+
   | **Board Reference** | **Schematic name** | **Shift register**    | **Description**                                                                           |
   |                     |                    |                       |                                                                                           |
-  |                     |                    | **(IC14) pin**        |                                                                                           |
+  |                     |                    | **(IC15) pin**        |                                                                                           |
   +---------------------+--------------------+-----------------------+-------------------------------------------------------------------------------------------+
   | LED1                | RPI_LED1_R         | Q0                    | User defined.                                                                             |
   |                     +--------------------+-----------------------+                                                                                           |

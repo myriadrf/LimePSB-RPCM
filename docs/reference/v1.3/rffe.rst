@@ -1,7 +1,7 @@
 RF Front End
 ############
 
-LimePSB RPCM RF path features power amplifiers, low noise amplifiers, SPDT switches, Couplers and power detectors as shown in Figure 6.
+LimePSB RPCM RF path features power amplifiers, low noise amplifiers and SPDT switches as shown in Figure 6.
 
 .. figure:: /images/LimePSB-RPCM_v1.3_diagrams_RFFE.png
   :width: 600
@@ -16,14 +16,16 @@ A single control signal (RF_SW_TDD) is used to control all RF switches simultane
   | **Control signal (RF_SW_TDD)** | **TRXA/B       | **RXA/B        |
   |                                | connected to** | connected to** |
   +================================+================+================+
-  | High                           | TXA/B_IN       | RXA/B_OUT      |
+  | Low                            | TXA/B_IN       | RXA/B_OUT      |
   +--------------------------------+----------------+----------------+
-  | Low                            | RXA/B_OUT      | NC             |
+  | High                           | RXA/B_OUT      | NC             |
   +--------------------------------+----------------+----------------+
 
-By default RF switches may be controlled from FPGA pin 13 (via resistor R43). Optional control source may be RFFE TDD control header (J18).
+By default RF switches may be controlled from FPGA pin 13 (via resistor R39). Optional control source may be RFFE TDD control header J19 (not fitted by default).
 
-RF path contains two types of connectors: board edge SMA connectors (J42, J43, J46, J47) used for external connections (antennas or cables) and U.FL connectors (J44, J45, J48, 49) used for internal connections (for example to connect to XTRX mini PCIe expansion board). 
+RF_SW_TDD is pulled low by resistor R41.
+
+RF path contains two types of connectors: board edge SMA connectors (J47, J48, J51, J52) used for external connections (antennas or cables) and U.FL connectors (J45, J46, J49, J50) used for internal connections (for example to connect to XTRX mini PCIe expansion board). 
 
 Signal frequency range of TX and RX paths are listed in Table 9.
 
@@ -56,11 +58,7 @@ More detailed RF path component parameters are given in Table 10.
   |               |              +--------------------------------------+----------------------+-------------------+
   |               |              | 7.0 dB   (3800 MHz)                  | 22.8 dBm (3800 MHz)  | 1.49 dB (3800 MHz)|
   +---------------+--------------+--------------------------------------+----------------------+-------------------+
-  |               |              | -0.7 dB (1000 MHz)                   |                      |                   |
-  |               |              +--------------------------------------+                      |                   |
-  | SKY13286      | RF switch    |                                      | 30 dBm (2000 MHz)    |                   |
-  |               |              +--------------------------------------+                      |                   |
-  |               |              |                                      |                      |                   |
+  | SKY13286      | RF switch    | -0.7 dB (1000 MHz)                   | 30 dBm (2000 MHz)    |                   |
   +---------------+--------------+--------------------------------------+----------------------+-------------------+
 
 

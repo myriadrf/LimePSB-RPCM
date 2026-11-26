@@ -3,7 +3,7 @@ Software
 
 The LimePSB RPCM host device (CM4 or CM5) runs on `Raspberry Pi OS`_.
 
-For GPSDO funcionatily please see `Gateware`_.
+For GPSDO functionality please see `Gateware`_.
 
 The configuration and control files for on-board devices are contained within the `Board Support Package`_.
 

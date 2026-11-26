@@ -30,7 +30,7 @@ Clock path may be configured using analog muxes that are controlled by CM4/5 mod
   |              +---------------+               |             |                                                                                      |
   |              | PCIE_PPS_OUT  |               |             |                                                                                      |
   +--------------+---------------+---------------+-------------+--------------------------------------------------------------------------------------+
-  | IC45         | EXT_SYNC_IN   | PCIE_UIMC4    | EXP1 GPA5   | Reference clock selection for mPCIE exanpsion board (XTRX)                           |
+  | IC45         | EXT_SYNC_IN   | PCIE_UIMC4    | EXP1 GPA5   | Reference clock selection for mPCIE expansion board (XTRX)                           |
   |              +---------------+               |             |                                                                                      |
   |              | LMKRF_CLK_OUT2|               |             |                                                                                      |
   +--------------+---------------+---------------+-------------+--------------------------------------------------------------------------------------+
