@@ -6,7 +6,7 @@ Host Device
 
 The Raspberry Pi Compute Module serves as the system host device. The LimePSB RPCM is compatible with Raspberry Pi Compute Module 4 and 5.
 
-Before installing the Compute Module, ensure that the fourth bit of the configuration DIP switch (SW1) is set to the correct position.
+Before installing the Compute Module, ensure that the fourth bit of the configuration DIP switch (DSW1) is set to the correct position.
  
  * Compute Module 5 - CM5 USB (ON) position.
  * Compute Module 4 - CM4 USB (OFF) position.
@@ -19,7 +19,9 @@ Cooling
 
 Depending on the application, host system and ambient temperature, additional cooling may be required to ensure reliable operation of the LimePSB RPCM board. This may be in the form of airflow through the host system, or a dedicated heatsink fitted to the board.
 
-In standard applications, an 80 mm × 80 mm fan with a 4-pin, 3-pin, or 2-pin connector can be mounted using M3 spacers with a recommended length of 12 mm. This configuration provides sufficient cooling for systems operating with both a Compute Module and an mPCIe expansion card simultaneously.
+In standard applications, an 80 mm x 80 mm fan with a 4-pin, 3-pin, or 2-pin connector can be mounted using M3 spacers with a recommended length of 12 mm. This configuration provides sufficient cooling for systems operating with both a Compute Module and an mPCIe expansion card simultaneously.
+
+To use the PWM speed control input of a 4-pin fan, board resistor options must be changed. See the Board Temperature Control page of the :doc:`/reference/index` for your board version.
 
 .. note::
    In the event of errors, instability or reduced performance, check the board temperature to ensure that it is within the specified operating range.
@@ -30,7 +32,7 @@ RF Connections
 .. figure:: /images/LimePSB-RPCM_v1.4_RFCON.png
   :width: 600
   
-  Figure 5: LimePSB RPCM board top with RF connector positions
+  Figure 6: LimePSB RPCM board top with RF connector positions
 
 .. list-table:: Table 2. RF Connectors
     :header-rows: 1
@@ -65,10 +67,16 @@ RF Connections
       - Channel A receive output
     * - J20 (Header), J21 (SMA), J22 (U.FL)
       - up to 6 GHz
-      - U.FL to SMA adapter (INT to EXT 1)
-    * - J23 (header), J24 (SMA), J25 (U.FL)
+      - U.FL to SMA adapter (INT to EXT 1).
+
+        Header J20 is not fitted by default.
+    * - J23 (Header), J24 (SMA), J25 (U.FL)
       - up to 6 GHz
-      - U.FL to SMA adapter (INT to EXT 2)
+      - U.FL to SMA adapter (INT to EXT 2), v1.4 and newer.
+
+        By default J24 is connected to the GNSS receiver antenna input.
+
+        J23 and J25 are not fitted by default.
 
 .. warning::
    Care should be taken when connecting external RF signals to the TX and RX inputs, to ensure that the maximum safe input power of +10 dBm is not exceeded, as this may cause permanent damage to the device.

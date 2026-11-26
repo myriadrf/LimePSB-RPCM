@@ -3,7 +3,7 @@
 project = 'LimePSB RPCM'
 copyright = '2024-2026 Lime Microsystems'
 author = 'Lime Microsystems'
-release = 'v1.4'
+release = 'v1.5'
 
 # These are used for the "Edit on GitHub" links.
 # github_repo_path should be set to the branch + path to the docs.

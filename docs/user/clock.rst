@@ -14,13 +14,13 @@ The board provides external synchronization input and output signals, including 
   |                      +-------------------+-------------------------------------+
   |                      | 10 MHz VCOCXO     | U8073LF                             |
   +----------------------+-------------------+-------------------------------------+
-  |  External Sync Input | SMA (J36)         | 1PPS; 30,72 MHz 3,3V CMOS           |
+  |  External Sync Input | SMA (J36)         | 1PPS; 30.72 MHz 3.3V CMOS           |
   +----------------------+-------------------+-------------------------------------+
-  | External Sync output | SMA (J38)         | 1PPS; 10 MHz or 30,72 MHz 3.3V CMOS |
+  | External Sync output | SMA (J38)         | 1PPS; 10 MHz or 30.72 MHz 3.3V CMOS |
   +----------------------+-------------------+-------------------------------------+
   |     Clock output     | U.FL (J39)        | 10 MHz 3.3V CMOS                    |
   |                      +-------------------+-------------------------------------+
-  |                      | U.FL (J37)        | 30,72 MHz3.3V CMOS                  |
+  |                      | U.FL (J37)        | 30.72 MHz 3.3V CMOS                 |
   +----------------------+-------------------+-------------------------------------+
 
 .. note::
